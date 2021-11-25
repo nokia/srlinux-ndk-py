@@ -16,11 +16,11 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/telemetry_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bndk/telemetry_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"\x1f\n\x0cTelemetryKey\x12\x0f\n\x07js_path\x18\x01 \x01(\t\"%\n\rTelemetryData\x12\x14\n\x0cjson_content\x18\x01 \x01(\t\"Q\n\rTelemetryInfo\x12\x1e\n\x03key\x18\x01 \x01(\x0b\x32\x11.ndk.TelemetryKey\x12 \n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x12.ndk.TelemetryData\";\n\x16TelemetryUpdateRequest\x12!\n\x05state\x18\x01 \x03(\x0b\x32\x12.ndk.TelemetryInfo\"O\n\x17TelemetryUpdateResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"8\n\x16TelemetryDeleteRequest\x12\x1e\n\x03key\x18\x01 \x03(\x0b\x32\x11.ndk.TelemetryKey\"O\n\x17TelemetryDeleteResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t2\xbd\x01\n\x16SdkMgrTelemetryService\x12S\n\x14TelemetryAddOrUpdate\x12\x1b.ndk.TelemetryUpdateRequest\x1a\x1c.ndk.TelemetryUpdateResponse\"\x00\x12N\n\x0fTelemetryDelete\x12\x1b.ndk.TelemetryDeleteRequest\x1a\x1c.ndk.TelemetryDeleteResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x1bndk/telemetry_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"\x1f\n\x0cTelemetryKey\x12\x0f\n\x07js_path\x18\x01 \x01(\t\"%\n\rTelemetryData\x12\x14\n\x0cjson_content\x18\x01 \x01(\t\"a\n\rTelemetryInfo\x12&\n\x03key\x18\x01 \x01(\x0b\x32\x19.srlinux.sdk.TelemetryKey\x12(\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x1a.srlinux.sdk.TelemetryData\"C\n\x16TelemetryUpdateRequest\x12)\n\x05state\x18\x01 \x03(\x0b\x32\x1a.srlinux.sdk.TelemetryInfo\"W\n\x17TelemetryUpdateResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"@\n\x16TelemetryDeleteRequest\x12&\n\x03key\x18\x01 \x03(\x0b\x32\x19.srlinux.sdk.TelemetryKey\"W\n\x17TelemetryDeleteResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t2\xdd\x01\n\x16SdkMgrTelemetryService\x12\x63\n\x14TelemetryAddOrUpdate\x12#.srlinux.sdk.TelemetryUpdateRequest\x1a$.srlinux.sdk.TelemetryUpdateResponse\"\x00\x12^\n\x0fTelemetryDelete\x12#.srlinux.sdk.TelemetryDeleteRequest\x1a$.srlinux.sdk.TelemetryDeleteResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
@@ -29,14 +29,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _TELEMETRYKEY = _descriptor.Descriptor(
   name='TelemetryKey',
-  full_name='ndk.TelemetryKey',
+  full_name='srlinux.sdk.TelemetryKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='js_path', full_name='ndk.TelemetryKey.js_path', index=0,
+      name='js_path', full_name='srlinux.sdk.TelemetryKey.js_path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -54,21 +54,21 @@ _TELEMETRYKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58,
-  serialized_end=89,
+  serialized_start=66,
+  serialized_end=97,
 )
 
 
 _TELEMETRYDATA = _descriptor.Descriptor(
   name='TelemetryData',
-  full_name='ndk.TelemetryData',
+  full_name='srlinux.sdk.TelemetryData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='json_content', full_name='ndk.TelemetryData.json_content', index=0,
+      name='json_content', full_name='srlinux.sdk.TelemetryData.json_content', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -86,28 +86,28 @@ _TELEMETRYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=91,
-  serialized_end=128,
+  serialized_start=99,
+  serialized_end=136,
 )
 
 
 _TELEMETRYINFO = _descriptor.Descriptor(
   name='TelemetryInfo',
-  full_name='ndk.TelemetryInfo',
+  full_name='srlinux.sdk.TelemetryInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.TelemetryInfo.key', index=0,
+      name='key', full_name='srlinux.sdk.TelemetryInfo.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.TelemetryInfo.data', index=1,
+      name='data', full_name='srlinux.sdk.TelemetryInfo.data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -125,21 +125,21 @@ _TELEMETRYINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=130,
-  serialized_end=211,
+  serialized_start=138,
+  serialized_end=235,
 )
 
 
 _TELEMETRYUPDATEREQUEST = _descriptor.Descriptor(
   name='TelemetryUpdateRequest',
-  full_name='ndk.TelemetryUpdateRequest',
+  full_name='srlinux.sdk.TelemetryUpdateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='state', full_name='ndk.TelemetryUpdateRequest.state', index=0,
+      name='state', full_name='srlinux.sdk.TelemetryUpdateRequest.state', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -157,28 +157,28 @@ _TELEMETRYUPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=213,
-  serialized_end=272,
+  serialized_start=237,
+  serialized_end=304,
 )
 
 
 _TELEMETRYUPDATERESPONSE = _descriptor.Descriptor(
   name='TelemetryUpdateResponse',
-  full_name='ndk.TelemetryUpdateResponse',
+  full_name='srlinux.sdk.TelemetryUpdateResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.TelemetryUpdateResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.TelemetryUpdateResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.TelemetryUpdateResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.TelemetryUpdateResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -196,21 +196,21 @@ _TELEMETRYUPDATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=274,
-  serialized_end=353,
+  serialized_start=306,
+  serialized_end=393,
 )
 
 
 _TELEMETRYDELETEREQUEST = _descriptor.Descriptor(
   name='TelemetryDeleteRequest',
-  full_name='ndk.TelemetryDeleteRequest',
+  full_name='srlinux.sdk.TelemetryDeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.TelemetryDeleteRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.TelemetryDeleteRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -228,28 +228,28 @@ _TELEMETRYDELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=355,
-  serialized_end=411,
+  serialized_start=395,
+  serialized_end=459,
 )
 
 
 _TELEMETRYDELETERESPONSE = _descriptor.Descriptor(
   name='TelemetryDeleteResponse',
-  full_name='ndk.TelemetryDeleteResponse',
+  full_name='srlinux.sdk.TelemetryDeleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.TelemetryDeleteResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.TelemetryDeleteResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.TelemetryDeleteResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.TelemetryDeleteResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -267,8 +267,8 @@ _TELEMETRYDELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=413,
-  serialized_end=492,
+  serialized_start=461,
+  serialized_end=548,
 )
 
 _TELEMETRYINFO.fields_by_name['key'].message_type = _TELEMETRYKEY
@@ -289,49 +289,49 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 TelemetryKey = _reflection.GeneratedProtocolMessageType('TelemetryKey', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYKEY,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryKey)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryKey)
   })
 _sym_db.RegisterMessage(TelemetryKey)
 
 TelemetryData = _reflection.GeneratedProtocolMessageType('TelemetryData', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYDATA,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryData)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryData)
   })
 _sym_db.RegisterMessage(TelemetryData)
 
 TelemetryInfo = _reflection.GeneratedProtocolMessageType('TelemetryInfo', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYINFO,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryInfo)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryInfo)
   })
 _sym_db.RegisterMessage(TelemetryInfo)
 
 TelemetryUpdateRequest = _reflection.GeneratedProtocolMessageType('TelemetryUpdateRequest', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYUPDATEREQUEST,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryUpdateRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryUpdateRequest)
   })
 _sym_db.RegisterMessage(TelemetryUpdateRequest)
 
 TelemetryUpdateResponse = _reflection.GeneratedProtocolMessageType('TelemetryUpdateResponse', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYUPDATERESPONSE,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryUpdateResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryUpdateResponse)
   })
 _sym_db.RegisterMessage(TelemetryUpdateResponse)
 
 TelemetryDeleteRequest = _reflection.GeneratedProtocolMessageType('TelemetryDeleteRequest', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYDELETEREQUEST,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryDeleteRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryDeleteRequest)
   })
 _sym_db.RegisterMessage(TelemetryDeleteRequest)
 
 TelemetryDeleteResponse = _reflection.GeneratedProtocolMessageType('TelemetryDeleteResponse', (_message.Message,), {
   'DESCRIPTOR' : _TELEMETRYDELETERESPONSE,
   '__module__' : 'ndk.telemetry_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.TelemetryDeleteResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.TelemetryDeleteResponse)
   })
 _sym_db.RegisterMessage(TelemetryDeleteResponse)
 
@@ -340,17 +340,17 @@ DESCRIPTOR._options = None
 
 _SDKMGRTELEMETRYSERVICE = _descriptor.ServiceDescriptor(
   name='SdkMgrTelemetryService',
-  full_name='ndk.SdkMgrTelemetryService',
+  full_name='srlinux.sdk.SdkMgrTelemetryService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=495,
-  serialized_end=684,
+  serialized_start=551,
+  serialized_end=772,
   methods=[
   _descriptor.MethodDescriptor(
     name='TelemetryAddOrUpdate',
-    full_name='ndk.SdkMgrTelemetryService.TelemetryAddOrUpdate',
+    full_name='srlinux.sdk.SdkMgrTelemetryService.TelemetryAddOrUpdate',
     index=0,
     containing_service=None,
     input_type=_TELEMETRYUPDATEREQUEST,
@@ -360,7 +360,7 @@ _SDKMGRTELEMETRYSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='TelemetryDelete',
-    full_name='ndk.SdkMgrTelemetryService.TelemetryDelete',
+    full_name='srlinux.sdk.SdkMgrTelemetryService.TelemetryDelete',
     index=1,
     containing_service=None,
     input_type=_TELEMETRYDELETEREQUEST,

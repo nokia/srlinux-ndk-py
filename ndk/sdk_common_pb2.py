@@ -16,16 +16,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/sdk_common.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14ndk/sdk_common.proto\x12\x03ndk\"\x1b\n\x0bIpAddressPb\x12\x0c\n\x04\x61\x64\x64r\x18\x01 \x01(\x0c\"K\n\x0fIpAddrPrefLenPb\x12!\n\x07ip_addr\x18\x01 \x01(\x0b\x32\x10.ndk.IpAddressPb\x12\x15\n\rprefix_length\x18\x02 \x01(\r\"c\n\x17IpInterfaceAddrPrefixPb\x12$\n\x06prefix\x18\x01 \x01(\x0b\x32\x14.ndk.IpAddrPrefLenPb\x12\"\n\x05state\x18\x02 \x01(\x0e\x32\x13.ndk.IpAddressState\"#\n\x0cMacAddressPb\x12\x13\n\x0bmac_address\x18\x01 \x01(\x0c\"\"\n\nGlobalIfId\x12\x14\n\x0cglobal_if_id\x18\x01 \x01(\r\"$\n\rNetInstanceId\x12\x13\n\x0binstance_id\x18\x01 \x01(\r\"\x1b\n\x08PortIdPb\x12\x0f\n\x07port_id\x18\x01 \x01(\x04\"\x1f\n\tMplsLabel\x12\x12\n\nmpls_label\x18\x01 \x01(\r\"\x0c\n\nAgentReply\"\r\n\x0bSyncRequest\"D\n\x0cSyncResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"\x1f\n\x0e\x45vpnEthSegIdPb\x12\r\n\x05\x65s_id\x18\x01 \x01(\x0c*f\n\x0bIfMgrIfType\x12\x0c\n\x08\x45THERNET\x10\x00\x12\x0c\n\x08LOOPBACK\x10\x01\x12\x0e\n\nMANAGEMENT\x10\x02\x12\r\n\tAGGREGATE\x10\x03\x12\x07\n\x03IRB\x10\x04\x12\n\n\x06SYSTEM\x10\x05\x12\x07\n\x03MAX\x10\x06*\xbb\x01\n\x0eIpAddressState\x12\x18\n\x14IPADDR_STATE_UNKNOWN\x10\x00\x12\x1a\n\x16IPADDR_STATE_TENTATIVE\x10\x01\x12\x1b\n\x17IPADDR_STATE_DUPLICATED\x10\x02\x12\x1d\n\x19IPADDR_STATE_INACCESSIBLE\x10\x03\x12\x1b\n\x17IPADDR_STATE_DEPRECATED\x10\x04\x12\x1a\n\x16IPADDR_STATE_PREFERRED\x10\x05*\xd3\x01\n\x0fIfOperStateType\x12\x14\n\x10IF_OPER_STATE_UP\x10\x00\x12\x16\n\x12IF_OPER_STATE_DOWN\x10\x01\x12\x19\n\x15IF_OPER_STATE_TESTING\x10\x02\x12\x19\n\x15IF_OPER_STATE_UNKNOWN\x10\x03\x12\x19\n\x15IF_OPER_STATE_DORMANT\x10\x04\x12\x1d\n\x19IF_OPER_STATE_NOT_PRESENT\x10\x05\x12\"\n\x1eIF_OPER_STATE_LOWER_LAYER_DOWN\x10\x06*\xcb\x06\n\x10IfOperDownReason\x12\x15\n\x11IF_OPER_DOWN_NONE\x10\x00\x12$\n IF_OPER_DOWN_PORT_ADMIN_DISABLED\x10\x01\x12#\n\x1fIF_OPER_DOWN_MDA_ADMIN_DISABLED\x10\x02\x12%\n!IF_OPER_DOWN_TRANS_LASER_DISABLED\x10\x03\x12 \n\x1cIF_OPER_DOWN_MDA_NOT_PRESENT\x10\x04\x12\"\n\x1eIF_OPER_DOWN_TRANS_NOT_PRESENT\x10\x05\x12\x19\n\x15IF_OPER_DOWN_PHY_INIT\x10\x06\x12\x19\n\x15IF_OPER_DOWN_LOOPBACK\x10\x07\x12!\n\x1dIF_OPER_DOWN_LOWER_LAYER_DOWN\x10\x08\x12\x1e\n\x1aIF_OPER_DOWN_MTU_RESOURCES\x10\t\x12\"\n\x1eIF_OPER_DOWN_UNSUPPORTED_SPEED\x10\n\x12&\n\"IF_OPER_DOWN_UNSUPPORTED_TRANS_FEC\x10\x0b\x12\x16\n\x12IF_OPER_DOWN_OTHER\x10\x0c\x12!\n\x1dIF_OPER_DOWN_PORT_NOT_PRESENT\x10\r\x12$\n IF_OPER_DOWN_FABRIC_AVAILABILITY\x10\x0e\x12 \n\x1cIF_OPER_DOWN_NO_ACTIVE_LINKS\x10\x0f\x12#\n\x1fIF_OPER_DOWN_MIN_LINK_THRESHOLD\x10\x10\x12$\n IF_OPER_DOWN_9_12_SPEED_MISMATCH\x10\x11\x12\x1e\n\x1aIF_OPER_DOWN_LAG_RESOURCES\x10\x12\x12%\n!IF_OPER_DOWN_LAG_MEMBER_RESOURCES\x10\x13\x12\"\n\x1eIF_OPER_DOWN_STANDBY_SIGNALING\x10\x14\x12$\n IF_OPER_DOWN_HOLD_TIME_UP_ACTIVE\x10\x15\x12#\n\x1fIF_OPER_DOWN_RELOAD_TIME_ACTIVE\x10\x16\x12\x1f\n\x1bIF_OPER_DOWN_CONNECTOR_DOWN\x10\x17*\xe1\x02\n\x17IfEthernetPortSpeedType\x12\x1b\n\x17IF_ETH_PORT_SPEED_UNSET\x10\x00\x12\x19\n\x15IF_ETH_PORT_SPEED_10M\x10\x01\x12\x1a\n\x16IF_ETH_PORT_SPEED_100M\x10\x02\x12\x18\n\x14IF_ETH_PORT_SPEED_1G\x10\x03\x12\x19\n\x15IF_ETH_PORT_SPEED_10G\x10\x04\x12\x19\n\x15IF_ETH_PORT_SPEED_25G\x10\x05\x12\x19\n\x15IF_ETH_PORT_SPEED_40G\x10\x06\x12\x19\n\x15IF_ETH_PORT_SPEED_50G\x10\x07\x12\x1a\n\x16IF_ETH_PORT_SPEED_100G\x10\x08\x12\x1a\n\x16IF_ETH_PORT_SPEED_200G\x10\t\x12\x1a\n\x16IF_ETH_PORT_SPEED_400G\x10\n\x12\x18\n\x14IF_ETH_PORT_SPEED_1T\x10\x0b*r\n\x18IfEthernetDuplexModeType\x12\x1c\n\x18IF_ETH_DUPLEX_MODE_UNSET\x10\x00\x12\x1b\n\x17IF_ETH_DUPLEX_MODE_FULL\x10\x01\x12\x1b\n\x17IF_ETH_DUPLEX_MODE_HALF\x10\x02*\xa9\x01\n\x14IfTransceiverFecType\x12\x16\n\x12IF_TRANS_FEC_UNSET\x10\x00\x12\x19\n\x15IF_TRANS_FEC_DISABLED\x10\x01\x12\x16\n\x12IF_TRANS_FEC_RS528\x10\x02\x12\x16\n\x12IF_TRANS_FEC_RS544\x10\x03\x12\x16\n\x12IF_TRANS_FEC_BASER\x10\x04\x12\x16\n\x12IF_TRANS_FEC_RS108\x10\x05*5\n\x0fSdkMgrOperation\x12\n\n\x06\x43reate\x10\x00\x12\n\n\x06\x43hange\x10\x01\x12\n\n\x06\x44\x65lete\x10\x02*5\n\x0cSdkMgrStatus\x12\x12\n\x0ekSdkMgrSuccess\x10\x00\x12\x11\n\rkSdkMgrFailed\x10\x01\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x14ndk/sdk_common.proto\x12\x0bsrlinux.sdk\"\x1b\n\x0bIpAddressPb\x12\x0c\n\x04\x61\x64\x64r\x18\x01 \x01(\x0c\"S\n\x0fIpAddrPrefLenPb\x12)\n\x07ip_addr\x18\x01 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12\x15\n\rprefix_length\x18\x02 \x01(\r\"s\n\x17IpInterfaceAddrPrefixPb\x12,\n\x06prefix\x18\x01 \x01(\x0b\x32\x1c.srlinux.sdk.IpAddrPrefLenPb\x12*\n\x05state\x18\x02 \x01(\x0e\x32\x1b.srlinux.sdk.IpAddressState\"#\n\x0cMacAddressPb\x12\x13\n\x0bmac_address\x18\x01 \x01(\x0c\"\"\n\nGlobalIfId\x12\x14\n\x0cglobal_if_id\x18\x01 \x01(\r\"$\n\rNetInstanceId\x12\x13\n\x0binstance_id\x18\x01 \x01(\r\"\x1b\n\x08PortIdPb\x12\x0f\n\x07port_id\x18\x01 \x01(\x04\"\x1f\n\tMplsLabel\x12\x12\n\nmpls_label\x18\x01 \x01(\r\"\x0c\n\nAgentReply\"\r\n\x0bSyncRequest\"L\n\x0cSyncResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"\x1f\n\x0e\x45vpnEthSegIdPb\x12\r\n\x05\x65s_id\x18\x01 \x01(\x0c*f\n\x0bIfMgrIfType\x12\x0c\n\x08\x45THERNET\x10\x00\x12\x0c\n\x08LOOPBACK\x10\x01\x12\x0e\n\nMANAGEMENT\x10\x02\x12\r\n\tAGGREGATE\x10\x03\x12\x07\n\x03IRB\x10\x04\x12\n\n\x06SYSTEM\x10\x05\x12\x07\n\x03MAX\x10\x06*\xbb\x01\n\x0eIpAddressState\x12\x18\n\x14IPADDR_STATE_UNKNOWN\x10\x00\x12\x1a\n\x16IPADDR_STATE_TENTATIVE\x10\x01\x12\x1b\n\x17IPADDR_STATE_DUPLICATED\x10\x02\x12\x1d\n\x19IPADDR_STATE_INACCESSIBLE\x10\x03\x12\x1b\n\x17IPADDR_STATE_DEPRECATED\x10\x04\x12\x1a\n\x16IPADDR_STATE_PREFERRED\x10\x05*\xd3\x01\n\x0fIfOperStateType\x12\x14\n\x10IF_OPER_STATE_UP\x10\x00\x12\x16\n\x12IF_OPER_STATE_DOWN\x10\x01\x12\x19\n\x15IF_OPER_STATE_TESTING\x10\x02\x12\x19\n\x15IF_OPER_STATE_UNKNOWN\x10\x03\x12\x19\n\x15IF_OPER_STATE_DORMANT\x10\x04\x12\x1d\n\x19IF_OPER_STATE_NOT_PRESENT\x10\x05\x12\"\n\x1eIF_OPER_STATE_LOWER_LAYER_DOWN\x10\x06*\xcb\x06\n\x10IfOperDownReason\x12\x15\n\x11IF_OPER_DOWN_NONE\x10\x00\x12$\n IF_OPER_DOWN_PORT_ADMIN_DISABLED\x10\x01\x12#\n\x1fIF_OPER_DOWN_MDA_ADMIN_DISABLED\x10\x02\x12%\n!IF_OPER_DOWN_TRANS_LASER_DISABLED\x10\x03\x12 \n\x1cIF_OPER_DOWN_MDA_NOT_PRESENT\x10\x04\x12\"\n\x1eIF_OPER_DOWN_TRANS_NOT_PRESENT\x10\x05\x12\x19\n\x15IF_OPER_DOWN_PHY_INIT\x10\x06\x12\x19\n\x15IF_OPER_DOWN_LOOPBACK\x10\x07\x12!\n\x1dIF_OPER_DOWN_LOWER_LAYER_DOWN\x10\x08\x12\x1e\n\x1aIF_OPER_DOWN_MTU_RESOURCES\x10\t\x12\"\n\x1eIF_OPER_DOWN_UNSUPPORTED_SPEED\x10\n\x12&\n\"IF_OPER_DOWN_UNSUPPORTED_TRANS_FEC\x10\x0b\x12\x16\n\x12IF_OPER_DOWN_OTHER\x10\x0c\x12!\n\x1dIF_OPER_DOWN_PORT_NOT_PRESENT\x10\r\x12$\n IF_OPER_DOWN_FABRIC_AVAILABILITY\x10\x0e\x12 \n\x1cIF_OPER_DOWN_NO_ACTIVE_LINKS\x10\x0f\x12#\n\x1fIF_OPER_DOWN_MIN_LINK_THRESHOLD\x10\x10\x12$\n IF_OPER_DOWN_9_12_SPEED_MISMATCH\x10\x11\x12\x1e\n\x1aIF_OPER_DOWN_LAG_RESOURCES\x10\x12\x12%\n!IF_OPER_DOWN_LAG_MEMBER_RESOURCES\x10\x13\x12\"\n\x1eIF_OPER_DOWN_STANDBY_SIGNALING\x10\x14\x12$\n IF_OPER_DOWN_HOLD_TIME_UP_ACTIVE\x10\x15\x12#\n\x1fIF_OPER_DOWN_RELOAD_TIME_ACTIVE\x10\x16\x12\x1f\n\x1bIF_OPER_DOWN_CONNECTOR_DOWN\x10\x17*\xe1\x02\n\x17IfEthernetPortSpeedType\x12\x1b\n\x17IF_ETH_PORT_SPEED_UNSET\x10\x00\x12\x19\n\x15IF_ETH_PORT_SPEED_10M\x10\x01\x12\x1a\n\x16IF_ETH_PORT_SPEED_100M\x10\x02\x12\x18\n\x14IF_ETH_PORT_SPEED_1G\x10\x03\x12\x19\n\x15IF_ETH_PORT_SPEED_10G\x10\x04\x12\x19\n\x15IF_ETH_PORT_SPEED_25G\x10\x05\x12\x19\n\x15IF_ETH_PORT_SPEED_40G\x10\x06\x12\x19\n\x15IF_ETH_PORT_SPEED_50G\x10\x07\x12\x1a\n\x16IF_ETH_PORT_SPEED_100G\x10\x08\x12\x1a\n\x16IF_ETH_PORT_SPEED_200G\x10\t\x12\x1a\n\x16IF_ETH_PORT_SPEED_400G\x10\n\x12\x18\n\x14IF_ETH_PORT_SPEED_1T\x10\x0b*r\n\x18IfEthernetDuplexModeType\x12\x1c\n\x18IF_ETH_DUPLEX_MODE_UNSET\x10\x00\x12\x1b\n\x17IF_ETH_DUPLEX_MODE_FULL\x10\x01\x12\x1b\n\x17IF_ETH_DUPLEX_MODE_HALF\x10\x02*\xa9\x01\n\x14IfTransceiverFecType\x12\x16\n\x12IF_TRANS_FEC_UNSET\x10\x00\x12\x19\n\x15IF_TRANS_FEC_DISABLED\x10\x01\x12\x16\n\x12IF_TRANS_FEC_RS528\x10\x02\x12\x16\n\x12IF_TRANS_FEC_RS544\x10\x03\x12\x16\n\x12IF_TRANS_FEC_BASER\x10\x04\x12\x16\n\x12IF_TRANS_FEC_RS108\x10\x05*5\n\x0fSdkMgrOperation\x12\n\n\x06\x43reate\x10\x00\x12\n\n\x06\x43hange\x10\x01\x12\n\n\x06\x44\x65lete\x10\x02*5\n\x0cSdkMgrStatus\x12\x12\n\x0ekSdkMgrSuccess\x10\x00\x12\x11\n\rkSdkMgrFailed\x10\x01\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
 )
 
 _IFMGRIFTYPE = _descriptor.EnumDescriptor(
   name='IfMgrIfType',
-  full_name='ndk.IfMgrIfType',
+  full_name='srlinux.sdk.IfMgrIfType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -68,15 +68,15 @@ _IFMGRIFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=541,
-  serialized_end=643,
+  serialized_start=581,
+  serialized_end=683,
 )
 _sym_db.RegisterEnumDescriptor(_IFMGRIFTYPE)
 
 IfMgrIfType = enum_type_wrapper.EnumTypeWrapper(_IFMGRIFTYPE)
 _IPADDRESSSTATE = _descriptor.EnumDescriptor(
   name='IpAddressState',
-  full_name='ndk.IpAddressState',
+  full_name='srlinux.sdk.IpAddressState',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -114,15 +114,15 @@ _IPADDRESSSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=646,
-  serialized_end=833,
+  serialized_start=686,
+  serialized_end=873,
 )
 _sym_db.RegisterEnumDescriptor(_IPADDRESSSTATE)
 
 IpAddressState = enum_type_wrapper.EnumTypeWrapper(_IPADDRESSSTATE)
 _IFOPERSTATETYPE = _descriptor.EnumDescriptor(
   name='IfOperStateType',
-  full_name='ndk.IfOperStateType',
+  full_name='srlinux.sdk.IfOperStateType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -165,15 +165,15 @@ _IFOPERSTATETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=836,
-  serialized_end=1047,
+  serialized_start=876,
+  serialized_end=1087,
 )
 _sym_db.RegisterEnumDescriptor(_IFOPERSTATETYPE)
 
 IfOperStateType = enum_type_wrapper.EnumTypeWrapper(_IFOPERSTATETYPE)
 _IFOPERDOWNREASON = _descriptor.EnumDescriptor(
   name='IfOperDownReason',
-  full_name='ndk.IfOperDownReason',
+  full_name='srlinux.sdk.IfOperDownReason',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -301,15 +301,15 @@ _IFOPERDOWNREASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1050,
-  serialized_end=1893,
+  serialized_start=1090,
+  serialized_end=1933,
 )
 _sym_db.RegisterEnumDescriptor(_IFOPERDOWNREASON)
 
 IfOperDownReason = enum_type_wrapper.EnumTypeWrapper(_IFOPERDOWNREASON)
 _IFETHERNETPORTSPEEDTYPE = _descriptor.EnumDescriptor(
   name='IfEthernetPortSpeedType',
-  full_name='ndk.IfEthernetPortSpeedType',
+  full_name='srlinux.sdk.IfEthernetPortSpeedType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -377,15 +377,15 @@ _IFETHERNETPORTSPEEDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1896,
-  serialized_end=2249,
+  serialized_start=1936,
+  serialized_end=2289,
 )
 _sym_db.RegisterEnumDescriptor(_IFETHERNETPORTSPEEDTYPE)
 
 IfEthernetPortSpeedType = enum_type_wrapper.EnumTypeWrapper(_IFETHERNETPORTSPEEDTYPE)
 _IFETHERNETDUPLEXMODETYPE = _descriptor.EnumDescriptor(
   name='IfEthernetDuplexModeType',
-  full_name='ndk.IfEthernetDuplexModeType',
+  full_name='srlinux.sdk.IfEthernetDuplexModeType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -408,15 +408,15 @@ _IFETHERNETDUPLEXMODETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2251,
-  serialized_end=2365,
+  serialized_start=2291,
+  serialized_end=2405,
 )
 _sym_db.RegisterEnumDescriptor(_IFETHERNETDUPLEXMODETYPE)
 
 IfEthernetDuplexModeType = enum_type_wrapper.EnumTypeWrapper(_IFETHERNETDUPLEXMODETYPE)
 _IFTRANSCEIVERFECTYPE = _descriptor.EnumDescriptor(
   name='IfTransceiverFecType',
-  full_name='ndk.IfTransceiverFecType',
+  full_name='srlinux.sdk.IfTransceiverFecType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -454,15 +454,15 @@ _IFTRANSCEIVERFECTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2368,
-  serialized_end=2537,
+  serialized_start=2408,
+  serialized_end=2577,
 )
 _sym_db.RegisterEnumDescriptor(_IFTRANSCEIVERFECTYPE)
 
 IfTransceiverFecType = enum_type_wrapper.EnumTypeWrapper(_IFTRANSCEIVERFECTYPE)
 _SDKMGROPERATION = _descriptor.EnumDescriptor(
   name='SdkMgrOperation',
-  full_name='ndk.SdkMgrOperation',
+  full_name='srlinux.sdk.SdkMgrOperation',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -485,15 +485,15 @@ _SDKMGROPERATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2539,
-  serialized_end=2592,
+  serialized_start=2579,
+  serialized_end=2632,
 )
 _sym_db.RegisterEnumDescriptor(_SDKMGROPERATION)
 
 SdkMgrOperation = enum_type_wrapper.EnumTypeWrapper(_SDKMGROPERATION)
 _SDKMGRSTATUS = _descriptor.EnumDescriptor(
   name='SdkMgrStatus',
-  full_name='ndk.SdkMgrStatus',
+  full_name='srlinux.sdk.SdkMgrStatus',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -511,8 +511,8 @@ _SDKMGRSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2594,
-  serialized_end=2647,
+  serialized_start=2634,
+  serialized_end=2687,
 )
 _sym_db.RegisterEnumDescriptor(_SDKMGRSTATUS)
 
@@ -592,14 +592,14 @@ kSdkMgrFailed = 1
 
 _IPADDRESSPB = _descriptor.Descriptor(
   name='IpAddressPb',
-  full_name='ndk.IpAddressPb',
+  full_name='srlinux.sdk.IpAddressPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='addr', full_name='ndk.IpAddressPb.addr', index=0,
+      name='addr', full_name='srlinux.sdk.IpAddressPb.addr', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
@@ -617,28 +617,28 @@ _IPADDRESSPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29,
-  serialized_end=56,
+  serialized_start=37,
+  serialized_end=64,
 )
 
 
 _IPADDRPREFLENPB = _descriptor.Descriptor(
   name='IpAddrPrefLenPb',
-  full_name='ndk.IpAddrPrefLenPb',
+  full_name='srlinux.sdk.IpAddrPrefLenPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ip_addr', full_name='ndk.IpAddrPrefLenPb.ip_addr', index=0,
+      name='ip_addr', full_name='srlinux.sdk.IpAddrPrefLenPb.ip_addr', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='prefix_length', full_name='ndk.IpAddrPrefLenPb.prefix_length', index=1,
+      name='prefix_length', full_name='srlinux.sdk.IpAddrPrefLenPb.prefix_length', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -656,28 +656,28 @@ _IPADDRPREFLENPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58,
-  serialized_end=133,
+  serialized_start=66,
+  serialized_end=149,
 )
 
 
 _IPINTERFACEADDRPREFIXPB = _descriptor.Descriptor(
   name='IpInterfaceAddrPrefixPb',
-  full_name='ndk.IpInterfaceAddrPrefixPb',
+  full_name='srlinux.sdk.IpInterfaceAddrPrefixPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='prefix', full_name='ndk.IpInterfaceAddrPrefixPb.prefix', index=0,
+      name='prefix', full_name='srlinux.sdk.IpInterfaceAddrPrefixPb.prefix', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='state', full_name='ndk.IpInterfaceAddrPrefixPb.state', index=1,
+      name='state', full_name='srlinux.sdk.IpInterfaceAddrPrefixPb.state', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -695,21 +695,21 @@ _IPINTERFACEADDRPREFIXPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=135,
-  serialized_end=234,
+  serialized_start=151,
+  serialized_end=266,
 )
 
 
 _MACADDRESSPB = _descriptor.Descriptor(
   name='MacAddressPb',
-  full_name='ndk.MacAddressPb',
+  full_name='srlinux.sdk.MacAddressPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='mac_address', full_name='ndk.MacAddressPb.mac_address', index=0,
+      name='mac_address', full_name='srlinux.sdk.MacAddressPb.mac_address', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
@@ -727,21 +727,21 @@ _MACADDRESSPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=236,
-  serialized_end=271,
+  serialized_start=268,
+  serialized_end=303,
 )
 
 
 _GLOBALIFID = _descriptor.Descriptor(
   name='GlobalIfId',
-  full_name='ndk.GlobalIfId',
+  full_name='srlinux.sdk.GlobalIfId',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='global_if_id', full_name='ndk.GlobalIfId.global_if_id', index=0,
+      name='global_if_id', full_name='srlinux.sdk.GlobalIfId.global_if_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -759,21 +759,21 @@ _GLOBALIFID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=273,
-  serialized_end=307,
+  serialized_start=305,
+  serialized_end=339,
 )
 
 
 _NETINSTANCEID = _descriptor.Descriptor(
   name='NetInstanceId',
-  full_name='ndk.NetInstanceId',
+  full_name='srlinux.sdk.NetInstanceId',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='instance_id', full_name='ndk.NetInstanceId.instance_id', index=0,
+      name='instance_id', full_name='srlinux.sdk.NetInstanceId.instance_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -791,21 +791,21 @@ _NETINSTANCEID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=309,
-  serialized_end=345,
+  serialized_start=341,
+  serialized_end=377,
 )
 
 
 _PORTIDPB = _descriptor.Descriptor(
   name='PortIdPb',
-  full_name='ndk.PortIdPb',
+  full_name='srlinux.sdk.PortIdPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='port_id', full_name='ndk.PortIdPb.port_id', index=0,
+      name='port_id', full_name='srlinux.sdk.PortIdPb.port_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -823,21 +823,21 @@ _PORTIDPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=347,
-  serialized_end=374,
+  serialized_start=379,
+  serialized_end=406,
 )
 
 
 _MPLSLABEL = _descriptor.Descriptor(
   name='MplsLabel',
-  full_name='ndk.MplsLabel',
+  full_name='srlinux.sdk.MplsLabel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='mpls_label', full_name='ndk.MplsLabel.mpls_label', index=0,
+      name='mpls_label', full_name='srlinux.sdk.MplsLabel.mpls_label', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -855,14 +855,14 @@ _MPLSLABEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=376,
-  serialized_end=407,
+  serialized_start=408,
+  serialized_end=439,
 )
 
 
 _AGENTREPLY = _descriptor.Descriptor(
   name='AgentReply',
-  full_name='ndk.AgentReply',
+  full_name='srlinux.sdk.AgentReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -880,14 +880,14 @@ _AGENTREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=409,
-  serialized_end=421,
+  serialized_start=441,
+  serialized_end=453,
 )
 
 
 _SYNCREQUEST = _descriptor.Descriptor(
   name='SyncRequest',
-  full_name='ndk.SyncRequest',
+  full_name='srlinux.sdk.SyncRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -905,28 +905,28 @@ _SYNCREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=423,
-  serialized_end=436,
+  serialized_start=455,
+  serialized_end=468,
 )
 
 
 _SYNCRESPONSE = _descriptor.Descriptor(
   name='SyncResponse',
-  full_name='ndk.SyncResponse',
+  full_name='srlinux.sdk.SyncResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.SyncResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.SyncResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.SyncResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.SyncResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -944,21 +944,21 @@ _SYNCRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=438,
-  serialized_end=506,
+  serialized_start=470,
+  serialized_end=546,
 )
 
 
 _EVPNETHSEGIDPB = _descriptor.Descriptor(
   name='EvpnEthSegIdPb',
-  full_name='ndk.EvpnEthSegIdPb',
+  full_name='srlinux.sdk.EvpnEthSegIdPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='es_id', full_name='ndk.EvpnEthSegIdPb.es_id', index=0,
+      name='es_id', full_name='srlinux.sdk.EvpnEthSegIdPb.es_id', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
@@ -976,8 +976,8 @@ _EVPNETHSEGIDPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=508,
-  serialized_end=539,
+  serialized_start=548,
+  serialized_end=579,
 )
 
 _IPADDRPREFLENPB.fields_by_name['ip_addr'].message_type = _IPADDRESSPB
@@ -1010,84 +1010,84 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 IpAddressPb = _reflection.GeneratedProtocolMessageType('IpAddressPb', (_message.Message,), {
   'DESCRIPTOR' : _IPADDRESSPB,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.IpAddressPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.IpAddressPb)
   })
 _sym_db.RegisterMessage(IpAddressPb)
 
 IpAddrPrefLenPb = _reflection.GeneratedProtocolMessageType('IpAddrPrefLenPb', (_message.Message,), {
   'DESCRIPTOR' : _IPADDRPREFLENPB,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.IpAddrPrefLenPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.IpAddrPrefLenPb)
   })
 _sym_db.RegisterMessage(IpAddrPrefLenPb)
 
 IpInterfaceAddrPrefixPb = _reflection.GeneratedProtocolMessageType('IpInterfaceAddrPrefixPb', (_message.Message,), {
   'DESCRIPTOR' : _IPINTERFACEADDRPREFIXPB,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.IpInterfaceAddrPrefixPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.IpInterfaceAddrPrefixPb)
   })
 _sym_db.RegisterMessage(IpInterfaceAddrPrefixPb)
 
 MacAddressPb = _reflection.GeneratedProtocolMessageType('MacAddressPb', (_message.Message,), {
   'DESCRIPTOR' : _MACADDRESSPB,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MacAddressPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MacAddressPb)
   })
 _sym_db.RegisterMessage(MacAddressPb)
 
 GlobalIfId = _reflection.GeneratedProtocolMessageType('GlobalIfId', (_message.Message,), {
   'DESCRIPTOR' : _GLOBALIFID,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.GlobalIfId)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.GlobalIfId)
   })
 _sym_db.RegisterMessage(GlobalIfId)
 
 NetInstanceId = _reflection.GeneratedProtocolMessageType('NetInstanceId', (_message.Message,), {
   'DESCRIPTOR' : _NETINSTANCEID,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NetInstanceId)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NetInstanceId)
   })
 _sym_db.RegisterMessage(NetInstanceId)
 
 PortIdPb = _reflection.GeneratedProtocolMessageType('PortIdPb', (_message.Message,), {
   'DESCRIPTOR' : _PORTIDPB,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.PortIdPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.PortIdPb)
   })
 _sym_db.RegisterMessage(PortIdPb)
 
 MplsLabel = _reflection.GeneratedProtocolMessageType('MplsLabel', (_message.Message,), {
   'DESCRIPTOR' : _MPLSLABEL,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsLabel)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsLabel)
   })
 _sym_db.RegisterMessage(MplsLabel)
 
 AgentReply = _reflection.GeneratedProtocolMessageType('AgentReply', (_message.Message,), {
   'DESCRIPTOR' : _AGENTREPLY,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AgentReply)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AgentReply)
   })
 _sym_db.RegisterMessage(AgentReply)
 
 SyncRequest = _reflection.GeneratedProtocolMessageType('SyncRequest', (_message.Message,), {
   'DESCRIPTOR' : _SYNCREQUEST,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.SyncRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.SyncRequest)
   })
 _sym_db.RegisterMessage(SyncRequest)
 
 SyncResponse = _reflection.GeneratedProtocolMessageType('SyncResponse', (_message.Message,), {
   'DESCRIPTOR' : _SYNCRESPONSE,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.SyncResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.SyncResponse)
   })
 _sym_db.RegisterMessage(SyncResponse)
 
 EvpnEthSegIdPb = _reflection.GeneratedProtocolMessageType('EvpnEthSegIdPb', (_message.Message,), {
   'DESCRIPTOR' : _EVPNETHSEGIDPB,
   '__module__' : 'ndk.sdk_common_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.EvpnEthSegIdPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.EvpnEthSegIdPb)
   })
 _sym_db.RegisterMessage(EvpnEthSegIdPb)
 

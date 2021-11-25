@@ -16,11 +16,11 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/mpls_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16ndk/mpls_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"J\n\x0eMplsRouteKeyPb\x12!\n\ttop_label\x18\x01 \x01(\x0b\x32\x0e.ndk.MplsLabel\x12\x15\n\rnet_inst_name\x18\x02 \x01(\t\"\x9c\x01\n\x0bMplsRoutePb\x12\x1a\n\x12nexthop_group_name\x18\x01 \x01(\t\x12-\n\toperation\x18\x02 \x01(\x0e\x32\x1a.ndk.MplsRoutePb.Operation\x12\x12\n\npreference\x18\x03 \x01(\r\".\n\tOperation\x12\x0e\n\nINVALID_OP\x10\x00\x12\x07\n\x03POP\x10\x01\x12\x08\n\x04SWAP\x10\x02\"Q\n\rMplsRouteInfo\x12 \n\x03key\x18\x01 \x01(\x0b\x32\x13.ndk.MplsRouteKeyPb\x12\x1e\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x10.ndk.MplsRoutePb\"9\n\x13MplsRouteAddRequest\x12\"\n\x06routes\x18\x02 \x03(\x0b\x32\x12.ndk.MplsRouteInfo\"L\n\x14MplsRouteAddResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"=\n\x16MplsRouteDeleteRequest\x12#\n\x06routes\x18\x02 \x03(\x0b\x32\x13.ndk.MplsRouteKeyPb\"O\n\x17MplsRouteDeleteResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t2\xa3\x02\n\x16SdkMgrMplsRouteService\x12P\n\x14MplsRouteAddOrUpdate\x12\x18.ndk.MplsRouteAddRequest\x1a\x19.ndk.MplsRouteAddResponse\"\x03\x88\x02\x01\x12Q\n\x0fMplsRouteDelete\x12\x1b.ndk.MplsRouteDeleteRequest\x1a\x1c.ndk.MplsRouteDeleteResponse\"\x03\x88\x02\x01\x12\x32\n\tSyncStart\x12\x10.ndk.SyncRequest\x1a\x11.ndk.SyncResponse\"\x00\x12\x30\n\x07SyncEnd\x12\x10.ndk.SyncRequest\x1a\x11.ndk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x16ndk/mpls_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"R\n\x0eMplsRouteKeyPb\x12)\n\ttop_label\x18\x01 \x01(\x0b\x32\x16.srlinux.sdk.MplsLabel\x12\x15\n\rnet_inst_name\x18\x02 \x01(\t\"\xa4\x01\n\x0bMplsRoutePb\x12\x1a\n\x12nexthop_group_name\x18\x01 \x01(\t\x12\x35\n\toperation\x18\x02 \x01(\x0e\x32\".srlinux.sdk.MplsRoutePb.Operation\x12\x12\n\npreference\x18\x03 \x01(\r\".\n\tOperation\x12\x0e\n\nINVALID_OP\x10\x00\x12\x07\n\x03POP\x10\x01\x12\x08\n\x04SWAP\x10\x02\"a\n\rMplsRouteInfo\x12(\n\x03key\x18\x01 \x01(\x0b\x32\x1b.srlinux.sdk.MplsRouteKeyPb\x12&\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x18.srlinux.sdk.MplsRoutePb\"A\n\x13MplsRouteAddRequest\x12*\n\x06routes\x18\x02 \x03(\x0b\x32\x1a.srlinux.sdk.MplsRouteInfo\"T\n\x14MplsRouteAddResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"E\n\x16MplsRouteDeleteRequest\x12+\n\x06routes\x18\x02 \x03(\x0b\x32\x1b.srlinux.sdk.MplsRouteKeyPb\"W\n\x17MplsRouteDeleteResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t2\xe3\x02\n\x16SdkMgrMplsRouteService\x12`\n\x14MplsRouteAddOrUpdate\x12 .srlinux.sdk.MplsRouteAddRequest\x1a!.srlinux.sdk.MplsRouteAddResponse\"\x03\x88\x02\x01\x12\x61\n\x0fMplsRouteDelete\x12#.srlinux.sdk.MplsRouteDeleteRequest\x1a$.srlinux.sdk.MplsRouteDeleteResponse\"\x03\x88\x02\x01\x12\x42\n\tSyncStart\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x12@\n\x07SyncEnd\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _MPLSROUTEPB_OPERATION = _descriptor.EnumDescriptor(
   name='Operation',
-  full_name='ndk.MplsRoutePb.Operation',
+  full_name='srlinux.sdk.MplsRoutePb.Operation',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -51,29 +51,29 @@ _MPLSROUTEPB_OPERATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=240,
-  serialized_end=286,
+  serialized_start=264,
+  serialized_end=310,
 )
 _sym_db.RegisterEnumDescriptor(_MPLSROUTEPB_OPERATION)
 
 
 _MPLSROUTEKEYPB = _descriptor.Descriptor(
   name='MplsRouteKeyPb',
-  full_name='ndk.MplsRouteKeyPb',
+  full_name='srlinux.sdk.MplsRouteKeyPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='top_label', full_name='ndk.MplsRouteKeyPb.top_label', index=0,
+      name='top_label', full_name='srlinux.sdk.MplsRouteKeyPb.top_label', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='net_inst_name', full_name='ndk.MplsRouteKeyPb.net_inst_name', index=1,
+      name='net_inst_name', full_name='srlinux.sdk.MplsRouteKeyPb.net_inst_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -91,35 +91,35 @@ _MPLSROUTEKEYPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53,
-  serialized_end=127,
+  serialized_start=61,
+  serialized_end=143,
 )
 
 
 _MPLSROUTEPB = _descriptor.Descriptor(
   name='MplsRoutePb',
-  full_name='ndk.MplsRoutePb',
+  full_name='srlinux.sdk.MplsRoutePb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nexthop_group_name', full_name='ndk.MplsRoutePb.nexthop_group_name', index=0,
+      name='nexthop_group_name', full_name='srlinux.sdk.MplsRoutePb.nexthop_group_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='operation', full_name='ndk.MplsRoutePb.operation', index=1,
+      name='operation', full_name='srlinux.sdk.MplsRoutePb.operation', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='preference', full_name='ndk.MplsRoutePb.preference', index=2,
+      name='preference', full_name='srlinux.sdk.MplsRoutePb.preference', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -138,28 +138,28 @@ _MPLSROUTEPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=130,
-  serialized_end=286,
+  serialized_start=146,
+  serialized_end=310,
 )
 
 
 _MPLSROUTEINFO = _descriptor.Descriptor(
   name='MplsRouteInfo',
-  full_name='ndk.MplsRouteInfo',
+  full_name='srlinux.sdk.MplsRouteInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.MplsRouteInfo.key', index=0,
+      name='key', full_name='srlinux.sdk.MplsRouteInfo.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.MplsRouteInfo.data', index=1,
+      name='data', full_name='srlinux.sdk.MplsRouteInfo.data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -177,21 +177,21 @@ _MPLSROUTEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=288,
-  serialized_end=369,
+  serialized_start=312,
+  serialized_end=409,
 )
 
 
 _MPLSROUTEADDREQUEST = _descriptor.Descriptor(
   name='MplsRouteAddRequest',
-  full_name='ndk.MplsRouteAddRequest',
+  full_name='srlinux.sdk.MplsRouteAddRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='routes', full_name='ndk.MplsRouteAddRequest.routes', index=0,
+      name='routes', full_name='srlinux.sdk.MplsRouteAddRequest.routes', index=0,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -209,28 +209,28 @@ _MPLSROUTEADDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=371,
-  serialized_end=428,
+  serialized_start=411,
+  serialized_end=476,
 )
 
 
 _MPLSROUTEADDRESPONSE = _descriptor.Descriptor(
   name='MplsRouteAddResponse',
-  full_name='ndk.MplsRouteAddResponse',
+  full_name='srlinux.sdk.MplsRouteAddResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.MplsRouteAddResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.MplsRouteAddResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.MplsRouteAddResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.MplsRouteAddResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -248,21 +248,21 @@ _MPLSROUTEADDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=430,
-  serialized_end=506,
+  serialized_start=478,
+  serialized_end=562,
 )
 
 
 _MPLSROUTEDELETEREQUEST = _descriptor.Descriptor(
   name='MplsRouteDeleteRequest',
-  full_name='ndk.MplsRouteDeleteRequest',
+  full_name='srlinux.sdk.MplsRouteDeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='routes', full_name='ndk.MplsRouteDeleteRequest.routes', index=0,
+      name='routes', full_name='srlinux.sdk.MplsRouteDeleteRequest.routes', index=0,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -280,28 +280,28 @@ _MPLSROUTEDELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=508,
-  serialized_end=569,
+  serialized_start=564,
+  serialized_end=633,
 )
 
 
 _MPLSROUTEDELETERESPONSE = _descriptor.Descriptor(
   name='MplsRouteDeleteResponse',
-  full_name='ndk.MplsRouteDeleteResponse',
+  full_name='srlinux.sdk.MplsRouteDeleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.MplsRouteDeleteResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.MplsRouteDeleteResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.MplsRouteDeleteResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.MplsRouteDeleteResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -319,8 +319,8 @@ _MPLSROUTEDELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=571,
-  serialized_end=650,
+  serialized_start=635,
+  serialized_end=722,
 )
 
 _MPLSROUTEKEYPB.fields_by_name['top_label'].message_type = ndk_dot_sdk__common__pb2._MPLSLABEL
@@ -344,49 +344,49 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 MplsRouteKeyPb = _reflection.GeneratedProtocolMessageType('MplsRouteKeyPb', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEKEYPB,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRouteKeyPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRouteKeyPb)
   })
 _sym_db.RegisterMessage(MplsRouteKeyPb)
 
 MplsRoutePb = _reflection.GeneratedProtocolMessageType('MplsRoutePb', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEPB,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRoutePb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRoutePb)
   })
 _sym_db.RegisterMessage(MplsRoutePb)
 
 MplsRouteInfo = _reflection.GeneratedProtocolMessageType('MplsRouteInfo', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEINFO,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRouteInfo)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRouteInfo)
   })
 _sym_db.RegisterMessage(MplsRouteInfo)
 
 MplsRouteAddRequest = _reflection.GeneratedProtocolMessageType('MplsRouteAddRequest', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEADDREQUEST,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRouteAddRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRouteAddRequest)
   })
 _sym_db.RegisterMessage(MplsRouteAddRequest)
 
 MplsRouteAddResponse = _reflection.GeneratedProtocolMessageType('MplsRouteAddResponse', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEADDRESPONSE,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRouteAddResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRouteAddResponse)
   })
 _sym_db.RegisterMessage(MplsRouteAddResponse)
 
 MplsRouteDeleteRequest = _reflection.GeneratedProtocolMessageType('MplsRouteDeleteRequest', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEDELETEREQUEST,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRouteDeleteRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRouteDeleteRequest)
   })
 _sym_db.RegisterMessage(MplsRouteDeleteRequest)
 
 MplsRouteDeleteResponse = _reflection.GeneratedProtocolMessageType('MplsRouteDeleteResponse', (_message.Message,), {
   'DESCRIPTOR' : _MPLSROUTEDELETERESPONSE,
   '__module__' : 'ndk.mpls_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsRouteDeleteResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsRouteDeleteResponse)
   })
 _sym_db.RegisterMessage(MplsRouteDeleteResponse)
 
@@ -395,17 +395,17 @@ DESCRIPTOR._options = None
 
 _SDKMGRMPLSROUTESERVICE = _descriptor.ServiceDescriptor(
   name='SdkMgrMplsRouteService',
-  full_name='ndk.SdkMgrMplsRouteService',
+  full_name='srlinux.sdk.SdkMgrMplsRouteService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=653,
-  serialized_end=944,
+  serialized_start=725,
+  serialized_end=1080,
   methods=[
   _descriptor.MethodDescriptor(
     name='MplsRouteAddOrUpdate',
-    full_name='ndk.SdkMgrMplsRouteService.MplsRouteAddOrUpdate',
+    full_name='srlinux.sdk.SdkMgrMplsRouteService.MplsRouteAddOrUpdate',
     index=0,
     containing_service=None,
     input_type=_MPLSROUTEADDREQUEST,
@@ -415,7 +415,7 @@ _SDKMGRMPLSROUTESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='MplsRouteDelete',
-    full_name='ndk.SdkMgrMplsRouteService.MplsRouteDelete',
+    full_name='srlinux.sdk.SdkMgrMplsRouteService.MplsRouteDelete',
     index=1,
     containing_service=None,
     input_type=_MPLSROUTEDELETEREQUEST,
@@ -425,7 +425,7 @@ _SDKMGRMPLSROUTESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SyncStart',
-    full_name='ndk.SdkMgrMplsRouteService.SyncStart',
+    full_name='srlinux.sdk.SdkMgrMplsRouteService.SyncStart',
     index=2,
     containing_service=None,
     input_type=ndk_dot_sdk__common__pb2._SYNCREQUEST,
@@ -435,7 +435,7 @@ _SDKMGRMPLSROUTESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SyncEnd',
-    full_name='ndk.SdkMgrMplsRouteService.SyncEnd',
+    full_name='srlinux.sdk.SdkMgrMplsRouteService.SyncEnd',
     index=3,
     containing_service=None,
     input_type=ndk_dot_sdk__common__pb2._SYNCREQUEST,

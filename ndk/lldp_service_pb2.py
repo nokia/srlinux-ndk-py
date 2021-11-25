@@ -16,11 +16,11 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/lldp_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16ndk/lldp_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"F\n\x1fLldpNeighborSubscriptionRequest\x12#\n\x03key\x18\x01 \x01(\x0b\x32\x16.ndk.LldpNeighborKeyPb\"\xab\x02\n\x11LldpNeighborKeyPb\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x12\x12\n\nchassis_id\x18\x02 \x01(\t\x12:\n\x0c\x63hassis_type\x18\x03 \x01(\x0e\x32$.ndk.LldpNeighborKeyPb.ChassisIdType\"\xad\x01\n\rChassisIdType\x12\x0c\n\x08RESERVED\x10\x00\x12\x15\n\x11\x43HASSIS_COMPONENT\x10\x01\x12\x13\n\x0fINTERFACE_ALIAS\x10\x02\x12\x12\n\x0ePORT_COMPONENT\x10\x03\x12\x0f\n\x0bMAC_ADDRESS\x10\x04\x12\x13\n\x0fNETWORK_ADDRESS\x10\x05\x12\x12\n\x0eINTERFACE_NAME\x10\x06\x12\x14\n\x10LOCALLY_ASSIGNED\x10\x07\"\xa4\x03\n\x12LldpNeighborDataPb\x12\x0f\n\x07port_id\x18\x01 \x01(\t\x12\x36\n\tport_type\x18\x02 \x01(\x0e\x32#.ndk.LldpNeighborDataPb.PortSubType\x12%\n\nsource_mac\x18\x03 \x01(\x0b\x32\x11.ndk.MacAddressPb\x12*\n\x10\x62gp_peer_address\x18\x04 \x03(\x0b\x32\x10.ndk.IpAddressPb\x12\x14\n\x0c\x62gp_group_id\x18\x05 \x01(\r\x12\x13\n\x0bsystem_name\x18\x06 \x01(\t\x12\x1a\n\x12system_description\x18\x07 \x01(\t\"\xaa\x01\n\x0bPortSubType\x12\x0c\n\x08RESERVED\x10\x00\x12\x13\n\x0fINTERFACE_ALIAS\x10\x01\x12\x12\n\x0ePORT_COMPONENT\x10\x02\x12\x0f\n\x0bMAC_ADDRESS\x10\x03\x12\x13\n\x0fNETWORK_ADDRESS\x10\x04\x12\x12\n\x0eINTERFACE_NAME\x10\x05\x12\x14\n\x10\x41GENT_CIRCUIT_ID\x10\x06\x12\x14\n\x10LOCALLY_ASSIGNED\x10\x07\"\x88\x01\n\x18LldpNeighborNotification\x12 \n\x02op\x18\x01 \x01(\x0e\x32\x14.ndk.SdkMgrOperation\x12#\n\x03key\x18\x02 \x01(\x0b\x32\x16.ndk.LldpNeighborKeyPb\x12%\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x17.ndk.LldpNeighborDataPbB%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x16ndk/lldp_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"N\n\x1fLldpNeighborSubscriptionRequest\x12+\n\x03key\x18\x01 \x01(\x0b\x32\x1e.srlinux.sdk.LldpNeighborKeyPb\"\xb3\x02\n\x11LldpNeighborKeyPb\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x12\x12\n\nchassis_id\x18\x02 \x01(\t\x12\x42\n\x0c\x63hassis_type\x18\x03 \x01(\x0e\x32,.srlinux.sdk.LldpNeighborKeyPb.ChassisIdType\"\xad\x01\n\rChassisIdType\x12\x0c\n\x08RESERVED\x10\x00\x12\x15\n\x11\x43HASSIS_COMPONENT\x10\x01\x12\x13\n\x0fINTERFACE_ALIAS\x10\x02\x12\x12\n\x0ePORT_COMPONENT\x10\x03\x12\x0f\n\x0bMAC_ADDRESS\x10\x04\x12\x13\n\x0fNETWORK_ADDRESS\x10\x05\x12\x12\n\x0eINTERFACE_NAME\x10\x06\x12\x14\n\x10LOCALLY_ASSIGNED\x10\x07\"\xbc\x03\n\x12LldpNeighborDataPb\x12\x0f\n\x07port_id\x18\x01 \x01(\t\x12>\n\tport_type\x18\x02 \x01(\x0e\x32+.srlinux.sdk.LldpNeighborDataPb.PortSubType\x12-\n\nsource_mac\x18\x03 \x01(\x0b\x32\x19.srlinux.sdk.MacAddressPb\x12\x32\n\x10\x62gp_peer_address\x18\x04 \x03(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12\x14\n\x0c\x62gp_group_id\x18\x05 \x01(\r\x12\x13\n\x0bsystem_name\x18\x06 \x01(\t\x12\x1a\n\x12system_description\x18\x07 \x01(\t\"\xaa\x01\n\x0bPortSubType\x12\x0c\n\x08RESERVED\x10\x00\x12\x13\n\x0fINTERFACE_ALIAS\x10\x01\x12\x12\n\x0ePORT_COMPONENT\x10\x02\x12\x0f\n\x0bMAC_ADDRESS\x10\x03\x12\x13\n\x0fNETWORK_ADDRESS\x10\x04\x12\x12\n\x0eINTERFACE_NAME\x10\x05\x12\x14\n\x10\x41GENT_CIRCUIT_ID\x10\x06\x12\x14\n\x10LOCALLY_ASSIGNED\x10\x07\"\xa0\x01\n\x18LldpNeighborNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12+\n\x03key\x18\x02 \x01(\x0b\x32\x1e.srlinux.sdk.LldpNeighborKeyPb\x12-\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x1f.srlinux.sdk.LldpNeighborDataPbB%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _LLDPNEIGHBORKEYPB_CHASSISIDTYPE = _descriptor.EnumDescriptor(
   name='ChassisIdType',
-  full_name='ndk.LldpNeighborKeyPb.ChassisIdType',
+  full_name='srlinux.sdk.LldpNeighborKeyPb.ChassisIdType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -76,14 +76,14 @@ _LLDPNEIGHBORKEYPB_CHASSISIDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=252,
-  serialized_end=425,
+  serialized_start=276,
+  serialized_end=449,
 )
 _sym_db.RegisterEnumDescriptor(_LLDPNEIGHBORKEYPB_CHASSISIDTYPE)
 
 _LLDPNEIGHBORDATAPB_PORTSUBTYPE = _descriptor.EnumDescriptor(
   name='PortSubType',
-  full_name='ndk.LldpNeighborDataPb.PortSubType',
+  full_name='srlinux.sdk.LldpNeighborDataPb.PortSubType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -131,22 +131,22 @@ _LLDPNEIGHBORDATAPB_PORTSUBTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=678,
-  serialized_end=848,
+  serialized_start=726,
+  serialized_end=896,
 )
 _sym_db.RegisterEnumDescriptor(_LLDPNEIGHBORDATAPB_PORTSUBTYPE)
 
 
 _LLDPNEIGHBORSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   name='LldpNeighborSubscriptionRequest',
-  full_name='ndk.LldpNeighborSubscriptionRequest',
+  full_name='srlinux.sdk.LldpNeighborSubscriptionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.LldpNeighborSubscriptionRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.LldpNeighborSubscriptionRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -164,35 +164,35 @@ _LLDPNEIGHBORSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53,
-  serialized_end=123,
+  serialized_start=61,
+  serialized_end=139,
 )
 
 
 _LLDPNEIGHBORKEYPB = _descriptor.Descriptor(
   name='LldpNeighborKeyPb',
-  full_name='ndk.LldpNeighborKeyPb',
+  full_name='srlinux.sdk.LldpNeighborKeyPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='interface_name', full_name='ndk.LldpNeighborKeyPb.interface_name', index=0,
+      name='interface_name', full_name='srlinux.sdk.LldpNeighborKeyPb.interface_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='chassis_id', full_name='ndk.LldpNeighborKeyPb.chassis_id', index=1,
+      name='chassis_id', full_name='srlinux.sdk.LldpNeighborKeyPb.chassis_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='chassis_type', full_name='ndk.LldpNeighborKeyPb.chassis_type', index=2,
+      name='chassis_type', full_name='srlinux.sdk.LldpNeighborKeyPb.chassis_type', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -211,63 +211,63 @@ _LLDPNEIGHBORKEYPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=126,
-  serialized_end=425,
+  serialized_start=142,
+  serialized_end=449,
 )
 
 
 _LLDPNEIGHBORDATAPB = _descriptor.Descriptor(
   name='LldpNeighborDataPb',
-  full_name='ndk.LldpNeighborDataPb',
+  full_name='srlinux.sdk.LldpNeighborDataPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='port_id', full_name='ndk.LldpNeighborDataPb.port_id', index=0,
+      name='port_id', full_name='srlinux.sdk.LldpNeighborDataPb.port_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='port_type', full_name='ndk.LldpNeighborDataPb.port_type', index=1,
+      name='port_type', full_name='srlinux.sdk.LldpNeighborDataPb.port_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='source_mac', full_name='ndk.LldpNeighborDataPb.source_mac', index=2,
+      name='source_mac', full_name='srlinux.sdk.LldpNeighborDataPb.source_mac', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bgp_peer_address', full_name='ndk.LldpNeighborDataPb.bgp_peer_address', index=3,
+      name='bgp_peer_address', full_name='srlinux.sdk.LldpNeighborDataPb.bgp_peer_address', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bgp_group_id', full_name='ndk.LldpNeighborDataPb.bgp_group_id', index=4,
+      name='bgp_group_id', full_name='srlinux.sdk.LldpNeighborDataPb.bgp_group_id', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='system_name', full_name='ndk.LldpNeighborDataPb.system_name', index=5,
+      name='system_name', full_name='srlinux.sdk.LldpNeighborDataPb.system_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='system_description', full_name='ndk.LldpNeighborDataPb.system_description', index=6,
+      name='system_description', full_name='srlinux.sdk.LldpNeighborDataPb.system_description', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -286,35 +286,35 @@ _LLDPNEIGHBORDATAPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=428,
-  serialized_end=848,
+  serialized_start=452,
+  serialized_end=896,
 )
 
 
 _LLDPNEIGHBORNOTIFICATION = _descriptor.Descriptor(
   name='LldpNeighborNotification',
-  full_name='ndk.LldpNeighborNotification',
+  full_name='srlinux.sdk.LldpNeighborNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.LldpNeighborNotification.op', index=0,
+      name='op', full_name='srlinux.sdk.LldpNeighborNotification.op', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.LldpNeighborNotification.key', index=1,
+      name='key', full_name='srlinux.sdk.LldpNeighborNotification.key', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.LldpNeighborNotification.data', index=2,
+      name='data', full_name='srlinux.sdk.LldpNeighborNotification.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -332,8 +332,8 @@ _LLDPNEIGHBORNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=851,
-  serialized_end=987,
+  serialized_start=899,
+  serialized_end=1059,
 )
 
 _LLDPNEIGHBORSUBSCRIPTIONREQUEST.fields_by_name['key'].message_type = _LLDPNEIGHBORKEYPB
@@ -355,28 +355,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 LldpNeighborSubscriptionRequest = _reflection.GeneratedProtocolMessageType('LldpNeighborSubscriptionRequest', (_message.Message,), {
   'DESCRIPTOR' : _LLDPNEIGHBORSUBSCRIPTIONREQUEST,
   '__module__' : 'ndk.lldp_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.LldpNeighborSubscriptionRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.LldpNeighborSubscriptionRequest)
   })
 _sym_db.RegisterMessage(LldpNeighborSubscriptionRequest)
 
 LldpNeighborKeyPb = _reflection.GeneratedProtocolMessageType('LldpNeighborKeyPb', (_message.Message,), {
   'DESCRIPTOR' : _LLDPNEIGHBORKEYPB,
   '__module__' : 'ndk.lldp_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.LldpNeighborKeyPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.LldpNeighborKeyPb)
   })
 _sym_db.RegisterMessage(LldpNeighborKeyPb)
 
 LldpNeighborDataPb = _reflection.GeneratedProtocolMessageType('LldpNeighborDataPb', (_message.Message,), {
   'DESCRIPTOR' : _LLDPNEIGHBORDATAPB,
   '__module__' : 'ndk.lldp_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.LldpNeighborDataPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.LldpNeighborDataPb)
   })
 _sym_db.RegisterMessage(LldpNeighborDataPb)
 
 LldpNeighborNotification = _reflection.GeneratedProtocolMessageType('LldpNeighborNotification', (_message.Message,), {
   'DESCRIPTOR' : _LLDPNEIGHBORNOTIFICATION,
   '__module__' : 'ndk.lldp_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.LldpNeighborNotification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.LldpNeighborNotification)
   })
 _sym_db.RegisterMessage(LldpNeighborNotification)
 

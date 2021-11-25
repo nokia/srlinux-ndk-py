@@ -17,17 +17,17 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/bfd_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15ndk/bfd_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"L\n\x1d\x42\x66\x64SessionSubscriptionRequest\x12+\n\x03key\x18\x01 \x01(\x0b\x32\x1e.ndk.BfdmgrGeneralSessionKeyPb\"\xd3\x01\n\x19\x42\x66\x64mgrGeneralSessionKeyPb\x12$\n\x04type\x18\x01 \x01(\x0e\x32\x16.ndk.BfdmgrSessionType\x12%\n\x0bsrc_ip_addr\x18\x02 \x01(\x0b\x32\x10.ndk.IpAddressPb\x12%\n\x0b\x64st_ip_addr\x18\x03 \x01(\x0b\x32\x10.ndk.IpAddressPb\x12\x13\n\x0binstance_id\x18\x04 \x01(\r\x12\x16\n\x0einterface_name\x18\x05 \x01(\t\x12\x15\n\ripv6_ll_if_id\x18\x06 \x01(\r\"\xb8\x02\n\x1a\x42\x66\x64mgrGeneralSessionDataPb\x12(\n\x06status\x18\x01 \x01(\x0e\x32\x18.ndk.BfdmgrSessionStatus\x12\x46\n\x08sub_type\x18\x02 \x01(\x0e\x32\x34.ndk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType\x12\x11\n\tsrc_if_id\x18\x03 \x01(\r\"\x94\x01\n\x14\x42\x66\x64mgrSessionSubType\x12\x1c\n\x18SESSION_SUB_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1bSESSION_SUB_TYPE_SINGLE_HOP\x10\x01\x12\x1e\n\x1aSESSION_SUB_TYPE_MULTI_HOP\x10\x02\x12\x1d\n\x19SESSION_SUB_TYPE_MICROBFD\x10\x03\"\x96\x01\n\x16\x42\x66\x64SessionNotification\x12 \n\x02op\x18\x01 \x01(\x0e\x32\x14.ndk.SdkMgrOperation\x12+\n\x03key\x18\x02 \x01(\x0b\x32\x1e.ndk.BfdmgrGeneralSessionKeyPb\x12-\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x1f.ndk.BfdmgrGeneralSessionDataPb*N\n\x13\x42\x66\x64mgrSessionStatus\x12\x0b\n\x07INVALID\x10\x00\x12\x0e\n\nADMIN_DOWN\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x08\n\x04INIT\x10\x03\x12\x06\n\x02UP\x10\x04*^\n\x11\x42\x66\x64mgrSessionType\x12\x18\n\x14SESSION_TYPE_UNKNOWN\x10\x00\x12\x14\n\x10SESSION_TYPE_P2P\x10\x01\x12\x19\n\x15SESSION_TYPE_MICROBFD\x10\x02\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x15ndk/bfd_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"T\n\x1d\x42\x66\x64SessionSubscriptionRequest\x12\x33\n\x03key\x18\x01 \x01(\x0b\x32&.srlinux.sdk.BfdmgrGeneralSessionKeyPb\"\xeb\x01\n\x19\x42\x66\x64mgrGeneralSessionKeyPb\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x1e.srlinux.sdk.BfdmgrSessionType\x12-\n\x0bsrc_ip_addr\x18\x02 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12-\n\x0b\x64st_ip_addr\x18\x03 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12\x13\n\x0binstance_id\x18\x04 \x01(\r\x12\x16\n\x0einterface_name\x18\x05 \x01(\t\x12\x15\n\ripv6_ll_if_id\x18\x06 \x01(\r\"\xc8\x02\n\x1a\x42\x66\x64mgrGeneralSessionDataPb\x12\x30\n\x06status\x18\x01 \x01(\x0e\x32 .srlinux.sdk.BfdmgrSessionStatus\x12N\n\x08sub_type\x18\x02 \x01(\x0e\x32<.srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType\x12\x11\n\tsrc_if_id\x18\x03 \x01(\r\"\x94\x01\n\x14\x42\x66\x64mgrSessionSubType\x12\x1c\n\x18SESSION_SUB_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1bSESSION_SUB_TYPE_SINGLE_HOP\x10\x01\x12\x1e\n\x1aSESSION_SUB_TYPE_MULTI_HOP\x10\x02\x12\x1d\n\x19SESSION_SUB_TYPE_MICROBFD\x10\x03\"\xae\x01\n\x16\x42\x66\x64SessionNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12\x33\n\x03key\x18\x02 \x01(\x0b\x32&.srlinux.sdk.BfdmgrGeneralSessionKeyPb\x12\x35\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\'.srlinux.sdk.BfdmgrGeneralSessionDataPb*N\n\x13\x42\x66\x64mgrSessionStatus\x12\x0b\n\x07INVALID\x10\x00\x12\x0e\n\nADMIN_DOWN\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x08\n\x04INIT\x10\x03\x12\x06\n\x02UP\x10\x04*^\n\x11\x42\x66\x64mgrSessionType\x12\x18\n\x14SESSION_TYPE_UNKNOWN\x10\x00\x12\x14\n\x10SESSION_TYPE_P2P\x10\x01\x12\x19\n\x15SESSION_TYPE_MICROBFD\x10\x02\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
 _BFDMGRSESSIONSTATUS = _descriptor.EnumDescriptor(
   name='BfdmgrSessionStatus',
-  full_name='ndk.BfdmgrSessionStatus',
+  full_name='srlinux.sdk.BfdmgrSessionStatus',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -60,15 +60,15 @@ _BFDMGRSESSIONSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=812,
-  serialized_end=890,
+  serialized_start=892,
+  serialized_end=970,
 )
 _sym_db.RegisterEnumDescriptor(_BFDMGRSESSIONSTATUS)
 
 BfdmgrSessionStatus = enum_type_wrapper.EnumTypeWrapper(_BFDMGRSESSIONSTATUS)
 _BFDMGRSESSIONTYPE = _descriptor.EnumDescriptor(
   name='BfdmgrSessionType',
-  full_name='ndk.BfdmgrSessionType',
+  full_name='srlinux.sdk.BfdmgrSessionType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -91,8 +91,8 @@ _BFDMGRSESSIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=892,
-  serialized_end=986,
+  serialized_start=972,
+  serialized_end=1066,
 )
 _sym_db.RegisterEnumDescriptor(_BFDMGRSESSIONTYPE)
 
@@ -109,7 +109,7 @@ SESSION_TYPE_MICROBFD = 2
 
 _BFDMGRGENERALSESSIONDATAPB_BFDMGRSESSIONSUBTYPE = _descriptor.EnumDescriptor(
   name='BfdmgrSessionSubType',
-  full_name='ndk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType',
+  full_name='srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -137,22 +137,22 @@ _BFDMGRGENERALSESSIONDATAPB_BFDMGRSESSIONSUBTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=509,
-  serialized_end=657,
+  serialized_start=565,
+  serialized_end=713,
 )
 _sym_db.RegisterEnumDescriptor(_BFDMGRGENERALSESSIONDATAPB_BFDMGRSESSIONSUBTYPE)
 
 
 _BFDSESSIONSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   name='BfdSessionSubscriptionRequest',
-  full_name='ndk.BfdSessionSubscriptionRequest',
+  full_name='srlinux.sdk.BfdSessionSubscriptionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.BfdSessionSubscriptionRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.BfdSessionSubscriptionRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -170,56 +170,56 @@ _BFDSESSIONSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52,
-  serialized_end=128,
+  serialized_start=60,
+  serialized_end=144,
 )
 
 
 _BFDMGRGENERALSESSIONKEYPB = _descriptor.Descriptor(
   name='BfdmgrGeneralSessionKeyPb',
-  full_name='ndk.BfdmgrGeneralSessionKeyPb',
+  full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='ndk.BfdmgrGeneralSessionKeyPb.type', index=0,
+      name='type', full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb.type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='src_ip_addr', full_name='ndk.BfdmgrGeneralSessionKeyPb.src_ip_addr', index=1,
+      name='src_ip_addr', full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb.src_ip_addr', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='dst_ip_addr', full_name='ndk.BfdmgrGeneralSessionKeyPb.dst_ip_addr', index=2,
+      name='dst_ip_addr', full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb.dst_ip_addr', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='instance_id', full_name='ndk.BfdmgrGeneralSessionKeyPb.instance_id', index=3,
+      name='instance_id', full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb.instance_id', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='interface_name', full_name='ndk.BfdmgrGeneralSessionKeyPb.interface_name', index=4,
+      name='interface_name', full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb.interface_name', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ipv6_ll_if_id', full_name='ndk.BfdmgrGeneralSessionKeyPb.ipv6_ll_if_id', index=5,
+      name='ipv6_ll_if_id', full_name='srlinux.sdk.BfdmgrGeneralSessionKeyPb.ipv6_ll_if_id', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -237,35 +237,35 @@ _BFDMGRGENERALSESSIONKEYPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=131,
-  serialized_end=342,
+  serialized_start=147,
+  serialized_end=382,
 )
 
 
 _BFDMGRGENERALSESSIONDATAPB = _descriptor.Descriptor(
   name='BfdmgrGeneralSessionDataPb',
-  full_name='ndk.BfdmgrGeneralSessionDataPb',
+  full_name='srlinux.sdk.BfdmgrGeneralSessionDataPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.BfdmgrGeneralSessionDataPb.status', index=0,
+      name='status', full_name='srlinux.sdk.BfdmgrGeneralSessionDataPb.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sub_type', full_name='ndk.BfdmgrGeneralSessionDataPb.sub_type', index=1,
+      name='sub_type', full_name='srlinux.sdk.BfdmgrGeneralSessionDataPb.sub_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='src_if_id', full_name='ndk.BfdmgrGeneralSessionDataPb.src_if_id', index=2,
+      name='src_if_id', full_name='srlinux.sdk.BfdmgrGeneralSessionDataPb.src_if_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -284,35 +284,35 @@ _BFDMGRGENERALSESSIONDATAPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=345,
-  serialized_end=657,
+  serialized_start=385,
+  serialized_end=713,
 )
 
 
 _BFDSESSIONNOTIFICATION = _descriptor.Descriptor(
   name='BfdSessionNotification',
-  full_name='ndk.BfdSessionNotification',
+  full_name='srlinux.sdk.BfdSessionNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.BfdSessionNotification.op', index=0,
+      name='op', full_name='srlinux.sdk.BfdSessionNotification.op', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.BfdSessionNotification.key', index=1,
+      name='key', full_name='srlinux.sdk.BfdSessionNotification.key', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.BfdSessionNotification.data', index=2,
+      name='data', full_name='srlinux.sdk.BfdSessionNotification.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -330,8 +330,8 @@ _BFDSESSIONNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=660,
-  serialized_end=810,
+  serialized_start=716,
+  serialized_end=890,
 )
 
 _BFDSESSIONSUBSCRIPTIONREQUEST.fields_by_name['key'].message_type = _BFDMGRGENERALSESSIONKEYPB
@@ -355,28 +355,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 BfdSessionSubscriptionRequest = _reflection.GeneratedProtocolMessageType('BfdSessionSubscriptionRequest', (_message.Message,), {
   'DESCRIPTOR' : _BFDSESSIONSUBSCRIPTIONREQUEST,
   '__module__' : 'ndk.bfd_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.BfdSessionSubscriptionRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.BfdSessionSubscriptionRequest)
   })
 _sym_db.RegisterMessage(BfdSessionSubscriptionRequest)
 
 BfdmgrGeneralSessionKeyPb = _reflection.GeneratedProtocolMessageType('BfdmgrGeneralSessionKeyPb', (_message.Message,), {
   'DESCRIPTOR' : _BFDMGRGENERALSESSIONKEYPB,
   '__module__' : 'ndk.bfd_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.BfdmgrGeneralSessionKeyPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.BfdmgrGeneralSessionKeyPb)
   })
 _sym_db.RegisterMessage(BfdmgrGeneralSessionKeyPb)
 
 BfdmgrGeneralSessionDataPb = _reflection.GeneratedProtocolMessageType('BfdmgrGeneralSessionDataPb', (_message.Message,), {
   'DESCRIPTOR' : _BFDMGRGENERALSESSIONDATAPB,
   '__module__' : 'ndk.bfd_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.BfdmgrGeneralSessionDataPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.BfdmgrGeneralSessionDataPb)
   })
 _sym_db.RegisterMessage(BfdmgrGeneralSessionDataPb)
 
 BfdSessionNotification = _reflection.GeneratedProtocolMessageType('BfdSessionNotification', (_message.Message,), {
   'DESCRIPTOR' : _BFDSESSIONNOTIFICATION,
   '__module__' : 'ndk.bfd_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.BfdSessionNotification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.BfdSessionNotification)
   })
 _sym_db.RegisterMessage(BfdSessionNotification)
 

@@ -16,11 +16,11 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/config_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18ndk/config_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"8\n\x19\x43onfigSubscriptionRequest\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.ndk.ConfigKey\"*\n\tConfigKey\x12\x0f\n\x07js_path\x18\x01 \x01(\t\x12\x0c\n\x04keys\x18\x02 \x03(\t\"\x1a\n\nConfigData\x12\x0c\n\x04json\x18\x01 \x01(\t\"r\n\x12\x43onfigNotification\x12 \n\x02op\x18\x01 \x01(\x0e\x32\x14.ndk.SdkMgrOperation\x12\x1b\n\x03key\x18\x02 \x01(\x0b\x32\x0e.ndk.ConfigKey\x12\x1d\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x0f.ndk.ConfigDataB%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x18ndk/config_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"@\n\x19\x43onfigSubscriptionRequest\x12#\n\x03key\x18\x01 \x01(\x0b\x32\x16.srlinux.sdk.ConfigKey\"*\n\tConfigKey\x12\x0f\n\x07js_path\x18\x01 \x01(\t\x12\x0c\n\x04keys\x18\x02 \x03(\t\"\x1a\n\nConfigData\x12\x0c\n\x04json\x18\x01 \x01(\t\"\x8a\x01\n\x12\x43onfigNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12#\n\x03key\x18\x02 \x01(\x0b\x32\x16.srlinux.sdk.ConfigKey\x12%\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x17.srlinux.sdk.ConfigDataB%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
@@ -29,14 +29,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _CONFIGSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   name='ConfigSubscriptionRequest',
-  full_name='ndk.ConfigSubscriptionRequest',
+  full_name='srlinux.sdk.ConfigSubscriptionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.ConfigSubscriptionRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.ConfigSubscriptionRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -54,28 +54,28 @@ _CONFIGSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55,
-  serialized_end=111,
+  serialized_start=63,
+  serialized_end=127,
 )
 
 
 _CONFIGKEY = _descriptor.Descriptor(
   name='ConfigKey',
-  full_name='ndk.ConfigKey',
+  full_name='srlinux.sdk.ConfigKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='js_path', full_name='ndk.ConfigKey.js_path', index=0,
+      name='js_path', full_name='srlinux.sdk.ConfigKey.js_path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='keys', full_name='ndk.ConfigKey.keys', index=1,
+      name='keys', full_name='srlinux.sdk.ConfigKey.keys', index=1,
       number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -93,21 +93,21 @@ _CONFIGKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=113,
-  serialized_end=155,
+  serialized_start=129,
+  serialized_end=171,
 )
 
 
 _CONFIGDATA = _descriptor.Descriptor(
   name='ConfigData',
-  full_name='ndk.ConfigData',
+  full_name='srlinux.sdk.ConfigData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='json', full_name='ndk.ConfigData.json', index=0,
+      name='json', full_name='srlinux.sdk.ConfigData.json', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -125,35 +125,35 @@ _CONFIGDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=157,
-  serialized_end=183,
+  serialized_start=173,
+  serialized_end=199,
 )
 
 
 _CONFIGNOTIFICATION = _descriptor.Descriptor(
   name='ConfigNotification',
-  full_name='ndk.ConfigNotification',
+  full_name='srlinux.sdk.ConfigNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.ConfigNotification.op', index=0,
+      name='op', full_name='srlinux.sdk.ConfigNotification.op', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.ConfigNotification.key', index=1,
+      name='key', full_name='srlinux.sdk.ConfigNotification.key', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.ConfigNotification.data', index=2,
+      name='data', full_name='srlinux.sdk.ConfigNotification.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -171,8 +171,8 @@ _CONFIGNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=185,
-  serialized_end=299,
+  serialized_start=202,
+  serialized_end=340,
 )
 
 _CONFIGSUBSCRIPTIONREQUEST.fields_by_name['key'].message_type = _CONFIGKEY
@@ -188,28 +188,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 ConfigSubscriptionRequest = _reflection.GeneratedProtocolMessageType('ConfigSubscriptionRequest', (_message.Message,), {
   'DESCRIPTOR' : _CONFIGSUBSCRIPTIONREQUEST,
   '__module__' : 'ndk.config_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.ConfigSubscriptionRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.ConfigSubscriptionRequest)
   })
 _sym_db.RegisterMessage(ConfigSubscriptionRequest)
 
 ConfigKey = _reflection.GeneratedProtocolMessageType('ConfigKey', (_message.Message,), {
   'DESCRIPTOR' : _CONFIGKEY,
   '__module__' : 'ndk.config_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.ConfigKey)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.ConfigKey)
   })
 _sym_db.RegisterMessage(ConfigKey)
 
 ConfigData = _reflection.GeneratedProtocolMessageType('ConfigData', (_message.Message,), {
   'DESCRIPTOR' : _CONFIGDATA,
   '__module__' : 'ndk.config_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.ConfigData)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.ConfigData)
   })
 _sym_db.RegisterMessage(ConfigData)
 
 ConfigNotification = _reflection.GeneratedProtocolMessageType('ConfigNotification', (_message.Message,), {
   'DESCRIPTOR' : _CONFIGNOTIFICATION,
   '__module__' : 'ndk.config_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.ConfigNotification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.ConfigNotification)
   })
 _sym_db.RegisterMessage(ConfigNotification)
 

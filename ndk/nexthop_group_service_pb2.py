@@ -16,11 +16,11 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/nexthop_group_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fndk/nexthop_group_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"D\n\x19NextHopGroupDeleteRequest\x12\'\n\tgroup_key\x18\x01 \x03(\x0b\x32\x14.ndk.NextHopGroupKey\"R\n\x1aNextHopGroupDeleteResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"@\n\x13NextHopGroupRequest\x12)\n\ngroup_info\x18\x01 \x03(\x0b\x32\x15.ndk.NextHopGroupInfo\"L\n\x14NextHopGroupResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"X\n\x0bMplsNextHop\x12$\n\nip_nexthop\x18\x01 \x01(\x0b\x32\x10.ndk.IpAddressPb\x12#\n\x0blabel_stack\x18\x02 \x03(\x0b\x32\x0e.ndk.MplsLabel\"\xad\x02\n\x07NextHop\x12.\n\nresolve_to\x18\x01 \x01(\x0e\x32\x1a.ndk.NextHop.ResolveToType\x12)\n\x04type\x18\x02 \x01(\x0e\x32\x1b.ndk.NextHop.ResolutionType\x12&\n\nip_nexthop\x18\x03 \x01(\x0b\x32\x10.ndk.IpAddressPbH\x00\x12(\n\x0cmpls_nexthop\x18\x04 \x01(\x0b\x32\x10.ndk.MplsNextHopH\x00\"4\n\rResolveToType\x12\t\n\x05LOCAL\x10\x00\x12\n\n\x06\x44IRECT\x10\x01\x12\x0c\n\x08INDIRECT\x10\x02\"4\n\x0eResolutionType\x12\x0b\n\x07INVALID\x10\x00\x12\x0b\n\x07REGULAR\x10\x01\x12\x08\n\x04MPLS\x10\x02\x42\t\n\x07nexthop\".\n\x0cNextHopGroup\x12\x1e\n\x08next_hop\x18\x01 \x03(\x0b\x32\x0c.ndk.NextHop\">\n\x0fNextHopGroupKey\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x15network_instance_name\x18\x02 \x01(\t\"V\n\x10NextHopGroupInfo\x12!\n\x03key\x18\x01 \x01(\x0b\x32\x14.ndk.NextHopGroupKey\x12\x1f\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x11.ndk.NextHopGroup\"D\n\x1fNextHopGroupSubscriptionRequest\x12!\n\x03key\x18\x01 \x01(\x0b\x32\x14.ndk.NextHopGroupKey\"j\n\x18NextHopGroupNotification\x12 \n\x02op\x18\x01 \x01(\x0e\x32\x14.ndk.SdkMgrOperation\x12\x0b\n\x03key\x18\x02 \x01(\x04\x12\x1f\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x11.ndk.NextHopGroup2\xac\x02\n\x19SdkMgrNextHopGroupService\x12P\n\x17NextHopGroupAddOrUpdate\x12\x18.ndk.NextHopGroupRequest\x1a\x19.ndk.NextHopGroupResponse\"\x00\x12W\n\x12NextHopGroupDelete\x12\x1e.ndk.NextHopGroupDeleteRequest\x1a\x1f.ndk.NextHopGroupDeleteResponse\"\x00\x12\x32\n\tSyncStart\x12\x10.ndk.SyncRequest\x1a\x11.ndk.SyncResponse\"\x00\x12\x30\n\x07SyncEnd\x12\x10.ndk.SyncRequest\x1a\x11.ndk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x1fndk/nexthop_group_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"L\n\x19NextHopGroupDeleteRequest\x12/\n\tgroup_key\x18\x01 \x03(\x0b\x32\x1c.srlinux.sdk.NextHopGroupKey\"Z\n\x1aNextHopGroupDeleteResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"H\n\x13NextHopGroupRequest\x12\x31\n\ngroup_info\x18\x01 \x03(\x0b\x32\x1d.srlinux.sdk.NextHopGroupInfo\"T\n\x14NextHopGroupResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"h\n\x0bMplsNextHop\x12,\n\nip_nexthop\x18\x01 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12+\n\x0blabel_stack\x18\x02 \x03(\x0b\x32\x16.srlinux.sdk.MplsLabel\"\xcd\x02\n\x07NextHop\x12\x36\n\nresolve_to\x18\x01 \x01(\x0e\x32\".srlinux.sdk.NextHop.ResolveToType\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.srlinux.sdk.NextHop.ResolutionType\x12.\n\nip_nexthop\x18\x03 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPbH\x00\x12\x30\n\x0cmpls_nexthop\x18\x04 \x01(\x0b\x32\x18.srlinux.sdk.MplsNextHopH\x00\"4\n\rResolveToType\x12\t\n\x05LOCAL\x10\x00\x12\n\n\x06\x44IRECT\x10\x01\x12\x0c\n\x08INDIRECT\x10\x02\"4\n\x0eResolutionType\x12\x0b\n\x07INVALID\x10\x00\x12\x0b\n\x07REGULAR\x10\x01\x12\x08\n\x04MPLS\x10\x02\x42\t\n\x07nexthop\"6\n\x0cNextHopGroup\x12&\n\x08next_hop\x18\x01 \x03(\x0b\x32\x14.srlinux.sdk.NextHop\">\n\x0fNextHopGroupKey\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x15network_instance_name\x18\x02 \x01(\t\"f\n\x10NextHopGroupInfo\x12)\n\x03key\x18\x01 \x01(\x0b\x32\x1c.srlinux.sdk.NextHopGroupKey\x12\'\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x19.srlinux.sdk.NextHopGroup\"L\n\x1fNextHopGroupSubscriptionRequest\x12)\n\x03key\x18\x01 \x01(\x0b\x32\x1c.srlinux.sdk.NextHopGroupKey\"z\n\x18NextHopGroupNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12\x0b\n\x03key\x18\x02 \x01(\x04\x12\'\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x19.srlinux.sdk.NextHopGroup2\xec\x02\n\x19SdkMgrNextHopGroupService\x12`\n\x17NextHopGroupAddOrUpdate\x12 .srlinux.sdk.NextHopGroupRequest\x1a!.srlinux.sdk.NextHopGroupResponse\"\x00\x12g\n\x12NextHopGroupDelete\x12&.srlinux.sdk.NextHopGroupDeleteRequest\x1a\'.srlinux.sdk.NextHopGroupDeleteResponse\"\x00\x12\x42\n\tSyncStart\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x12@\n\x07SyncEnd\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _NEXTHOP_RESOLVETOTYPE = _descriptor.EnumDescriptor(
   name='ResolveToType',
-  full_name='ndk.NextHop.ResolveToType',
+  full_name='srlinux.sdk.NextHop.ResolveToType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -51,14 +51,14 @@ _NEXTHOP_RESOLVETOTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=635,
-  serialized_end=687,
+  serialized_start=723,
+  serialized_end=775,
 )
 _sym_db.RegisterEnumDescriptor(_NEXTHOP_RESOLVETOTYPE)
 
 _NEXTHOP_RESOLUTIONTYPE = _descriptor.EnumDescriptor(
   name='ResolutionType',
-  full_name='ndk.NextHop.ResolutionType',
+  full_name='srlinux.sdk.NextHop.ResolutionType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -81,22 +81,22 @@ _NEXTHOP_RESOLUTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=689,
-  serialized_end=741,
+  serialized_start=777,
+  serialized_end=829,
 )
 _sym_db.RegisterEnumDescriptor(_NEXTHOP_RESOLUTIONTYPE)
 
 
 _NEXTHOPGROUPDELETEREQUEST = _descriptor.Descriptor(
   name='NextHopGroupDeleteRequest',
-  full_name='ndk.NextHopGroupDeleteRequest',
+  full_name='srlinux.sdk.NextHopGroupDeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_key', full_name='ndk.NextHopGroupDeleteRequest.group_key', index=0,
+      name='group_key', full_name='srlinux.sdk.NextHopGroupDeleteRequest.group_key', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -114,28 +114,28 @@ _NEXTHOPGROUPDELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62,
-  serialized_end=130,
+  serialized_start=70,
+  serialized_end=146,
 )
 
 
 _NEXTHOPGROUPDELETERESPONSE = _descriptor.Descriptor(
   name='NextHopGroupDeleteResponse',
-  full_name='ndk.NextHopGroupDeleteResponse',
+  full_name='srlinux.sdk.NextHopGroupDeleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.NextHopGroupDeleteResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.NextHopGroupDeleteResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.NextHopGroupDeleteResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.NextHopGroupDeleteResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -153,21 +153,21 @@ _NEXTHOPGROUPDELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=132,
-  serialized_end=214,
+  serialized_start=148,
+  serialized_end=238,
 )
 
 
 _NEXTHOPGROUPREQUEST = _descriptor.Descriptor(
   name='NextHopGroupRequest',
-  full_name='ndk.NextHopGroupRequest',
+  full_name='srlinux.sdk.NextHopGroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_info', full_name='ndk.NextHopGroupRequest.group_info', index=0,
+      name='group_info', full_name='srlinux.sdk.NextHopGroupRequest.group_info', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -185,28 +185,28 @@ _NEXTHOPGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=216,
-  serialized_end=280,
+  serialized_start=240,
+  serialized_end=312,
 )
 
 
 _NEXTHOPGROUPRESPONSE = _descriptor.Descriptor(
   name='NextHopGroupResponse',
-  full_name='ndk.NextHopGroupResponse',
+  full_name='srlinux.sdk.NextHopGroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.NextHopGroupResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.NextHopGroupResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.NextHopGroupResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.NextHopGroupResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -224,28 +224,28 @@ _NEXTHOPGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=282,
-  serialized_end=358,
+  serialized_start=314,
+  serialized_end=398,
 )
 
 
 _MPLSNEXTHOP = _descriptor.Descriptor(
   name='MplsNextHop',
-  full_name='ndk.MplsNextHop',
+  full_name='srlinux.sdk.MplsNextHop',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ip_nexthop', full_name='ndk.MplsNextHop.ip_nexthop', index=0,
+      name='ip_nexthop', full_name='srlinux.sdk.MplsNextHop.ip_nexthop', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='label_stack', full_name='ndk.MplsNextHop.label_stack', index=1,
+      name='label_stack', full_name='srlinux.sdk.MplsNextHop.label_stack', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -263,42 +263,42 @@ _MPLSNEXTHOP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=360,
-  serialized_end=448,
+  serialized_start=400,
+  serialized_end=504,
 )
 
 
 _NEXTHOP = _descriptor.Descriptor(
   name='NextHop',
-  full_name='ndk.NextHop',
+  full_name='srlinux.sdk.NextHop',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='resolve_to', full_name='ndk.NextHop.resolve_to', index=0,
+      name='resolve_to', full_name='srlinux.sdk.NextHop.resolve_to', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='type', full_name='ndk.NextHop.type', index=1,
+      name='type', full_name='srlinux.sdk.NextHop.type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ip_nexthop', full_name='ndk.NextHop.ip_nexthop', index=2,
+      name='ip_nexthop', full_name='srlinux.sdk.NextHop.ip_nexthop', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mpls_nexthop', full_name='ndk.NextHop.mpls_nexthop', index=3,
+      name='mpls_nexthop', full_name='srlinux.sdk.NextHop.mpls_nexthop', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -318,26 +318,26 @@ _NEXTHOP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='nexthop', full_name='ndk.NextHop.nexthop',
+      name='nexthop', full_name='srlinux.sdk.NextHop.nexthop',
       index=0, containing_type=None,
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=451,
-  serialized_end=752,
+  serialized_start=507,
+  serialized_end=840,
 )
 
 
 _NEXTHOPGROUP = _descriptor.Descriptor(
   name='NextHopGroup',
-  full_name='ndk.NextHopGroup',
+  full_name='srlinux.sdk.NextHopGroup',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='next_hop', full_name='ndk.NextHopGroup.next_hop', index=0,
+      name='next_hop', full_name='srlinux.sdk.NextHopGroup.next_hop', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -355,28 +355,28 @@ _NEXTHOPGROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=800,
+  serialized_start=842,
+  serialized_end=896,
 )
 
 
 _NEXTHOPGROUPKEY = _descriptor.Descriptor(
   name='NextHopGroupKey',
-  full_name='ndk.NextHopGroupKey',
+  full_name='srlinux.sdk.NextHopGroupKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='ndk.NextHopGroupKey.name', index=0,
+      name='name', full_name='srlinux.sdk.NextHopGroupKey.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='network_instance_name', full_name='ndk.NextHopGroupKey.network_instance_name', index=1,
+      name='network_instance_name', full_name='srlinux.sdk.NextHopGroupKey.network_instance_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -394,28 +394,28 @@ _NEXTHOPGROUPKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=802,
-  serialized_end=864,
+  serialized_start=898,
+  serialized_end=960,
 )
 
 
 _NEXTHOPGROUPINFO = _descriptor.Descriptor(
   name='NextHopGroupInfo',
-  full_name='ndk.NextHopGroupInfo',
+  full_name='srlinux.sdk.NextHopGroupInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.NextHopGroupInfo.key', index=0,
+      name='key', full_name='srlinux.sdk.NextHopGroupInfo.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.NextHopGroupInfo.data', index=1,
+      name='data', full_name='srlinux.sdk.NextHopGroupInfo.data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -433,21 +433,21 @@ _NEXTHOPGROUPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=866,
-  serialized_end=952,
+  serialized_start=962,
+  serialized_end=1064,
 )
 
 
 _NEXTHOPGROUPSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   name='NextHopGroupSubscriptionRequest',
-  full_name='ndk.NextHopGroupSubscriptionRequest',
+  full_name='srlinux.sdk.NextHopGroupSubscriptionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.NextHopGroupSubscriptionRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.NextHopGroupSubscriptionRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -465,35 +465,35 @@ _NEXTHOPGROUPSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=954,
-  serialized_end=1022,
+  serialized_start=1066,
+  serialized_end=1142,
 )
 
 
 _NEXTHOPGROUPNOTIFICATION = _descriptor.Descriptor(
   name='NextHopGroupNotification',
-  full_name='ndk.NextHopGroupNotification',
+  full_name='srlinux.sdk.NextHopGroupNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.NextHopGroupNotification.op', index=0,
+      name='op', full_name='srlinux.sdk.NextHopGroupNotification.op', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.NextHopGroupNotification.key', index=1,
+      name='key', full_name='srlinux.sdk.NextHopGroupNotification.key', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.NextHopGroupNotification.data', index=2,
+      name='data', full_name='srlinux.sdk.NextHopGroupNotification.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -511,8 +511,8 @@ _NEXTHOPGROUPNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1024,
-  serialized_end=1130,
+  serialized_start=1144,
+  serialized_end=1266,
 )
 
 _NEXTHOPGROUPDELETEREQUEST.fields_by_name['group_key'].message_type = _NEXTHOPGROUPKEY
@@ -555,77 +555,77 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 NextHopGroupDeleteRequest = _reflection.GeneratedProtocolMessageType('NextHopGroupDeleteRequest', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPDELETEREQUEST,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupDeleteRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupDeleteRequest)
   })
 _sym_db.RegisterMessage(NextHopGroupDeleteRequest)
 
 NextHopGroupDeleteResponse = _reflection.GeneratedProtocolMessageType('NextHopGroupDeleteResponse', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPDELETERESPONSE,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupDeleteResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupDeleteResponse)
   })
 _sym_db.RegisterMessage(NextHopGroupDeleteResponse)
 
 NextHopGroupRequest = _reflection.GeneratedProtocolMessageType('NextHopGroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPREQUEST,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupRequest)
   })
 _sym_db.RegisterMessage(NextHopGroupRequest)
 
 NextHopGroupResponse = _reflection.GeneratedProtocolMessageType('NextHopGroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPRESPONSE,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupResponse)
   })
 _sym_db.RegisterMessage(NextHopGroupResponse)
 
 MplsNextHop = _reflection.GeneratedProtocolMessageType('MplsNextHop', (_message.Message,), {
   'DESCRIPTOR' : _MPLSNEXTHOP,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.MplsNextHop)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.MplsNextHop)
   })
 _sym_db.RegisterMessage(MplsNextHop)
 
 NextHop = _reflection.GeneratedProtocolMessageType('NextHop', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOP,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHop)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHop)
   })
 _sym_db.RegisterMessage(NextHop)
 
 NextHopGroup = _reflection.GeneratedProtocolMessageType('NextHopGroup', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUP,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroup)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroup)
   })
 _sym_db.RegisterMessage(NextHopGroup)
 
 NextHopGroupKey = _reflection.GeneratedProtocolMessageType('NextHopGroupKey', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPKEY,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupKey)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupKey)
   })
 _sym_db.RegisterMessage(NextHopGroupKey)
 
 NextHopGroupInfo = _reflection.GeneratedProtocolMessageType('NextHopGroupInfo', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPINFO,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupInfo)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupInfo)
   })
 _sym_db.RegisterMessage(NextHopGroupInfo)
 
 NextHopGroupSubscriptionRequest = _reflection.GeneratedProtocolMessageType('NextHopGroupSubscriptionRequest', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPSUBSCRIPTIONREQUEST,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupSubscriptionRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupSubscriptionRequest)
   })
 _sym_db.RegisterMessage(NextHopGroupSubscriptionRequest)
 
 NextHopGroupNotification = _reflection.GeneratedProtocolMessageType('NextHopGroupNotification', (_message.Message,), {
   'DESCRIPTOR' : _NEXTHOPGROUPNOTIFICATION,
   '__module__' : 'ndk.nexthop_group_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NextHopGroupNotification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NextHopGroupNotification)
   })
 _sym_db.RegisterMessage(NextHopGroupNotification)
 
@@ -634,17 +634,17 @@ DESCRIPTOR._options = None
 
 _SDKMGRNEXTHOPGROUPSERVICE = _descriptor.ServiceDescriptor(
   name='SdkMgrNextHopGroupService',
-  full_name='ndk.SdkMgrNextHopGroupService',
+  full_name='srlinux.sdk.SdkMgrNextHopGroupService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1133,
-  serialized_end=1433,
+  serialized_start=1269,
+  serialized_end=1633,
   methods=[
   _descriptor.MethodDescriptor(
     name='NextHopGroupAddOrUpdate',
-    full_name='ndk.SdkMgrNextHopGroupService.NextHopGroupAddOrUpdate',
+    full_name='srlinux.sdk.SdkMgrNextHopGroupService.NextHopGroupAddOrUpdate',
     index=0,
     containing_service=None,
     input_type=_NEXTHOPGROUPREQUEST,
@@ -654,7 +654,7 @@ _SDKMGRNEXTHOPGROUPSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='NextHopGroupDelete',
-    full_name='ndk.SdkMgrNextHopGroupService.NextHopGroupDelete',
+    full_name='srlinux.sdk.SdkMgrNextHopGroupService.NextHopGroupDelete',
     index=1,
     containing_service=None,
     input_type=_NEXTHOPGROUPDELETEREQUEST,
@@ -664,7 +664,7 @@ _SDKMGRNEXTHOPGROUPSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SyncStart',
-    full_name='ndk.SdkMgrNextHopGroupService.SyncStart',
+    full_name='srlinux.sdk.SdkMgrNextHopGroupService.SyncStart',
     index=2,
     containing_service=None,
     input_type=ndk_dot_sdk__common__pb2._SYNCREQUEST,
@@ -674,7 +674,7 @@ _SDKMGRNEXTHOPGROUPSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SyncEnd',
-    full_name='ndk.SdkMgrNextHopGroupService.SyncEnd',
+    full_name='srlinux.sdk.SdkMgrNextHopGroupService.SyncEnd',
     index=3,
     containing_service=None,
     input_type=ndk_dot_sdk__common__pb2._SYNCREQUEST,

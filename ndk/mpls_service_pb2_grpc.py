@@ -18,22 +18,22 @@ class SdkMgrMplsRouteServiceStub(object):
             channel: A grpc.Channel.
         """
         self.MplsRouteAddOrUpdate = channel.unary_unary(
-                '/ndk.SdkMgrMplsRouteService/MplsRouteAddOrUpdate',
+                '/srlinux.sdk.SdkMgrMplsRouteService/MplsRouteAddOrUpdate',
                 request_serializer=ndk_dot_mpls__service__pb2.MplsRouteAddRequest.SerializeToString,
                 response_deserializer=ndk_dot_mpls__service__pb2.MplsRouteAddResponse.FromString,
                 )
         self.MplsRouteDelete = channel.unary_unary(
-                '/ndk.SdkMgrMplsRouteService/MplsRouteDelete',
+                '/srlinux.sdk.SdkMgrMplsRouteService/MplsRouteDelete',
                 request_serializer=ndk_dot_mpls__service__pb2.MplsRouteDeleteRequest.SerializeToString,
                 response_deserializer=ndk_dot_mpls__service__pb2.MplsRouteDeleteResponse.FromString,
                 )
         self.SyncStart = channel.unary_unary(
-                '/ndk.SdkMgrMplsRouteService/SyncStart',
+                '/srlinux.sdk.SdkMgrMplsRouteService/SyncStart',
                 request_serializer=ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__common__pb2.SyncResponse.FromString,
                 )
         self.SyncEnd = channel.unary_unary(
-                '/ndk.SdkMgrMplsRouteService/SyncEnd',
+                '/srlinux.sdk.SdkMgrMplsRouteService/SyncEnd',
                 request_serializer=ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__common__pb2.SyncResponse.FromString,
                 )
@@ -97,7 +97,7 @@ def add_SdkMgrMplsRouteServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ndk.SdkMgrMplsRouteService', rpc_method_handlers)
+            'srlinux.sdk.SdkMgrMplsRouteService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -118,7 +118,7 @@ class SdkMgrMplsRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrMplsRouteService/MplsRouteAddOrUpdate',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrMplsRouteService/MplsRouteAddOrUpdate',
             ndk_dot_mpls__service__pb2.MplsRouteAddRequest.SerializeToString,
             ndk_dot_mpls__service__pb2.MplsRouteAddResponse.FromString,
             options, channel_credentials,
@@ -135,7 +135,7 @@ class SdkMgrMplsRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrMplsRouteService/MplsRouteDelete',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrMplsRouteService/MplsRouteDelete',
             ndk_dot_mpls__service__pb2.MplsRouteDeleteRequest.SerializeToString,
             ndk_dot_mpls__service__pb2.MplsRouteDeleteResponse.FromString,
             options, channel_credentials,
@@ -152,7 +152,7 @@ class SdkMgrMplsRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrMplsRouteService/SyncStart',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrMplsRouteService/SyncStart',
             ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
             ndk_dot_sdk__common__pb2.SyncResponse.FromString,
             options, channel_credentials,
@@ -169,7 +169,7 @@ class SdkMgrMplsRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrMplsRouteService/SyncEnd',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrMplsRouteService/SyncEnd',
             ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
             ndk_dot_sdk__common__pb2.SyncResponse.FromString,
             options, channel_credentials,

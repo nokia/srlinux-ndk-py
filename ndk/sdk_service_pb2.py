@@ -24,11 +24,11 @@ from ndk import nexthop_group_service_pb2 as ndk_dot_nexthop__group__service__pb
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/sdk_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15ndk/sdk_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\x1a\x18ndk/config_service.proto\x1a\x1bndk/interface_service.proto\x1a!ndk/networkinstance_service.proto\x1a\x17ndk/route_service.proto\x1a\x16ndk/lldp_service.proto\x1a\x15ndk/bfd_service.proto\x1a\x17ndk/appid_service.proto\x1a\x1fndk/nexthop_group_service.proto\"E\n\x18\x41gentRegistrationRequest\x12\x0f\n\x07js_path\x18\x01 \x03(\t\x12\x18\n\x10\x61gent_liveliness\x18\x02 \x01(\r\"a\n\x19\x41gentRegistrationResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\"\x12\n\x10KeepAliveRequest\"6\n\x11KeepAliveResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\"\x1c\n\x0c\x41ppIdRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\">\n\rAppIdResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\n\n\x02id\x18\x02 \x01(\r\"\x95\x05\n\x1bNotificationRegisterRequest\x12\x11\n\tstream_id\x18\x01 \x01(\x04\x12\x36\n\x02op\x18\x02 \x01(\x0e\x32*.ndk.NotificationRegisterRequest.Operation\x12\x0e\n\x06sub_id\x18\x03 \x01(\x04\x12\x31\n\x04intf\x18\n \x01(\x0b\x32!.ndk.InterfaceSubscriptionRequestH\x00\x12:\n\x07nw_inst\x18\x0b \x01(\x0b\x32\'.ndk.NetworkInstanceSubscriptionRequestH\x00\x12=\n\rlldp_neighbor\x18\x0c \x01(\x0b\x32$.ndk.LldpNeighborSubscriptionRequestH\x00\x12\x30\n\x06\x63onfig\x18\r \x01(\x0b\x32\x1e.ndk.ConfigSubscriptionRequestH\x00\x12\x39\n\x0b\x62\x66\x64_session\x18\x0e \x01(\x0b\x32\".ndk.BfdSessionSubscriptionRequestH\x00\x12\x30\n\x05route\x18\x0f \x01(\x0b\x32\x1f.ndk.IpRouteSubscriptionRequestH\x00\x12\x31\n\x05\x61ppid\x18\x10 \x01(\x0b\x32 .ndk.AppIdentSubscriptionRequestH\x00\x12\x33\n\x03nhg\x18\x11 \x01(\x0b\x32$.ndk.NextHopGroupSubscriptionRequestH\x00\"P\n\tOperation\x12\n\n\x06\x43reate\x10\x00\x12\n\n\x06\x44\x65lete\x10\x01\x12\x13\n\x0f\x41\x64\x64Subscription\x10\x02\x12\x16\n\x12\x44\x65leteSubscription\x10\x03\x42\x14\n\x12subscription_types\"d\n\x1cNotificationRegisterResponse\x12\x11\n\tstream_id\x18\x01 \x01(\x04\x12\x0e\n\x06sub_id\x18\x02 \x01(\x04\x12!\n\x06status\x18\x03 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\"-\n\x18NotificationQueryRequest\x12\x11\n\tstream_id\x18\x01 \x01(\x04\"D\n\x1dNotificationQuerySubscription\x12\x0e\n\x06sub_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"y\n\x19NotificationQueryResponse\x12\x39\n\rsubscriptions\x18\x01 \x03(\x0b\x32\".ndk.NotificationQuerySubscription\x12!\n\x06status\x18\x02 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\".\n\x19NotificationStreamRequest\x12\x11\n\tstream_id\x18\x01 \x01(\x04\"\xb1\x03\n\x0cNotification\x12\x0e\n\x06sub_id\x18\x01 \x01(\x04\x12*\n\x04intf\x18\n \x01(\x0b\x32\x1a.ndk.InterfaceNotificationH\x00\x12\x33\n\x07nw_inst\x18\x0b \x01(\x0b\x32 .ndk.NetworkInstanceNotificationH\x00\x12\x36\n\rlldp_neighbor\x18\x0c \x01(\x0b\x32\x1d.ndk.LldpNeighborNotificationH\x00\x12)\n\x06\x63onfig\x18\r \x01(\x0b\x32\x17.ndk.ConfigNotificationH\x00\x12\x32\n\x0b\x62\x66\x64_session\x18\x0e \x01(\x0b\x32\x1b.ndk.BfdSessionNotificationH\x00\x12)\n\x05route\x18\x0f \x01(\x0b\x32\x18.ndk.IpRouteNotificationH\x00\x12*\n\x05\x61ppid\x18\x10 \x01(\x0b\x32\x19.ndk.AppIdentNotificationH\x00\x12,\n\x03nhg\x18\x11 \x01(\x0b\x32\x1d.ndk.NextHopGroupNotificationH\x00\x42\x14\n\x12subscription_types\"E\n\x1aNotificationStreamResponse\x12\'\n\x0cnotification\x18\x01 \x03(\x0b\x32\x11.ndk.Notification2\xdd\x03\n\rSdkMgrService\x12P\n\rAgentRegister\x12\x1d.ndk.AgentRegistrationRequest\x1a\x1e.ndk.AgentRegistrationResponse\"\x00\x12R\n\x0f\x41gentUnRegister\x12\x1d.ndk.AgentRegistrationRequest\x1a\x1e.ndk.AgentRegistrationResponse\"\x00\x12]\n\x14NotificationRegister\x12 .ndk.NotificationRegisterRequest\x1a!.ndk.NotificationRegisterResponse\"\x00\x12T\n\x11NotificationQuery\x12\x1d.ndk.NotificationQueryRequest\x1a\x1e.ndk.NotificationQueryResponse\"\x00\x12<\n\tKeepAlive\x12\x15.ndk.KeepAliveRequest\x1a\x16.ndk.KeepAliveResponse\"\x00\x12\x33\n\x08GetAppId\x12\x11.ndk.AppIdRequest\x1a\x12.ndk.AppIdResponse\"\x00\x32s\n\x16SdkNotificationService\x12Y\n\x12NotificationStream\x12\x1e.ndk.NotificationStreamRequest\x1a\x1f.ndk.NotificationStreamResponse\"\x00\x30\x01\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x15ndk/sdk_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\x1a\x18ndk/config_service.proto\x1a\x1bndk/interface_service.proto\x1a!ndk/networkinstance_service.proto\x1a\x17ndk/route_service.proto\x1a\x16ndk/lldp_service.proto\x1a\x15ndk/bfd_service.proto\x1a\x17ndk/appid_service.proto\x1a\x1fndk/nexthop_group_service.proto\"E\n\x18\x41gentRegistrationRequest\x12\x0f\n\x07js_path\x18\x01 \x03(\t\x12\x18\n\x10\x61gent_liveliness\x18\x02 \x01(\r\"i\n\x19\x41gentRegistrationResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\"\x12\n\x10KeepAliveRequest\">\n\x11KeepAliveResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\"\x1c\n\x0c\x41ppIdRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"F\n\rAppIdResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\n\n\x02id\x18\x02 \x01(\r\"\xdd\x05\n\x1bNotificationRegisterRequest\x12\x11\n\tstream_id\x18\x01 \x01(\x04\x12>\n\x02op\x18\x02 \x01(\x0e\x32\x32.srlinux.sdk.NotificationRegisterRequest.Operation\x12\x0e\n\x06sub_id\x18\x03 \x01(\x04\x12\x39\n\x04intf\x18\n \x01(\x0b\x32).srlinux.sdk.InterfaceSubscriptionRequestH\x00\x12\x42\n\x07nw_inst\x18\x0b \x01(\x0b\x32/.srlinux.sdk.NetworkInstanceSubscriptionRequestH\x00\x12\x45\n\rlldp_neighbor\x18\x0c \x01(\x0b\x32,.srlinux.sdk.LldpNeighborSubscriptionRequestH\x00\x12\x38\n\x06\x63onfig\x18\r \x01(\x0b\x32&.srlinux.sdk.ConfigSubscriptionRequestH\x00\x12\x41\n\x0b\x62\x66\x64_session\x18\x0e \x01(\x0b\x32*.srlinux.sdk.BfdSessionSubscriptionRequestH\x00\x12\x38\n\x05route\x18\x0f \x01(\x0b\x32\'.srlinux.sdk.IpRouteSubscriptionRequestH\x00\x12\x39\n\x05\x61ppid\x18\x10 \x01(\x0b\x32(.srlinux.sdk.AppIdentSubscriptionRequestH\x00\x12;\n\x03nhg\x18\x11 \x01(\x0b\x32,.srlinux.sdk.NextHopGroupSubscriptionRequestH\x00\"P\n\tOperation\x12\n\n\x06\x43reate\x10\x00\x12\n\n\x06\x44\x65lete\x10\x01\x12\x13\n\x0f\x41\x64\x64Subscription\x10\x02\x12\x16\n\x12\x44\x65leteSubscription\x10\x03\x42\x14\n\x12subscription_types\"l\n\x1cNotificationRegisterResponse\x12\x11\n\tstream_id\x18\x01 \x01(\x04\x12\x0e\n\x06sub_id\x18\x02 \x01(\x04\x12)\n\x06status\x18\x03 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\"-\n\x18NotificationQueryRequest\x12\x11\n\tstream_id\x18\x01 \x01(\x04\"D\n\x1dNotificationQuerySubscription\x12\x0e\n\x06sub_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x89\x01\n\x19NotificationQueryResponse\x12\x41\n\rsubscriptions\x18\x01 \x03(\x0b\x32*.srlinux.sdk.NotificationQuerySubscription\x12)\n\x06status\x18\x02 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\".\n\x19NotificationStreamRequest\x12\x11\n\tstream_id\x18\x01 \x01(\x04\"\xf1\x03\n\x0cNotification\x12\x0e\n\x06sub_id\x18\x01 \x01(\x04\x12\x32\n\x04intf\x18\n \x01(\x0b\x32\".srlinux.sdk.InterfaceNotificationH\x00\x12;\n\x07nw_inst\x18\x0b \x01(\x0b\x32(.srlinux.sdk.NetworkInstanceNotificationH\x00\x12>\n\rlldp_neighbor\x18\x0c \x01(\x0b\x32%.srlinux.sdk.LldpNeighborNotificationH\x00\x12\x31\n\x06\x63onfig\x18\r \x01(\x0b\x32\x1f.srlinux.sdk.ConfigNotificationH\x00\x12:\n\x0b\x62\x66\x64_session\x18\x0e \x01(\x0b\x32#.srlinux.sdk.BfdSessionNotificationH\x00\x12\x31\n\x05route\x18\x0f \x01(\x0b\x32 .srlinux.sdk.IpRouteNotificationH\x00\x12\x32\n\x05\x61ppid\x18\x10 \x01(\x0b\x32!.srlinux.sdk.AppIdentNotificationH\x00\x12\x34\n\x03nhg\x18\x11 \x01(\x0b\x32%.srlinux.sdk.NextHopGroupNotificationH\x00\x42\x14\n\x12subscription_types\"M\n\x1aNotificationStreamResponse\x12/\n\x0cnotification\x18\x01 \x03(\x0b\x32\x19.srlinux.sdk.Notification2\xbd\x04\n\rSdkMgrService\x12`\n\rAgentRegister\x12%.srlinux.sdk.AgentRegistrationRequest\x1a&.srlinux.sdk.AgentRegistrationResponse\"\x00\x12\x62\n\x0f\x41gentUnRegister\x12%.srlinux.sdk.AgentRegistrationRequest\x1a&.srlinux.sdk.AgentRegistrationResponse\"\x00\x12m\n\x14NotificationRegister\x12(.srlinux.sdk.NotificationRegisterRequest\x1a).srlinux.sdk.NotificationRegisterResponse\"\x00\x12\x64\n\x11NotificationQuery\x12%.srlinux.sdk.NotificationQueryRequest\x1a&.srlinux.sdk.NotificationQueryResponse\"\x00\x12L\n\tKeepAlive\x12\x1d.srlinux.sdk.KeepAliveRequest\x1a\x1e.srlinux.sdk.KeepAliveResponse\"\x00\x12\x43\n\x08GetAppId\x12\x19.srlinux.sdk.AppIdRequest\x1a\x1a.srlinux.sdk.AppIdResponse\"\x00\x32\x83\x01\n\x16SdkNotificationService\x12i\n\x12NotificationStream\x12&.srlinux.sdk.NotificationStreamRequest\x1a\'.srlinux.sdk.NotificationStreamResponse\"\x00\x30\x01\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,ndk_dot_config__service__pb2.DESCRIPTOR,ndk_dot_interface__service__pb2.DESCRIPTOR,ndk_dot_networkinstance__service__pb2.DESCRIPTOR,ndk_dot_route__service__pb2.DESCRIPTOR,ndk_dot_lldp__service__pb2.DESCRIPTOR,ndk_dot_bfd__service__pb2.DESCRIPTOR,ndk_dot_appid__service__pb2.DESCRIPTOR,ndk_dot_nexthop__group__service__pb2.DESCRIPTOR,])
 
@@ -36,7 +36,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _NOTIFICATIONREGISTERREQUEST_OPERATION = _descriptor.EnumDescriptor(
   name='Operation',
-  full_name='ndk.NotificationRegisterRequest.Operation',
+  full_name='srlinux.sdk.NotificationRegisterRequest.Operation',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -64,29 +64,29 @@ _NOTIFICATIONREGISTERREQUEST_OPERATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1172,
-  serialized_end=1252,
+  serialized_start=1276,
+  serialized_end=1356,
 )
 _sym_db.RegisterEnumDescriptor(_NOTIFICATIONREGISTERREQUEST_OPERATION)
 
 
 _AGENTREGISTRATIONREQUEST = _descriptor.Descriptor(
   name='AgentRegistrationRequest',
-  full_name='ndk.AgentRegistrationRequest',
+  full_name='srlinux.sdk.AgentRegistrationRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='js_path', full_name='ndk.AgentRegistrationRequest.js_path', index=0,
+      name='js_path', full_name='srlinux.sdk.AgentRegistrationRequest.js_path', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='agent_liveliness', full_name='ndk.AgentRegistrationRequest.agent_liveliness', index=1,
+      name='agent_liveliness', full_name='srlinux.sdk.AgentRegistrationRequest.agent_liveliness', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -104,35 +104,35 @@ _AGENTREGISTRATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=272,
-  serialized_end=341,
+  serialized_start=280,
+  serialized_end=349,
 )
 
 
 _AGENTREGISTRATIONRESPONSE = _descriptor.Descriptor(
   name='AgentRegistrationResponse',
-  full_name='ndk.AgentRegistrationResponse',
+  full_name='srlinux.sdk.AgentRegistrationResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.AgentRegistrationResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.AgentRegistrationResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.AgentRegistrationResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.AgentRegistrationResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='app_id', full_name='ndk.AgentRegistrationResponse.app_id', index=2,
+      name='app_id', full_name='srlinux.sdk.AgentRegistrationResponse.app_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -150,14 +150,14 @@ _AGENTREGISTRATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=343,
-  serialized_end=440,
+  serialized_start=351,
+  serialized_end=456,
 )
 
 
 _KEEPALIVEREQUEST = _descriptor.Descriptor(
   name='KeepAliveRequest',
-  full_name='ndk.KeepAliveRequest',
+  full_name='srlinux.sdk.KeepAliveRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -175,21 +175,21 @@ _KEEPALIVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=442,
-  serialized_end=460,
+  serialized_start=458,
+  serialized_end=476,
 )
 
 
 _KEEPALIVERESPONSE = _descriptor.Descriptor(
   name='KeepAliveResponse',
-  full_name='ndk.KeepAliveResponse',
+  full_name='srlinux.sdk.KeepAliveResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.KeepAliveResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.KeepAliveResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -207,21 +207,21 @@ _KEEPALIVERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=462,
-  serialized_end=516,
+  serialized_start=478,
+  serialized_end=540,
 )
 
 
 _APPIDREQUEST = _descriptor.Descriptor(
   name='AppIdRequest',
-  full_name='ndk.AppIdRequest',
+  full_name='srlinux.sdk.AppIdRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='ndk.AppIdRequest.name', index=0,
+      name='name', full_name='srlinux.sdk.AppIdRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -239,28 +239,28 @@ _APPIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=518,
-  serialized_end=546,
+  serialized_start=542,
+  serialized_end=570,
 )
 
 
 _APPIDRESPONSE = _descriptor.Descriptor(
   name='AppIdResponse',
-  full_name='ndk.AppIdResponse',
+  full_name='srlinux.sdk.AppIdResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.AppIdResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.AppIdResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='id', full_name='ndk.AppIdResponse.id', index=1,
+      name='id', full_name='srlinux.sdk.AppIdResponse.id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -278,91 +278,91 @@ _APPIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=548,
-  serialized_end=610,
+  serialized_start=572,
+  serialized_end=642,
 )
 
 
 _NOTIFICATIONREGISTERREQUEST = _descriptor.Descriptor(
   name='NotificationRegisterRequest',
-  full_name='ndk.NotificationRegisterRequest',
+  full_name='srlinux.sdk.NotificationRegisterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='stream_id', full_name='ndk.NotificationRegisterRequest.stream_id', index=0,
+      name='stream_id', full_name='srlinux.sdk.NotificationRegisterRequest.stream_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.NotificationRegisterRequest.op', index=1,
+      name='op', full_name='srlinux.sdk.NotificationRegisterRequest.op', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sub_id', full_name='ndk.NotificationRegisterRequest.sub_id', index=2,
+      name='sub_id', full_name='srlinux.sdk.NotificationRegisterRequest.sub_id', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='intf', full_name='ndk.NotificationRegisterRequest.intf', index=3,
+      name='intf', full_name='srlinux.sdk.NotificationRegisterRequest.intf', index=3,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='nw_inst', full_name='ndk.NotificationRegisterRequest.nw_inst', index=4,
+      name='nw_inst', full_name='srlinux.sdk.NotificationRegisterRequest.nw_inst', index=4,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lldp_neighbor', full_name='ndk.NotificationRegisterRequest.lldp_neighbor', index=5,
+      name='lldp_neighbor', full_name='srlinux.sdk.NotificationRegisterRequest.lldp_neighbor', index=5,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='config', full_name='ndk.NotificationRegisterRequest.config', index=6,
+      name='config', full_name='srlinux.sdk.NotificationRegisterRequest.config', index=6,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bfd_session', full_name='ndk.NotificationRegisterRequest.bfd_session', index=7,
+      name='bfd_session', full_name='srlinux.sdk.NotificationRegisterRequest.bfd_session', index=7,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='route', full_name='ndk.NotificationRegisterRequest.route', index=8,
+      name='route', full_name='srlinux.sdk.NotificationRegisterRequest.route', index=8,
       number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='appid', full_name='ndk.NotificationRegisterRequest.appid', index=9,
+      name='appid', full_name='srlinux.sdk.NotificationRegisterRequest.appid', index=9,
       number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='nhg', full_name='ndk.NotificationRegisterRequest.nhg', index=10,
+      name='nhg', full_name='srlinux.sdk.NotificationRegisterRequest.nhg', index=10,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -381,40 +381,40 @@ _NOTIFICATIONREGISTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='subscription_types', full_name='ndk.NotificationRegisterRequest.subscription_types',
+      name='subscription_types', full_name='srlinux.sdk.NotificationRegisterRequest.subscription_types',
       index=0, containing_type=None,
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=613,
-  serialized_end=1274,
+  serialized_start=645,
+  serialized_end=1378,
 )
 
 
 _NOTIFICATIONREGISTERRESPONSE = _descriptor.Descriptor(
   name='NotificationRegisterResponse',
-  full_name='ndk.NotificationRegisterResponse',
+  full_name='srlinux.sdk.NotificationRegisterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='stream_id', full_name='ndk.NotificationRegisterResponse.stream_id', index=0,
+      name='stream_id', full_name='srlinux.sdk.NotificationRegisterResponse.stream_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sub_id', full_name='ndk.NotificationRegisterResponse.sub_id', index=1,
+      name='sub_id', full_name='srlinux.sdk.NotificationRegisterResponse.sub_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.NotificationRegisterResponse.status', index=2,
+      name='status', full_name='srlinux.sdk.NotificationRegisterResponse.status', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -432,21 +432,21 @@ _NOTIFICATIONREGISTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1276,
-  serialized_end=1376,
+  serialized_start=1380,
+  serialized_end=1488,
 )
 
 
 _NOTIFICATIONQUERYREQUEST = _descriptor.Descriptor(
   name='NotificationQueryRequest',
-  full_name='ndk.NotificationQueryRequest',
+  full_name='srlinux.sdk.NotificationQueryRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='stream_id', full_name='ndk.NotificationQueryRequest.stream_id', index=0,
+      name='stream_id', full_name='srlinux.sdk.NotificationQueryRequest.stream_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -464,28 +464,28 @@ _NOTIFICATIONQUERYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1378,
-  serialized_end=1423,
+  serialized_start=1490,
+  serialized_end=1535,
 )
 
 
 _NOTIFICATIONQUERYSUBSCRIPTION = _descriptor.Descriptor(
   name='NotificationQuerySubscription',
-  full_name='ndk.NotificationQuerySubscription',
+  full_name='srlinux.sdk.NotificationQuerySubscription',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sub_id', full_name='ndk.NotificationQuerySubscription.sub_id', index=0,
+      name='sub_id', full_name='srlinux.sdk.NotificationQuerySubscription.sub_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='ndk.NotificationQuerySubscription.description', index=1,
+      name='description', full_name='srlinux.sdk.NotificationQuerySubscription.description', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -503,28 +503,28 @@ _NOTIFICATIONQUERYSUBSCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1425,
-  serialized_end=1493,
+  serialized_start=1537,
+  serialized_end=1605,
 )
 
 
 _NOTIFICATIONQUERYRESPONSE = _descriptor.Descriptor(
   name='NotificationQueryResponse',
-  full_name='ndk.NotificationQueryResponse',
+  full_name='srlinux.sdk.NotificationQueryResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='subscriptions', full_name='ndk.NotificationQueryResponse.subscriptions', index=0,
+      name='subscriptions', full_name='srlinux.sdk.NotificationQueryResponse.subscriptions', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.NotificationQueryResponse.status', index=1,
+      name='status', full_name='srlinux.sdk.NotificationQueryResponse.status', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -542,21 +542,21 @@ _NOTIFICATIONQUERYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1495,
-  serialized_end=1616,
+  serialized_start=1608,
+  serialized_end=1745,
 )
 
 
 _NOTIFICATIONSTREAMREQUEST = _descriptor.Descriptor(
   name='NotificationStreamRequest',
-  full_name='ndk.NotificationStreamRequest',
+  full_name='srlinux.sdk.NotificationStreamRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='stream_id', full_name='ndk.NotificationStreamRequest.stream_id', index=0,
+      name='stream_id', full_name='srlinux.sdk.NotificationStreamRequest.stream_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -574,77 +574,77 @@ _NOTIFICATIONSTREAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1618,
-  serialized_end=1664,
+  serialized_start=1747,
+  serialized_end=1793,
 )
 
 
 _NOTIFICATION = _descriptor.Descriptor(
   name='Notification',
-  full_name='ndk.Notification',
+  full_name='srlinux.sdk.Notification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sub_id', full_name='ndk.Notification.sub_id', index=0,
+      name='sub_id', full_name='srlinux.sdk.Notification.sub_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='intf', full_name='ndk.Notification.intf', index=1,
+      name='intf', full_name='srlinux.sdk.Notification.intf', index=1,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='nw_inst', full_name='ndk.Notification.nw_inst', index=2,
+      name='nw_inst', full_name='srlinux.sdk.Notification.nw_inst', index=2,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lldp_neighbor', full_name='ndk.Notification.lldp_neighbor', index=3,
+      name='lldp_neighbor', full_name='srlinux.sdk.Notification.lldp_neighbor', index=3,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='config', full_name='ndk.Notification.config', index=4,
+      name='config', full_name='srlinux.sdk.Notification.config', index=4,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bfd_session', full_name='ndk.Notification.bfd_session', index=5,
+      name='bfd_session', full_name='srlinux.sdk.Notification.bfd_session', index=5,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='route', full_name='ndk.Notification.route', index=6,
+      name='route', full_name='srlinux.sdk.Notification.route', index=6,
       number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='appid', full_name='ndk.Notification.appid', index=7,
+      name='appid', full_name='srlinux.sdk.Notification.appid', index=7,
       number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='nhg', full_name='ndk.Notification.nhg', index=8,
+      name='nhg', full_name='srlinux.sdk.Notification.nhg', index=8,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -662,26 +662,26 @@ _NOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='subscription_types', full_name='ndk.Notification.subscription_types',
+      name='subscription_types', full_name='srlinux.sdk.Notification.subscription_types',
       index=0, containing_type=None,
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1667,
-  serialized_end=2100,
+  serialized_start=1796,
+  serialized_end=2293,
 )
 
 
 _NOTIFICATIONSTREAMRESPONSE = _descriptor.Descriptor(
   name='NotificationStreamResponse',
-  full_name='ndk.NotificationStreamResponse',
+  full_name='srlinux.sdk.NotificationStreamResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='notification', full_name='ndk.NotificationStreamResponse.notification', index=0,
+      name='notification', full_name='srlinux.sdk.NotificationStreamResponse.notification', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -699,8 +699,8 @@ _NOTIFICATIONSTREAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2102,
-  serialized_end=2171,
+  serialized_start=2295,
+  serialized_end=2372,
 )
 
 _AGENTREGISTRATIONRESPONSE.fields_by_name['status'].enum_type = ndk_dot_sdk__common__pb2._SDKMGRSTATUS
@@ -795,98 +795,98 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 AgentRegistrationRequest = _reflection.GeneratedProtocolMessageType('AgentRegistrationRequest', (_message.Message,), {
   'DESCRIPTOR' : _AGENTREGISTRATIONREQUEST,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AgentRegistrationRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AgentRegistrationRequest)
   })
 _sym_db.RegisterMessage(AgentRegistrationRequest)
 
 AgentRegistrationResponse = _reflection.GeneratedProtocolMessageType('AgentRegistrationResponse', (_message.Message,), {
   'DESCRIPTOR' : _AGENTREGISTRATIONRESPONSE,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AgentRegistrationResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AgentRegistrationResponse)
   })
 _sym_db.RegisterMessage(AgentRegistrationResponse)
 
 KeepAliveRequest = _reflection.GeneratedProtocolMessageType('KeepAliveRequest', (_message.Message,), {
   'DESCRIPTOR' : _KEEPALIVEREQUEST,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.KeepAliveRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.KeepAliveRequest)
   })
 _sym_db.RegisterMessage(KeepAliveRequest)
 
 KeepAliveResponse = _reflection.GeneratedProtocolMessageType('KeepAliveResponse', (_message.Message,), {
   'DESCRIPTOR' : _KEEPALIVERESPONSE,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.KeepAliveResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.KeepAliveResponse)
   })
 _sym_db.RegisterMessage(KeepAliveResponse)
 
 AppIdRequest = _reflection.GeneratedProtocolMessageType('AppIdRequest', (_message.Message,), {
   'DESCRIPTOR' : _APPIDREQUEST,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AppIdRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AppIdRequest)
   })
 _sym_db.RegisterMessage(AppIdRequest)
 
 AppIdResponse = _reflection.GeneratedProtocolMessageType('AppIdResponse', (_message.Message,), {
   'DESCRIPTOR' : _APPIDRESPONSE,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AppIdResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AppIdResponse)
   })
 _sym_db.RegisterMessage(AppIdResponse)
 
 NotificationRegisterRequest = _reflection.GeneratedProtocolMessageType('NotificationRegisterRequest', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONREGISTERREQUEST,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationRegisterRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationRegisterRequest)
   })
 _sym_db.RegisterMessage(NotificationRegisterRequest)
 
 NotificationRegisterResponse = _reflection.GeneratedProtocolMessageType('NotificationRegisterResponse', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONREGISTERRESPONSE,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationRegisterResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationRegisterResponse)
   })
 _sym_db.RegisterMessage(NotificationRegisterResponse)
 
 NotificationQueryRequest = _reflection.GeneratedProtocolMessageType('NotificationQueryRequest', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONQUERYREQUEST,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationQueryRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationQueryRequest)
   })
 _sym_db.RegisterMessage(NotificationQueryRequest)
 
 NotificationQuerySubscription = _reflection.GeneratedProtocolMessageType('NotificationQuerySubscription', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONQUERYSUBSCRIPTION,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationQuerySubscription)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationQuerySubscription)
   })
 _sym_db.RegisterMessage(NotificationQuerySubscription)
 
 NotificationQueryResponse = _reflection.GeneratedProtocolMessageType('NotificationQueryResponse', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONQUERYRESPONSE,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationQueryResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationQueryResponse)
   })
 _sym_db.RegisterMessage(NotificationQueryResponse)
 
 NotificationStreamRequest = _reflection.GeneratedProtocolMessageType('NotificationStreamRequest', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONSTREAMREQUEST,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationStreamRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationStreamRequest)
   })
 _sym_db.RegisterMessage(NotificationStreamRequest)
 
 Notification = _reflection.GeneratedProtocolMessageType('Notification', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATION,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.Notification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.Notification)
   })
 _sym_db.RegisterMessage(Notification)
 
 NotificationStreamResponse = _reflection.GeneratedProtocolMessageType('NotificationStreamResponse', (_message.Message,), {
   'DESCRIPTOR' : _NOTIFICATIONSTREAMRESPONSE,
   '__module__' : 'ndk.sdk_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.NotificationStreamResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.NotificationStreamResponse)
   })
 _sym_db.RegisterMessage(NotificationStreamResponse)
 
@@ -895,17 +895,17 @@ DESCRIPTOR._options = None
 
 _SDKMGRSERVICE = _descriptor.ServiceDescriptor(
   name='SdkMgrService',
-  full_name='ndk.SdkMgrService',
+  full_name='srlinux.sdk.SdkMgrService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2174,
-  serialized_end=2651,
+  serialized_start=2375,
+  serialized_end=2948,
   methods=[
   _descriptor.MethodDescriptor(
     name='AgentRegister',
-    full_name='ndk.SdkMgrService.AgentRegister',
+    full_name='srlinux.sdk.SdkMgrService.AgentRegister',
     index=0,
     containing_service=None,
     input_type=_AGENTREGISTRATIONREQUEST,
@@ -915,7 +915,7 @@ _SDKMGRSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AgentUnRegister',
-    full_name='ndk.SdkMgrService.AgentUnRegister',
+    full_name='srlinux.sdk.SdkMgrService.AgentUnRegister',
     index=1,
     containing_service=None,
     input_type=_AGENTREGISTRATIONREQUEST,
@@ -925,7 +925,7 @@ _SDKMGRSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='NotificationRegister',
-    full_name='ndk.SdkMgrService.NotificationRegister',
+    full_name='srlinux.sdk.SdkMgrService.NotificationRegister',
     index=2,
     containing_service=None,
     input_type=_NOTIFICATIONREGISTERREQUEST,
@@ -935,7 +935,7 @@ _SDKMGRSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='NotificationQuery',
-    full_name='ndk.SdkMgrService.NotificationQuery',
+    full_name='srlinux.sdk.SdkMgrService.NotificationQuery',
     index=3,
     containing_service=None,
     input_type=_NOTIFICATIONQUERYREQUEST,
@@ -945,7 +945,7 @@ _SDKMGRSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='KeepAlive',
-    full_name='ndk.SdkMgrService.KeepAlive',
+    full_name='srlinux.sdk.SdkMgrService.KeepAlive',
     index=4,
     containing_service=None,
     input_type=_KEEPALIVEREQUEST,
@@ -955,7 +955,7 @@ _SDKMGRSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetAppId',
-    full_name='ndk.SdkMgrService.GetAppId',
+    full_name='srlinux.sdk.SdkMgrService.GetAppId',
     index=5,
     containing_service=None,
     input_type=_APPIDREQUEST,
@@ -971,17 +971,17 @@ DESCRIPTOR.services_by_name['SdkMgrService'] = _SDKMGRSERVICE
 
 _SDKNOTIFICATIONSERVICE = _descriptor.ServiceDescriptor(
   name='SdkNotificationService',
-  full_name='ndk.SdkNotificationService',
+  full_name='srlinux.sdk.SdkNotificationService',
   file=DESCRIPTOR,
   index=1,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2653,
-  serialized_end=2768,
+  serialized_start=2951,
+  serialized_end=3082,
   methods=[
   _descriptor.MethodDescriptor(
     name='NotificationStream',
-    full_name='ndk.SdkNotificationService.NotificationStream',
+    full_name='srlinux.sdk.SdkNotificationService.NotificationStream',
     index=0,
     containing_service=None,
     input_type=_NOTIFICATIONSTREAMREQUEST,

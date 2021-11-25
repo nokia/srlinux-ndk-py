@@ -16,11 +16,11 @@ from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/appid_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17ndk/appid_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\"<\n\x1b\x41ppIdentSubscriptionRequest\x12\x1d\n\x03key\x18\x01 \x01(\x0b\x32\x10.ndk.AppIdentKey\"\x19\n\x0b\x41ppIdentKey\x12\n\n\x02id\x18\x01 \x01(\r\"S\n\x0c\x41ppIdentData\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61uthor\x18\x02 \x01(\t\x12\x14\n\x0cis_connected\x18\x03 \x01(\x08\x12\x0f\n\x07version\x18\x04 \x01(\t\"x\n\x14\x41ppIdentNotification\x12 \n\x02op\x18\x01 \x01(\x0e\x32\x14.ndk.SdkMgrOperation\x12\x1d\n\x03key\x18\x02 \x01(\x0b\x32\x10.ndk.AppIdentKey\x12\x1f\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x11.ndk.AppIdentDataB%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x17ndk/appid_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"D\n\x1b\x41ppIdentSubscriptionRequest\x12%\n\x03key\x18\x01 \x01(\x0b\x32\x18.srlinux.sdk.AppIdentKey\"\x19\n\x0b\x41ppIdentKey\x12\n\n\x02id\x18\x01 \x01(\r\"S\n\x0c\x41ppIdentData\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61uthor\x18\x02 \x01(\t\x12\x14\n\x0cis_connected\x18\x03 \x01(\x08\x12\x0f\n\x07version\x18\x04 \x01(\t\"\x90\x01\n\x14\x41ppIdentNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12%\n\x03key\x18\x02 \x01(\x0b\x32\x18.srlinux.sdk.AppIdentKey\x12\'\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x19.srlinux.sdk.AppIdentDataB%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,])
 
@@ -29,14 +29,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _APPIDENTSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   name='AppIdentSubscriptionRequest',
-  full_name='ndk.AppIdentSubscriptionRequest',
+  full_name='srlinux.sdk.AppIdentSubscriptionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.AppIdentSubscriptionRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.AppIdentSubscriptionRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -54,21 +54,21 @@ _APPIDENTSUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54,
-  serialized_end=114,
+  serialized_start=62,
+  serialized_end=130,
 )
 
 
 _APPIDENTKEY = _descriptor.Descriptor(
   name='AppIdentKey',
-  full_name='ndk.AppIdentKey',
+  full_name='srlinux.sdk.AppIdentKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='ndk.AppIdentKey.id', index=0,
+      name='id', full_name='srlinux.sdk.AppIdentKey.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -86,42 +86,42 @@ _APPIDENTKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=116,
-  serialized_end=141,
+  serialized_start=132,
+  serialized_end=157,
 )
 
 
 _APPIDENTDATA = _descriptor.Descriptor(
   name='AppIdentData',
-  full_name='ndk.AppIdentData',
+  full_name='srlinux.sdk.AppIdentData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='ndk.AppIdentData.name', index=0,
+      name='name', full_name='srlinux.sdk.AppIdentData.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='author', full_name='ndk.AppIdentData.author', index=1,
+      name='author', full_name='srlinux.sdk.AppIdentData.author', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='is_connected', full_name='ndk.AppIdentData.is_connected', index=2,
+      name='is_connected', full_name='srlinux.sdk.AppIdentData.is_connected', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='version', full_name='ndk.AppIdentData.version', index=3,
+      name='version', full_name='srlinux.sdk.AppIdentData.version', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -139,35 +139,35 @@ _APPIDENTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=143,
-  serialized_end=226,
+  serialized_start=159,
+  serialized_end=242,
 )
 
 
 _APPIDENTNOTIFICATION = _descriptor.Descriptor(
   name='AppIdentNotification',
-  full_name='ndk.AppIdentNotification',
+  full_name='srlinux.sdk.AppIdentNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.AppIdentNotification.op', index=0,
+      name='op', full_name='srlinux.sdk.AppIdentNotification.op', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.AppIdentNotification.key', index=1,
+      name='key', full_name='srlinux.sdk.AppIdentNotification.key', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.AppIdentNotification.data', index=2,
+      name='data', full_name='srlinux.sdk.AppIdentNotification.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -185,8 +185,8 @@ _APPIDENTNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=228,
-  serialized_end=348,
+  serialized_start=245,
+  serialized_end=389,
 )
 
 _APPIDENTSUBSCRIPTIONREQUEST.fields_by_name['key'].message_type = _APPIDENTKEY
@@ -202,28 +202,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 AppIdentSubscriptionRequest = _reflection.GeneratedProtocolMessageType('AppIdentSubscriptionRequest', (_message.Message,), {
   'DESCRIPTOR' : _APPIDENTSUBSCRIPTIONREQUEST,
   '__module__' : 'ndk.appid_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AppIdentSubscriptionRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AppIdentSubscriptionRequest)
   })
 _sym_db.RegisterMessage(AppIdentSubscriptionRequest)
 
 AppIdentKey = _reflection.GeneratedProtocolMessageType('AppIdentKey', (_message.Message,), {
   'DESCRIPTOR' : _APPIDENTKEY,
   '__module__' : 'ndk.appid_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AppIdentKey)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AppIdentKey)
   })
 _sym_db.RegisterMessage(AppIdentKey)
 
 AppIdentData = _reflection.GeneratedProtocolMessageType('AppIdentData', (_message.Message,), {
   'DESCRIPTOR' : _APPIDENTDATA,
   '__module__' : 'ndk.appid_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AppIdentData)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AppIdentData)
   })
 _sym_db.RegisterMessage(AppIdentData)
 
 AppIdentNotification = _reflection.GeneratedProtocolMessageType('AppIdentNotification', (_message.Message,), {
   'DESCRIPTOR' : _APPIDENTNOTIFICATION,
   '__module__' : 'ndk.appid_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.AppIdentNotification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.AppIdentNotification)
   })
 _sym_db.RegisterMessage(AppIdentNotification)
 

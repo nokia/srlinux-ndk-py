@@ -17,11 +17,11 @@ from ndk import nexthop_group_service_pb2 as ndk_dot_nexthop__group__service__pb
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ndk/route_service.proto',
-  package='ndk',
+  package='srlinux.sdk',
   syntax='proto3',
   serialized_options=b'Z#github.com/nokia/srlinux-ndk-go/ndk',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17ndk/route_service.proto\x12\x03ndk\x1a\x14ndk/sdk_common.proto\x1a\x1fndk/nexthop_group_service.proto\"L\n\nRouteKeyPb\x12\x15\n\rnet_inst_name\x18\x01 \x01(\t\x12\'\n\tip_prefix\x18\x02 \x01(\x0b\x32\x14.ndk.IpAddrPrefLenPb\"\x8a\x01\n\x07RoutePb\x12\x1a\n\x12nexthop_group_name\x18\x01 \x01(\t\x12\x12\n\npreference\x18\x02 \x01(\r\x12\x0e\n\x06metric\x18\x03 \x01(\r\x12\x1d\n\x07nexthop\x18\x04 \x03(\x0b\x32\x0c.ndk.NextHop\x12\x10\n\x08owner_id\x18\x05 \x01(\r\x12\x0e\n\x06nhg_id\x18\x06 \x01(\x04\"E\n\tRouteInfo\x12\x1c\n\x03key\x18\x01 \x01(\x0b\x32\x0f.ndk.RouteKeyPb\x12\x1a\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x0c.ndk.RoutePb\"1\n\x0fRouteAddRequest\x12\x1e\n\x06routes\x18\x02 \x03(\x0b\x32\x0e.ndk.RouteInfo\"H\n\x10RouteAddResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"5\n\x12RouteDeleteRequest\x12\x1f\n\x06routes\x18\x02 \x03(\x0b\x32\x0f.ndk.RouteKeyPb\"K\n\x13RouteDeleteResponse\x12!\n\x06status\x18\x01 \x01(\x0e\x32\x11.ndk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\":\n\x1aIpRouteSubscriptionRequest\x12\x1c\n\x03key\x18\x01 \x01(\x0b\x32\x0f.ndk.RouteKeyPb\"q\n\x13IpRouteNotification\x12 \n\x02op\x18\x01 \x01(\x0e\x32\x14.ndk.SdkMgrOperation\x12\x1c\n\x03key\x18\x02 \x01(\x0b\x32\x0f.ndk.RouteKeyPb\x12\x1a\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x0c.ndk.RoutePb2\x81\x02\n\x12SdkMgrRouteService\x12\x41\n\x10RouteAddOrUpdate\x12\x14.ndk.RouteAddRequest\x1a\x15.ndk.RouteAddResponse\"\x00\x12\x42\n\x0bRouteDelete\x12\x17.ndk.RouteDeleteRequest\x1a\x18.ndk.RouteDeleteResponse\"\x00\x12\x32\n\tSyncStart\x12\x10.ndk.SyncRequest\x1a\x11.ndk.SyncResponse\"\x00\x12\x30\n\x07SyncEnd\x12\x10.ndk.SyncRequest\x1a\x11.ndk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
+  serialized_pb=b'\n\x17ndk/route_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\x1a\x1fndk/nexthop_group_service.proto\"T\n\nRouteKeyPb\x12\x15\n\rnet_inst_name\x18\x01 \x01(\t\x12/\n\tip_prefix\x18\x02 \x01(\x0b\x32\x1c.srlinux.sdk.IpAddrPrefLenPb\"\x92\x01\n\x07RoutePb\x12\x1a\n\x12nexthop_group_name\x18\x01 \x01(\t\x12\x12\n\npreference\x18\x02 \x01(\r\x12\x0e\n\x06metric\x18\x03 \x01(\r\x12%\n\x07nexthop\x18\x04 \x03(\x0b\x32\x14.srlinux.sdk.NextHop\x12\x10\n\x08owner_id\x18\x05 \x01(\r\x12\x0e\n\x06nhg_id\x18\x06 \x01(\x04\"U\n\tRouteInfo\x12$\n\x03key\x18\x01 \x01(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\x12\"\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x14.srlinux.sdk.RoutePb\"9\n\x0fRouteAddRequest\x12&\n\x06routes\x18\x02 \x03(\x0b\x32\x16.srlinux.sdk.RouteInfo\"P\n\x10RouteAddResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"=\n\x12RouteDeleteRequest\x12\'\n\x06routes\x18\x02 \x03(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\"S\n\x13RouteDeleteResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"B\n\x1aIpRouteSubscriptionRequest\x12$\n\x03key\x18\x01 \x01(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\"\x89\x01\n\x13IpRouteNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12$\n\x03key\x18\x02 \x01(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\x12\"\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x14.srlinux.sdk.RoutePb2\xc1\x02\n\x12SdkMgrRouteService\x12Q\n\x10RouteAddOrUpdate\x12\x1c.srlinux.sdk.RouteAddRequest\x1a\x1d.srlinux.sdk.RouteAddResponse\"\x00\x12R\n\x0bRouteDelete\x12\x1f.srlinux.sdk.RouteDeleteRequest\x1a .srlinux.sdk.RouteDeleteResponse\"\x00\x12\x42\n\tSyncStart\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x12@\n\x07SyncEnd\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3'
   ,
   dependencies=[ndk_dot_sdk__common__pb2.DESCRIPTOR,ndk_dot_nexthop__group__service__pb2.DESCRIPTOR,])
 
@@ -30,21 +30,21 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _ROUTEKEYPB = _descriptor.Descriptor(
   name='RouteKeyPb',
-  full_name='ndk.RouteKeyPb',
+  full_name='srlinux.sdk.RouteKeyPb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='net_inst_name', full_name='ndk.RouteKeyPb.net_inst_name', index=0,
+      name='net_inst_name', full_name='srlinux.sdk.RouteKeyPb.net_inst_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ip_prefix', full_name='ndk.RouteKeyPb.ip_prefix', index=1,
+      name='ip_prefix', full_name='srlinux.sdk.RouteKeyPb.ip_prefix', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -62,56 +62,56 @@ _ROUTEKEYPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
-  serialized_end=163,
+  serialized_start=95,
+  serialized_end=179,
 )
 
 
 _ROUTEPB = _descriptor.Descriptor(
   name='RoutePb',
-  full_name='ndk.RoutePb',
+  full_name='srlinux.sdk.RoutePb',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nexthop_group_name', full_name='ndk.RoutePb.nexthop_group_name', index=0,
+      name='nexthop_group_name', full_name='srlinux.sdk.RoutePb.nexthop_group_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='preference', full_name='ndk.RoutePb.preference', index=1,
+      name='preference', full_name='srlinux.sdk.RoutePb.preference', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='metric', full_name='ndk.RoutePb.metric', index=2,
+      name='metric', full_name='srlinux.sdk.RoutePb.metric', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='nexthop', full_name='ndk.RoutePb.nexthop', index=3,
+      name='nexthop', full_name='srlinux.sdk.RoutePb.nexthop', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='ndk.RoutePb.owner_id', index=4,
+      name='owner_id', full_name='srlinux.sdk.RoutePb.owner_id', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='nhg_id', full_name='ndk.RoutePb.nhg_id', index=5,
+      name='nhg_id', full_name='srlinux.sdk.RoutePb.nhg_id', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -129,28 +129,28 @@ _ROUTEPB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=166,
-  serialized_end=304,
+  serialized_start=182,
+  serialized_end=328,
 )
 
 
 _ROUTEINFO = _descriptor.Descriptor(
   name='RouteInfo',
-  full_name='ndk.RouteInfo',
+  full_name='srlinux.sdk.RouteInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.RouteInfo.key', index=0,
+      name='key', full_name='srlinux.sdk.RouteInfo.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.RouteInfo.data', index=1,
+      name='data', full_name='srlinux.sdk.RouteInfo.data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -168,21 +168,21 @@ _ROUTEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=306,
-  serialized_end=375,
+  serialized_start=330,
+  serialized_end=415,
 )
 
 
 _ROUTEADDREQUEST = _descriptor.Descriptor(
   name='RouteAddRequest',
-  full_name='ndk.RouteAddRequest',
+  full_name='srlinux.sdk.RouteAddRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='routes', full_name='ndk.RouteAddRequest.routes', index=0,
+      name='routes', full_name='srlinux.sdk.RouteAddRequest.routes', index=0,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -200,28 +200,28 @@ _ROUTEADDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=377,
-  serialized_end=426,
+  serialized_start=417,
+  serialized_end=474,
 )
 
 
 _ROUTEADDRESPONSE = _descriptor.Descriptor(
   name='RouteAddResponse',
-  full_name='ndk.RouteAddResponse',
+  full_name='srlinux.sdk.RouteAddResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.RouteAddResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.RouteAddResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.RouteAddResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.RouteAddResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -239,21 +239,21 @@ _ROUTEADDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=428,
-  serialized_end=500,
+  serialized_start=476,
+  serialized_end=556,
 )
 
 
 _ROUTEDELETEREQUEST = _descriptor.Descriptor(
   name='RouteDeleteRequest',
-  full_name='ndk.RouteDeleteRequest',
+  full_name='srlinux.sdk.RouteDeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='routes', full_name='ndk.RouteDeleteRequest.routes', index=0,
+      name='routes', full_name='srlinux.sdk.RouteDeleteRequest.routes', index=0,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -271,28 +271,28 @@ _ROUTEDELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=502,
-  serialized_end=555,
+  serialized_start=558,
+  serialized_end=619,
 )
 
 
 _ROUTEDELETERESPONSE = _descriptor.Descriptor(
   name='RouteDeleteResponse',
-  full_name='ndk.RouteDeleteResponse',
+  full_name='srlinux.sdk.RouteDeleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='ndk.RouteDeleteResponse.status', index=0,
+      name='status', full_name='srlinux.sdk.RouteDeleteResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='error_str', full_name='ndk.RouteDeleteResponse.error_str', index=1,
+      name='error_str', full_name='srlinux.sdk.RouteDeleteResponse.error_str', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -310,21 +310,21 @@ _ROUTEDELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=557,
-  serialized_end=632,
+  serialized_start=621,
+  serialized_end=704,
 )
 
 
 _IPROUTESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   name='IpRouteSubscriptionRequest',
-  full_name='ndk.IpRouteSubscriptionRequest',
+  full_name='srlinux.sdk.IpRouteSubscriptionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.IpRouteSubscriptionRequest.key', index=0,
+      name='key', full_name='srlinux.sdk.IpRouteSubscriptionRequest.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -342,35 +342,35 @@ _IPROUTESUBSCRIPTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=634,
-  serialized_end=692,
+  serialized_start=706,
+  serialized_end=772,
 )
 
 
 _IPROUTENOTIFICATION = _descriptor.Descriptor(
   name='IpRouteNotification',
-  full_name='ndk.IpRouteNotification',
+  full_name='srlinux.sdk.IpRouteNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='ndk.IpRouteNotification.op', index=0,
+      name='op', full_name='srlinux.sdk.IpRouteNotification.op', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='key', full_name='ndk.IpRouteNotification.key', index=1,
+      name='key', full_name='srlinux.sdk.IpRouteNotification.key', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='ndk.IpRouteNotification.data', index=2,
+      name='data', full_name='srlinux.sdk.IpRouteNotification.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -388,8 +388,8 @@ _IPROUTENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=694,
-  serialized_end=807,
+  serialized_start=775,
+  serialized_end=912,
 )
 
 _ROUTEKEYPB.fields_by_name['ip_prefix'].message_type = ndk_dot_sdk__common__pb2._IPADDRPREFLENPB
@@ -418,63 +418,63 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 RouteKeyPb = _reflection.GeneratedProtocolMessageType('RouteKeyPb', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEKEYPB,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RouteKeyPb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RouteKeyPb)
   })
 _sym_db.RegisterMessage(RouteKeyPb)
 
 RoutePb = _reflection.GeneratedProtocolMessageType('RoutePb', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEPB,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RoutePb)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RoutePb)
   })
 _sym_db.RegisterMessage(RoutePb)
 
 RouteInfo = _reflection.GeneratedProtocolMessageType('RouteInfo', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEINFO,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RouteInfo)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RouteInfo)
   })
 _sym_db.RegisterMessage(RouteInfo)
 
 RouteAddRequest = _reflection.GeneratedProtocolMessageType('RouteAddRequest', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEADDREQUEST,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RouteAddRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RouteAddRequest)
   })
 _sym_db.RegisterMessage(RouteAddRequest)
 
 RouteAddResponse = _reflection.GeneratedProtocolMessageType('RouteAddResponse', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEADDRESPONSE,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RouteAddResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RouteAddResponse)
   })
 _sym_db.RegisterMessage(RouteAddResponse)
 
 RouteDeleteRequest = _reflection.GeneratedProtocolMessageType('RouteDeleteRequest', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEDELETEREQUEST,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RouteDeleteRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RouteDeleteRequest)
   })
 _sym_db.RegisterMessage(RouteDeleteRequest)
 
 RouteDeleteResponse = _reflection.GeneratedProtocolMessageType('RouteDeleteResponse', (_message.Message,), {
   'DESCRIPTOR' : _ROUTEDELETERESPONSE,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.RouteDeleteResponse)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.RouteDeleteResponse)
   })
 _sym_db.RegisterMessage(RouteDeleteResponse)
 
 IpRouteSubscriptionRequest = _reflection.GeneratedProtocolMessageType('IpRouteSubscriptionRequest', (_message.Message,), {
   'DESCRIPTOR' : _IPROUTESUBSCRIPTIONREQUEST,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.IpRouteSubscriptionRequest)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.IpRouteSubscriptionRequest)
   })
 _sym_db.RegisterMessage(IpRouteSubscriptionRequest)
 
 IpRouteNotification = _reflection.GeneratedProtocolMessageType('IpRouteNotification', (_message.Message,), {
   'DESCRIPTOR' : _IPROUTENOTIFICATION,
   '__module__' : 'ndk.route_service_pb2'
-  # @@protoc_insertion_point(class_scope:ndk.IpRouteNotification)
+  # @@protoc_insertion_point(class_scope:srlinux.sdk.IpRouteNotification)
   })
 _sym_db.RegisterMessage(IpRouteNotification)
 
@@ -483,17 +483,17 @@ DESCRIPTOR._options = None
 
 _SDKMGRROUTESERVICE = _descriptor.ServiceDescriptor(
   name='SdkMgrRouteService',
-  full_name='ndk.SdkMgrRouteService',
+  full_name='srlinux.sdk.SdkMgrRouteService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=810,
-  serialized_end=1067,
+  serialized_start=915,
+  serialized_end=1236,
   methods=[
   _descriptor.MethodDescriptor(
     name='RouteAddOrUpdate',
-    full_name='ndk.SdkMgrRouteService.RouteAddOrUpdate',
+    full_name='srlinux.sdk.SdkMgrRouteService.RouteAddOrUpdate',
     index=0,
     containing_service=None,
     input_type=_ROUTEADDREQUEST,
@@ -503,7 +503,7 @@ _SDKMGRROUTESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='RouteDelete',
-    full_name='ndk.SdkMgrRouteService.RouteDelete',
+    full_name='srlinux.sdk.SdkMgrRouteService.RouteDelete',
     index=1,
     containing_service=None,
     input_type=_ROUTEDELETEREQUEST,
@@ -513,7 +513,7 @@ _SDKMGRROUTESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SyncStart',
-    full_name='ndk.SdkMgrRouteService.SyncStart',
+    full_name='srlinux.sdk.SdkMgrRouteService.SyncStart',
     index=2,
     containing_service=None,
     input_type=ndk_dot_sdk__common__pb2._SYNCREQUEST,
@@ -523,7 +523,7 @@ _SDKMGRROUTESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SyncEnd',
-    full_name='ndk.SdkMgrRouteService.SyncEnd',
+    full_name='srlinux.sdk.SdkMgrRouteService.SyncEnd',
     index=3,
     containing_service=None,
     input_type=ndk_dot_sdk__common__pb2._SYNCREQUEST,

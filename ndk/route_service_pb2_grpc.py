@@ -18,22 +18,22 @@ class SdkMgrRouteServiceStub(object):
             channel: A grpc.Channel.
         """
         self.RouteAddOrUpdate = channel.unary_unary(
-                '/ndk.SdkMgrRouteService/RouteAddOrUpdate',
+                '/srlinux.sdk.SdkMgrRouteService/RouteAddOrUpdate',
                 request_serializer=ndk_dot_route__service__pb2.RouteAddRequest.SerializeToString,
                 response_deserializer=ndk_dot_route__service__pb2.RouteAddResponse.FromString,
                 )
         self.RouteDelete = channel.unary_unary(
-                '/ndk.SdkMgrRouteService/RouteDelete',
+                '/srlinux.sdk.SdkMgrRouteService/RouteDelete',
                 request_serializer=ndk_dot_route__service__pb2.RouteDeleteRequest.SerializeToString,
                 response_deserializer=ndk_dot_route__service__pb2.RouteDeleteResponse.FromString,
                 )
         self.SyncStart = channel.unary_unary(
-                '/ndk.SdkMgrRouteService/SyncStart',
+                '/srlinux.sdk.SdkMgrRouteService/SyncStart',
                 request_serializer=ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__common__pb2.SyncResponse.FromString,
                 )
         self.SyncEnd = channel.unary_unary(
-                '/ndk.SdkMgrRouteService/SyncEnd',
+                '/srlinux.sdk.SdkMgrRouteService/SyncEnd',
                 request_serializer=ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__common__pb2.SyncResponse.FromString,
                 )
@@ -97,7 +97,7 @@ def add_SdkMgrRouteServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ndk.SdkMgrRouteService', rpc_method_handlers)
+            'srlinux.sdk.SdkMgrRouteService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -118,7 +118,7 @@ class SdkMgrRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrRouteService/RouteAddOrUpdate',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrRouteService/RouteAddOrUpdate',
             ndk_dot_route__service__pb2.RouteAddRequest.SerializeToString,
             ndk_dot_route__service__pb2.RouteAddResponse.FromString,
             options, channel_credentials,
@@ -135,7 +135,7 @@ class SdkMgrRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrRouteService/RouteDelete',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrRouteService/RouteDelete',
             ndk_dot_route__service__pb2.RouteDeleteRequest.SerializeToString,
             ndk_dot_route__service__pb2.RouteDeleteResponse.FromString,
             options, channel_credentials,
@@ -152,7 +152,7 @@ class SdkMgrRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrRouteService/SyncStart',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrRouteService/SyncStart',
             ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
             ndk_dot_sdk__common__pb2.SyncResponse.FromString,
             options, channel_credentials,
@@ -169,7 +169,7 @@ class SdkMgrRouteService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrRouteService/SyncEnd',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrRouteService/SyncEnd',
             ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
             ndk_dot_sdk__common__pb2.SyncResponse.FromString,
             options, channel_credentials,

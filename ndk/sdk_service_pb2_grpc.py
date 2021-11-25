@@ -17,32 +17,32 @@ class SdkMgrServiceStub(object):
             channel: A grpc.Channel.
         """
         self.AgentRegister = channel.unary_unary(
-                '/ndk.SdkMgrService/AgentRegister',
+                '/srlinux.sdk.SdkMgrService/AgentRegister',
                 request_serializer=ndk_dot_sdk__service__pb2.AgentRegistrationRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.AgentRegistrationResponse.FromString,
                 )
         self.AgentUnRegister = channel.unary_unary(
-                '/ndk.SdkMgrService/AgentUnRegister',
+                '/srlinux.sdk.SdkMgrService/AgentUnRegister',
                 request_serializer=ndk_dot_sdk__service__pb2.AgentRegistrationRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.AgentRegistrationResponse.FromString,
                 )
         self.NotificationRegister = channel.unary_unary(
-                '/ndk.SdkMgrService/NotificationRegister',
+                '/srlinux.sdk.SdkMgrService/NotificationRegister',
                 request_serializer=ndk_dot_sdk__service__pb2.NotificationRegisterRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.NotificationRegisterResponse.FromString,
                 )
         self.NotificationQuery = channel.unary_unary(
-                '/ndk.SdkMgrService/NotificationQuery',
+                '/srlinux.sdk.SdkMgrService/NotificationQuery',
                 request_serializer=ndk_dot_sdk__service__pb2.NotificationQueryRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.NotificationQueryResponse.FromString,
                 )
         self.KeepAlive = channel.unary_unary(
-                '/ndk.SdkMgrService/KeepAlive',
+                '/srlinux.sdk.SdkMgrService/KeepAlive',
                 request_serializer=ndk_dot_sdk__service__pb2.KeepAliveRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.KeepAliveResponse.FromString,
                 )
         self.GetAppId = channel.unary_unary(
-                '/ndk.SdkMgrService/GetAppId',
+                '/srlinux.sdk.SdkMgrService/GetAppId',
                 request_serializer=ndk_dot_sdk__service__pb2.AppIdRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.AppIdResponse.FromString,
                 )
@@ -130,7 +130,7 @@ def add_SdkMgrServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ndk.SdkMgrService', rpc_method_handlers)
+            'srlinux.sdk.SdkMgrService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -151,7 +151,7 @@ class SdkMgrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrService/AgentRegister',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrService/AgentRegister',
             ndk_dot_sdk__service__pb2.AgentRegistrationRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.AgentRegistrationResponse.FromString,
             options, channel_credentials,
@@ -168,7 +168,7 @@ class SdkMgrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrService/AgentUnRegister',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrService/AgentUnRegister',
             ndk_dot_sdk__service__pb2.AgentRegistrationRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.AgentRegistrationResponse.FromString,
             options, channel_credentials,
@@ -185,7 +185,7 @@ class SdkMgrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrService/NotificationRegister',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrService/NotificationRegister',
             ndk_dot_sdk__service__pb2.NotificationRegisterRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.NotificationRegisterResponse.FromString,
             options, channel_credentials,
@@ -202,7 +202,7 @@ class SdkMgrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrService/NotificationQuery',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrService/NotificationQuery',
             ndk_dot_sdk__service__pb2.NotificationQueryRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.NotificationQueryResponse.FromString,
             options, channel_credentials,
@@ -219,7 +219,7 @@ class SdkMgrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrService/KeepAlive',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrService/KeepAlive',
             ndk_dot_sdk__service__pb2.KeepAliveRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.KeepAliveResponse.FromString,
             options, channel_credentials,
@@ -236,7 +236,7 @@ class SdkMgrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrService/GetAppId',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrService/GetAppId',
             ndk_dot_sdk__service__pb2.AppIdRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.AppIdResponse.FromString,
             options, channel_credentials,
@@ -259,7 +259,7 @@ class SdkNotificationServiceStub(object):
             channel: A grpc.Channel.
         """
         self.NotificationStream = channel.unary_stream(
-                '/ndk.SdkNotificationService/NotificationStream',
+                '/srlinux.sdk.SdkNotificationService/NotificationStream',
                 request_serializer=ndk_dot_sdk__service__pb2.NotificationStreamRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__service__pb2.NotificationStreamResponse.FromString,
                 )
@@ -291,7 +291,7 @@ def add_SdkNotificationServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ndk.SdkNotificationService', rpc_method_handlers)
+            'srlinux.sdk.SdkNotificationService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -316,7 +316,7 @@ class SdkNotificationService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/ndk.SdkNotificationService/NotificationStream',
+        return grpc.experimental.unary_stream(request, target, '/srlinux.sdk.SdkNotificationService/NotificationStream',
             ndk_dot_sdk__service__pb2.NotificationStreamRequest.SerializeToString,
             ndk_dot_sdk__service__pb2.NotificationStreamResponse.FromString,
             options, channel_credentials,

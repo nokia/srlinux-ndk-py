@@ -17,12 +17,12 @@ class SdkMgrTelemetryServiceStub(object):
             channel: A grpc.Channel.
         """
         self.TelemetryAddOrUpdate = channel.unary_unary(
-                '/ndk.SdkMgrTelemetryService/TelemetryAddOrUpdate',
+                '/srlinux.sdk.SdkMgrTelemetryService/TelemetryAddOrUpdate',
                 request_serializer=ndk_dot_telemetry__service__pb2.TelemetryUpdateRequest.SerializeToString,
                 response_deserializer=ndk_dot_telemetry__service__pb2.TelemetryUpdateResponse.FromString,
                 )
         self.TelemetryDelete = channel.unary_unary(
-                '/ndk.SdkMgrTelemetryService/TelemetryDelete',
+                '/srlinux.sdk.SdkMgrTelemetryService/TelemetryDelete',
                 request_serializer=ndk_dot_telemetry__service__pb2.TelemetryDeleteRequest.SerializeToString,
                 response_deserializer=ndk_dot_telemetry__service__pb2.TelemetryDeleteResponse.FromString,
                 )
@@ -62,7 +62,7 @@ def add_SdkMgrTelemetryServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ndk.SdkMgrTelemetryService', rpc_method_handlers)
+            'srlinux.sdk.SdkMgrTelemetryService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -83,7 +83,7 @@ class SdkMgrTelemetryService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrTelemetryService/TelemetryAddOrUpdate',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrTelemetryService/TelemetryAddOrUpdate',
             ndk_dot_telemetry__service__pb2.TelemetryUpdateRequest.SerializeToString,
             ndk_dot_telemetry__service__pb2.TelemetryUpdateResponse.FromString,
             options, channel_credentials,
@@ -100,7 +100,7 @@ class SdkMgrTelemetryService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrTelemetryService/TelemetryDelete',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrTelemetryService/TelemetryDelete',
             ndk_dot_telemetry__service__pb2.TelemetryDeleteRequest.SerializeToString,
             ndk_dot_telemetry__service__pb2.TelemetryDeleteResponse.FromString,
             options, channel_credentials,

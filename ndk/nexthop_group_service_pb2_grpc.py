@@ -18,22 +18,22 @@ class SdkMgrNextHopGroupServiceStub(object):
             channel: A grpc.Channel.
         """
         self.NextHopGroupAddOrUpdate = channel.unary_unary(
-                '/ndk.SdkMgrNextHopGroupService/NextHopGroupAddOrUpdate',
+                '/srlinux.sdk.SdkMgrNextHopGroupService/NextHopGroupAddOrUpdate',
                 request_serializer=ndk_dot_nexthop__group__service__pb2.NextHopGroupRequest.SerializeToString,
                 response_deserializer=ndk_dot_nexthop__group__service__pb2.NextHopGroupResponse.FromString,
                 )
         self.NextHopGroupDelete = channel.unary_unary(
-                '/ndk.SdkMgrNextHopGroupService/NextHopGroupDelete',
+                '/srlinux.sdk.SdkMgrNextHopGroupService/NextHopGroupDelete',
                 request_serializer=ndk_dot_nexthop__group__service__pb2.NextHopGroupDeleteRequest.SerializeToString,
                 response_deserializer=ndk_dot_nexthop__group__service__pb2.NextHopGroupDeleteResponse.FromString,
                 )
         self.SyncStart = channel.unary_unary(
-                '/ndk.SdkMgrNextHopGroupService/SyncStart',
+                '/srlinux.sdk.SdkMgrNextHopGroupService/SyncStart',
                 request_serializer=ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__common__pb2.SyncResponse.FromString,
                 )
         self.SyncEnd = channel.unary_unary(
-                '/ndk.SdkMgrNextHopGroupService/SyncEnd',
+                '/srlinux.sdk.SdkMgrNextHopGroupService/SyncEnd',
                 request_serializer=ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
                 response_deserializer=ndk_dot_sdk__common__pb2.SyncResponse.FromString,
                 )
@@ -97,7 +97,7 @@ def add_SdkMgrNextHopGroupServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ndk.SdkMgrNextHopGroupService', rpc_method_handlers)
+            'srlinux.sdk.SdkMgrNextHopGroupService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -118,7 +118,7 @@ class SdkMgrNextHopGroupService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrNextHopGroupService/NextHopGroupAddOrUpdate',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrNextHopGroupService/NextHopGroupAddOrUpdate',
             ndk_dot_nexthop__group__service__pb2.NextHopGroupRequest.SerializeToString,
             ndk_dot_nexthop__group__service__pb2.NextHopGroupResponse.FromString,
             options, channel_credentials,
@@ -135,7 +135,7 @@ class SdkMgrNextHopGroupService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrNextHopGroupService/NextHopGroupDelete',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrNextHopGroupService/NextHopGroupDelete',
             ndk_dot_nexthop__group__service__pb2.NextHopGroupDeleteRequest.SerializeToString,
             ndk_dot_nexthop__group__service__pb2.NextHopGroupDeleteResponse.FromString,
             options, channel_credentials,
@@ -152,7 +152,7 @@ class SdkMgrNextHopGroupService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrNextHopGroupService/SyncStart',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrNextHopGroupService/SyncStart',
             ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
             ndk_dot_sdk__common__pb2.SyncResponse.FromString,
             options, channel_credentials,
@@ -169,7 +169,7 @@ class SdkMgrNextHopGroupService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ndk.SdkMgrNextHopGroupService/SyncEnd',
+        return grpc.experimental.unary_unary(request, target, '/srlinux.sdk.SdkMgrNextHopGroupService/SyncEnd',
             ndk_dot_sdk__common__pb2.SyncRequest.SerializeToString,
             ndk_dot_sdk__common__pb2.SyncResponse.FromString,
             options, channel_credentials,
