@@ -7,21 +7,21 @@ The Nokia SR Linux NetOps Development Kit (NDK) allows operators to program high
 This repository contains generated Python code for [SR Linux NDK Protocol buffers](https://github.com/nokia/srlinux-ndk-protobufs).
 
 ## Installation
-SR Linux NDK follows the SR Linux software version (20.11.1, 21.6.2, etc). For simplicity, the Python package is versioned the same way - v20.11.1, v21.6.2, etc.
+The Python `srlinux-ndk` package version is synchronized with the SR Linux [NDK protobuf releases](https://github.com/nokia/srlinux-ndk-protobufs).
 
-Use git tags to checkout a particular version of the generated package files.
+Use git tags to check out a particular version of the generated package files.
 
-To install the `srlinux-ndk` python package with `pip` use one of the following:
+To install the `srlinux-ndk` python package with `pip`, use one of the following:
 
 ```bash
-# install the version from the main branch
+# install the latest version from the main branch
 pip install https://github.com/nokia/srlinux-ndk-py/archive/main.zip
 
-# install the specific version (example given for v21.6.2)
-pip install https://github.com/nokia/srlinux-ndk-py/archive/v21.6.2.zip
+# install the specific version from github
+pip install https://github.com/nokia/srlinux-ndk-py/archive/0.1.0-rc1.zip
 ```
 
-This will install the `srlinux-ndk` package on your system. To import the modules from this package:
+These installation steps will install the `srlinux-ndk` package on your system. To import the modules from this package:
 
 ```py
 from ndk import appid_service_pb2
