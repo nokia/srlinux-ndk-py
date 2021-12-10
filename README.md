@@ -14,11 +14,15 @@ Use git tags to check out a particular version of the generated package files.
 To install the `srlinux-ndk` python package with `pip`, use one of the following:
 
 ```bash
-# install the latest version from the main branch
-pip install https://github.com/nokia/srlinux-ndk-py/archive/main.zip
+# install the latest version from pypi
+pip install srlinux-ndk
+# install the specific version from pypi
+pip install srlinux-ndk==0.1.0
 
+# install the latest version from the main github branch
+pip install https://github.com/nokia/srlinux-ndk-py/archive/main.zip
 # install the specific version from github
-pip install https://github.com/nokia/srlinux-ndk-py/archive/0.1.0-rc1.zip
+pip install https://github.com/nokia/srlinux-ndk-py/archive/0.1.0.zip
 ```
 
 These installation steps will install the `srlinux-ndk` package on your system. To import the modules from this package:
