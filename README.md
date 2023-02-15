@@ -7,6 +7,7 @@ The Nokia SR Linux NetOps Development Kit (NDK) allows operators to program high
 This repository contains generated Python code for [SR Linux NDK Protocol buffers](https://github.com/nokia/srlinux-ndk-protobufs).
 
 ## Installation
+
 The Python `srlinux-ndk` package version is synchronized with the SR Linux [NDK protobuf releases](https://github.com/nokia/srlinux-ndk-protobufs).
 
 Use git tags to check out a particular version of the generated package files.
@@ -32,15 +33,20 @@ from ndk import appid_service_pb2
 ```
 
 ## Code generation
-This code has been generated from [SR Linux NDK Protocol buffers](https://github.com/nokia/srlinux-ndk-protobufs) using [`protoc` compiler](https://github.com/srl-labs/protoc-container) with gRPC-Python plugin.
 
-Here is the code generation command that produces the bindings captured in this repo:
+This code has been generated from [SR Linux NDK Protocol buffers](https://github.com/nokia/srlinux-ndk-protobufs) using [`protoc` compiler](https://github.com/srl-labs/protoc-container) with the gRPC plugins for Go and Python.
 
-> Assuming [`srlinux-ndk-protobufs`](https://github.com/nokia/srlinux-ndk-protobufs) cloned to the home directory **and** checkout out to the needed release/tag.
+`gen.sh` script calls the `protoc` container using the ndk protobufs version as its single argument.
 
 ```bash
-docker run -v ~/srlinux-ndk-protobufs:/in -v $(pwd):/out ghcr.io/srl-labs/protoc \
-  bash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
+bash gen.sh v0.1.1
 ```
 
 The python package will appear under `ndk` name in the current working directory.
+
+## Publishing
+
+To publish the generated package on pypi,
+
+1. Change the version of the package in [setup.py](setup.py) accordingly.
+2. Create a github release using UI or gh cli tool.
