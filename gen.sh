@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # usage: bash gen.sh <protobufVersion>, where protobufVersion is the tag of the protobufs repo
 # example: bash gen.sh v0.2.0
@@ -28,6 +28,10 @@ cd ${PROTO_DIR} && git checkout ${PROTO_VER}
 
 docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ghcr.io/srl-labs/protoc:23.3__1.31.0 \
   ash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
+
+# replace version number in setup.py with PROTO_VER
+
+sed -i "s/version=.*/version=\"${PROTO_VER:1}\",/g" ${PROJ_DIR}/setup.py
 
 
 # once the bindings are generated, we can push it to the repo
