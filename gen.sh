@@ -28,3 +28,9 @@ cd ${PROTO_DIR} && git checkout ${PROTO_VER}
 
 docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ghcr.io/srl-labs/protoc:23.3__1.31.0 \
   ash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
+
+
+# once the bindings are generated, we can push it to the repo
+# git push
+# and create a release
+# gh release create v0.2.0 --generate-notes
