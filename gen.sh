@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# usage: bash gen.sh <protobufVersion>, where protobufVersion is the tag of the protobufs repo
+# example: bash gen.sh v0.2.0
+
 set -e
 
 PROJ_DIR=$(pwd)
@@ -23,5 +26,5 @@ rm -rf ${PROJ_DIR}/ndk
 # checkout protos to the desired version
 cd ${PROTO_DIR} && git checkout ${PROTO_VER}
 
-docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ghcr.io/srl-labs/protoc:0.0.2 \
-  bash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
+docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ghcr.io/srl-labs/protoc:23.3__1.31.0 \
+  ash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
