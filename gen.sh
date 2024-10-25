@@ -21,12 +21,14 @@ if [ -z "$1" ]; then
 fi
 
 # remove previously generated bindings
-rm -rf ${PROJ_DIR}/ndk
+sudo rm -rf ${PROJ_DIR}/ndk
 
 # checkout protos to the desired version
-cd ${PROTO_DIR} && git checkout ${PROTO_VER}
+cd ${PROTO_DIR} && git checkout refs/tags/${PROTO_VER}
 
-docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ghcr.io/srl-labs/protoc:23.3__1.31.0 \
+PROTOC_IMAGE=ghcr.io/srl-labs/protoc:24.4__1.31.0
+
+docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ${PROTOC_IMAGE} \
   ash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
 
 # replace version number in setup.py with PROTO_VER
