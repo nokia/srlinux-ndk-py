@@ -28,7 +28,7 @@ cd ${PROTO_DIR} && git checkout refs/tags/${PROTO_VER}
 
 PROTOC_IMAGE=ghcr.io/srl-labs/protoc:24.4__1.31.0
 
-docker run -v ${PROTO_DIR}:/in -v ${PROJ_DIR}:/out ${PROTOC_IMAGE} \
+docker run -v ${PROTO_DIR}:/in -u $(id -u):$(id -g) -v ${PROJ_DIR}:/out ${PROTOC_IMAGE} \
   ash -c "python3 -m grpc_tools.protoc -I /in --python_out=/out --grpc_python_out=/out ndk/*.proto"
 
 # replace version number in setup.py with PROTO_VER
