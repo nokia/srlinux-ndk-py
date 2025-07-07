@@ -12,7 +12,7 @@ __author__ = "Roman Dodin <dodin.roman@gmail.com>"
 
 setup(
     name="srlinux-ndk",
-    version="0.4.0",
+    version="0.5.0",
     packages=["ndk"],
     author="Nokia",
     author_email="roman.dodin@nokia.com",

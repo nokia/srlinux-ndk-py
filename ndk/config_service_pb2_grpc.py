@@ -30,7 +30,7 @@ class SdkMgrConfigServiceServicer(object):
 
     def AcknowledgeConfig(self, request, context):
         """Acknowledge received configuration.
-        When agent is registered with `wait_config_ack` flag set to true,
+        When agent is registered with `wait_config_ack` flag set to true
         it needs to acknowledge received configuration.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)

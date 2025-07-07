@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15ndk/bfd_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"T\n\x1d\x42\x66\x64SessionSubscriptionRequest\x12\x33\n\x03key\x18\x01 \x01(\x0b\x32&.srlinux.sdk.BfdmgrGeneralSessionKeyPb\"\x9f\x06\n\x19\x42\x66\x64mgrGeneralSessionKeyPb\x12,\n\x04type\x18\n \x01(\x0e\x32\x1e.srlinux.sdk.BfdmgrSessionType\x12<\n\x03p2p\x18\x14 \x01(\x0b\x32-.srlinux.sdk.BfdmgrGeneralSessionKeyPb.P2pKeyH\x00\x12\x46\n\x08microbfd\x18\x1e \x01(\x0b\x32\x32.srlinux.sdk.BfdmgrGeneralSessionKeyPb.MicrobfdKeyH\x00\x12\x46\n\x08sbfdecho\x18( \x01(\x0b\x32\x32.srlinux.sdk.BfdmgrGeneralSessionKeyPb.SbfdechoKeyH\x00\x1a\xb9\x01\n\x06P2pKey\x12-\n\x0bsrc_ip_addr\x18\x01 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12-\n\x0b\x64st_ip_addr\x18\x02 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12\x13\n\x0binstance_id\x18\x03 \x01(\r\x12#\n\x1bipv4_unnum_or_ipv6_ll_if_id\x18\x04 \x01(\r\x12\x17\n\x0fspecified_discr\x18\x05 \x01(\x08\x1a%\n\x0bMicrobfdKey\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x1a\x9b\x02\n\x0bSbfdechoKey\x12\x13\n\x0binstance_id\x18\x01 \x01(\r\x12!\n\x19sr_policy_segment_list_id\x18\x02 \x01(\r\x12\x13\n\x0bpolicy_name\x18\x03 \x01(\t\x12V\n\tuser_type\x18\x04 \x01(\x0e\x32\x43.srlinux.sdk.BfdmgrGeneralSessionKeyPb.SbfdechoKey.SrpolicyUserType\x12\x34\n\x12sr_policy_endpoint\x18\x05 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\"1\n\x10SrpolicyUserType\x12\x0e\n\nTYPE_LOCAL\x10\x00\x12\r\n\tTYPE_PCEP\x10\x01\x42\x05\n\x03Key\"\xe8\x02\n\x1a\x42\x66\x64mgrGeneralSessionDataPb\x12\x30\n\x06status\x18\x01 \x01(\x0e\x32 .srlinux.sdk.BfdmgrSessionStatus\x12N\n\x08sub_type\x18\x02 \x01(\x0e\x32<.srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType\x12\x11\n\tsrc_if_id\x18\x03 \x01(\r\"\xb4\x01\n\x14\x42\x66\x64mgrSessionSubType\x12\x1c\n\x18SESSION_SUB_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1bSESSION_SUB_TYPE_SINGLE_HOP\x10\x01\x12\x1e\n\x1aSESSION_SUB_TYPE_MULTI_HOP\x10\x02\x12\x1d\n\x19SESSION_SUB_TYPE_MICROBFD\x10\x03\x12\x1e\n\x1aSESSION_SUB_TYPE_SBFD_ECHO\x10\x04\"\xae\x01\n\x16\x42\x66\x64SessionNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12\x33\n\x03key\x18\x02 \x01(\x0b\x32&.srlinux.sdk.BfdmgrGeneralSessionKeyPb\x12\x35\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\'.srlinux.sdk.BfdmgrGeneralSessionDataPb*N\n\x13\x42\x66\x64mgrSessionStatus\x12\x0b\n\x07INVALID\x10\x00\x12\x0e\n\nADMIN_DOWN\x10\x01\x12\x08\n\x04\x44OWN\x10\x02\x12\x08\n\x04INIT\x10\x03\x12\x06\n\x02UP\x10\x04*z\n\x11\x42\x66\x64mgrSessionType\x12\x18\n\x14SESSION_TYPE_UNKNOWN\x10\x00\x12\x14\n\x10SESSION_TYPE_P2P\x10\x01\x12\x19\n\x15SESSION_TYPE_MICROBFD\x10\x02\x12\x1a\n\x16SESSION_TYPE_SBFD_ECHO\x10\x03\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15ndk/bfd_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\"O\n\x1d\x42\x66\x64SessionSubscriptionRequest\x12.\n\x03key\x18\x01 \x01(\x0b\x32!.srlinux.sdk.BfdGeneralSessionKey\"\xc9\x06\n\x14\x42\x66\x64GeneralSessionKey\x12)\n\x04type\x18\n \x01(\x0e\x32\x1b.srlinux.sdk.BfdSessionType\x12\x37\n\x03p2p\x18\x14 \x01(\x0b\x32(.srlinux.sdk.BfdGeneralSessionKey.P2pKeyH\x00\x12\x41\n\x08microbfd\x18\x1e \x01(\x0b\x32-.srlinux.sdk.BfdGeneralSessionKey.MicrobfdKeyH\x00\x12\x41\n\x08sbfdecho\x18( \x01(\x0b\x32-.srlinux.sdk.BfdGeneralSessionKey.SbfdechoKeyH\x00\x1a\xde\x01\n\x06P2pKey\x12\x33\n\x11source_ip_address\x18\x01 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12\x38\n\x16\x64\x65stination_ip_address\x18\x02 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\x12\x13\n\x0binstance_id\x18\x03 \x01(\r\x12/\n\'ipv4_unnumbered_or_ipv6_ll_interface_id\x18\x04 \x01(\r\x12\x1f\n\x17specified_discriminator\x18\x05 \x01(\x08\x1a%\n\x0bMicrobfdKey\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x1a\xb7\x02\n\x0bSbfdechoKey\x12\x13\n\x0binstance_id\x18\x01 \x01(\r\x12!\n\x19sr_policy_segment_list_id\x18\x02 \x01(\r\x12\x13\n\x0bpolicy_name\x18\x03 \x01(\t\x12Q\n\tuser_type\x18\x04 \x01(\x0e\x32>.srlinux.sdk.BfdGeneralSessionKey.SbfdechoKey.SrpolicyUserType\x12\x34\n\x12sr_policy_endpoint\x18\x05 \x01(\x0b\x32\x18.srlinux.sdk.IpAddressPb\"R\n\x10SrpolicyUserType\x12\x1c\n\x18SRPOLICY_USER_TYPE_LOCAL\x10\x00\x12 \n\x1cSRPOLICY_USER_TYPE_TYPE_PCEP\x10\x01\x42\x05\n\x03key\"\xfc\x02\n\x15\x42\x66\x64GeneralSessionData\x12-\n\x06status\x18\x01 \x01(\x0e\x32\x1d.srlinux.sdk.BfdSessionStatus\x12O\n\x11subscription_type\x18\x02 \x01(\x0e\x32\x34.srlinux.sdk.BfdGeneralSessionData.BfdSessionSubType\x12\x1b\n\x13source_interface_id\x18\x03 \x01(\r\"\xc5\x01\n\x11\x42\x66\x64SessionSubType\x12 \n\x1c\x42\x46\x44_SESSION_SUB_TYPE_UNKNOWN\x10\x00\x12#\n\x1f\x42\x46\x44_SESSION_SUB_TYPE_SINGLE_HOP\x10\x01\x12\"\n\x1e\x42\x46\x44_SESSION_SUB_TYPE_MULTI_HOP\x10\x02\x12!\n\x1d\x42\x46\x44_SESSION_SUB_TYPE_MICROBFD\x10\x03\x12\"\n\x1e\x42\x46\x44_SESSION_SUB_TYPE_SBFD_ECHO\x10\x04\"\xa4\x01\n\x16\x42\x66\x64SessionNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12.\n\x03key\x18\x02 \x01(\x0b\x32!.srlinux.sdk.BfdGeneralSessionKey\x12\x30\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\".srlinux.sdk.BfdGeneralSessionData*\xaa\x01\n\x10\x42\x66\x64SessionStatus\x12\x1e\n\x1a\x42\x46\x44_SESSION_STATUS_INVALID\x10\x00\x12!\n\x1d\x42\x46\x44_SESSION_STATUS_ADMIN_DOWN\x10\x01\x12\x1b\n\x17\x42\x46\x44_SESSION_STATUS_DOWN\x10\x02\x12\x1b\n\x17\x42\x46\x44_SESSION_STATUS_INIT\x10\x03\x12\x19\n\x15\x42\x46\x44_SESSION_STATUS_UP\x10\x04*\x87\x01\n\x0e\x42\x66\x64SessionType\x12\x1c\n\x18\x42\x46\x44_SESSION_TYPE_UNKNOWN\x10\x00\x12\x18\n\x14\x42\x46\x44_SESSION_TYPE_P2P\x10\x01\x12\x1d\n\x19\x42\x46\x44_SESSION_TYPE_MICROBFD\x10\x02\x12\x1e\n\x1a\x42\x46\x44_SESSION_TYPE_SBFD_ECHO\x10\x03\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -22,26 +22,26 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ndk.bfd_service_pb2', _glob
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z#github.com/nokia/srlinux-ndk-go/ndk'
-  _globals['_BFDMGRSESSIONSTATUS']._serialized_start=1488
-  _globals['_BFDMGRSESSIONSTATUS']._serialized_end=1566
-  _globals['_BFDMGRSESSIONTYPE']._serialized_start=1568
-  _globals['_BFDMGRSESSIONTYPE']._serialized_end=1690
+  _globals['_BFDSESSIONSTATUS']._serialized_start=1536
+  _globals['_BFDSESSIONSTATUS']._serialized_end=1706
+  _globals['_BFDSESSIONTYPE']._serialized_start=1709
+  _globals['_BFDSESSIONTYPE']._serialized_end=1844
   _globals['_BFDSESSIONSUBSCRIPTIONREQUEST']._serialized_start=60
-  _globals['_BFDSESSIONSUBSCRIPTIONREQUEST']._serialized_end=144
-  _globals['_BFDMGRGENERALSESSIONKEYPB']._serialized_start=147
-  _globals['_BFDMGRGENERALSESSIONKEYPB']._serialized_end=946
-  _globals['_BFDMGRGENERALSESSIONKEYPB_P2PKEY']._serialized_start=429
-  _globals['_BFDMGRGENERALSESSIONKEYPB_P2PKEY']._serialized_end=614
-  _globals['_BFDMGRGENERALSESSIONKEYPB_MICROBFDKEY']._serialized_start=616
-  _globals['_BFDMGRGENERALSESSIONKEYPB_MICROBFDKEY']._serialized_end=653
-  _globals['_BFDMGRGENERALSESSIONKEYPB_SBFDECHOKEY']._serialized_start=656
-  _globals['_BFDMGRGENERALSESSIONKEYPB_SBFDECHOKEY']._serialized_end=939
-  _globals['_BFDMGRGENERALSESSIONKEYPB_SBFDECHOKEY_SRPOLICYUSERTYPE']._serialized_start=890
-  _globals['_BFDMGRGENERALSESSIONKEYPB_SBFDECHOKEY_SRPOLICYUSERTYPE']._serialized_end=939
-  _globals['_BFDMGRGENERALSESSIONDATAPB']._serialized_start=949
-  _globals['_BFDMGRGENERALSESSIONDATAPB']._serialized_end=1309
-  _globals['_BFDMGRGENERALSESSIONDATAPB_BFDMGRSESSIONSUBTYPE']._serialized_start=1129
-  _globals['_BFDMGRGENERALSESSIONDATAPB_BFDMGRSESSIONSUBTYPE']._serialized_end=1309
-  _globals['_BFDSESSIONNOTIFICATION']._serialized_start=1312
-  _globals['_BFDSESSIONNOTIFICATION']._serialized_end=1486
+  _globals['_BFDSESSIONSUBSCRIPTIONREQUEST']._serialized_end=139
+  _globals['_BFDGENERALSESSIONKEY']._serialized_start=142
+  _globals['_BFDGENERALSESSIONKEY']._serialized_end=983
+  _globals['_BFDGENERALSESSIONKEY_P2PKEY']._serialized_start=401
+  _globals['_BFDGENERALSESSIONKEY_P2PKEY']._serialized_end=623
+  _globals['_BFDGENERALSESSIONKEY_MICROBFDKEY']._serialized_start=625
+  _globals['_BFDGENERALSESSIONKEY_MICROBFDKEY']._serialized_end=662
+  _globals['_BFDGENERALSESSIONKEY_SBFDECHOKEY']._serialized_start=665
+  _globals['_BFDGENERALSESSIONKEY_SBFDECHOKEY']._serialized_end=976
+  _globals['_BFDGENERALSESSIONKEY_SBFDECHOKEY_SRPOLICYUSERTYPE']._serialized_start=894
+  _globals['_BFDGENERALSESSIONKEY_SBFDECHOKEY_SRPOLICYUSERTYPE']._serialized_end=976
+  _globals['_BFDGENERALSESSIONDATA']._serialized_start=986
+  _globals['_BFDGENERALSESSIONDATA']._serialized_end=1366
+  _globals['_BFDGENERALSESSIONDATA_BFDSESSIONSUBTYPE']._serialized_start=1169
+  _globals['_BFDGENERALSESSIONDATA_BFDSESSIONSUBTYPE']._serialized_end=1366
+  _globals['_BFDSESSIONNOTIFICATION']._serialized_start=1369
+  _globals['_BFDSESSIONNOTIFICATION']._serialized_end=1533
 # @@protoc_insertion_point(module_scope)

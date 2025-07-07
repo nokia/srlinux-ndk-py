@@ -34,14 +34,14 @@ class SdkMgrTelemetryServiceServicer(object):
     """
 
     def TelemetryAddOrUpdate(self, request, context):
-        """/ Add or update telemetry data
+        """Add or update telemetry data
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def TelemetryDelete(self, request, context):
-        """/ Delete telemetry data
+        """Delete telemetry data
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

@@ -54,42 +54,42 @@ class SdkMgrServiceServicer(object):
     """
 
     def AgentRegister(self, request, context):
-        """/ Register agent
+        """Register agent
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def AgentUnRegister(self, request, context):
-        """/ Unregister agent
+        """Unregister agent
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def NotificationRegister(self, request, context):
-        """/ Register for event notifications
+        """Register for event notifications
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def NotificationQuery(self, request, context):
-        """/ Returns current or specific notification subscription details
+        """Returns current or specific notification subscription details
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def KeepAlive(self, request, context):
-        """/ Send periodic keepalive message
+        """Send periodic keepalive message
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetAppId(self, request, context):
-        """/ Get application name from application identifier
+        """Get application name from application identifier
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -275,7 +275,7 @@ class SdkNotificationServiceServicer(object):
     """
 
     def NotificationStream(self, request, context):
-        """/ Send stream of event notifications based on the agent subscriptions
+        """Send stream of event notifications based on the agent subscriptions
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

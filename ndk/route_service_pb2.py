@@ -11,11 +11,11 @@ from google.protobuf.internal import builder as _builder
 _sym_db = _symbol_database.Default()
 
 
-from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 from ndk import nexthop_group_service_pb2 as ndk_dot_nexthop__group__service__pb2
+from ndk import sdk_common_pb2 as ndk_dot_sdk__common__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17ndk/route_service.proto\x12\x0bsrlinux.sdk\x1a\x14ndk/sdk_common.proto\x1a\x1fndk/nexthop_group_service.proto\"T\n\nRouteKeyPb\x12\x15\n\rnet_inst_name\x18\x01 \x01(\t\x12/\n\tip_prefix\x18\x02 \x01(\x0b\x32\x1c.srlinux.sdk.IpAddrPrefLenPb\"\x92\x01\n\x07RoutePb\x12\x1a\n\x12nexthop_group_name\x18\x01 \x01(\t\x12\x12\n\npreference\x18\x02 \x01(\r\x12\x0e\n\x06metric\x18\x03 \x01(\r\x12%\n\x07nexthop\x18\x04 \x03(\x0b\x32\x14.srlinux.sdk.NextHop\x12\x10\n\x08owner_id\x18\x05 \x01(\r\x12\x0e\n\x06nhg_id\x18\x06 \x01(\x04\"U\n\tRouteInfo\x12$\n\x03key\x18\x01 \x01(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\x12\"\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x14.srlinux.sdk.RoutePb\"9\n\x0fRouteAddRequest\x12&\n\x06routes\x18\x02 \x03(\x0b\x32\x16.srlinux.sdk.RouteInfo\"P\n\x10RouteAddResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"=\n\x12RouteDeleteRequest\x12\'\n\x06routes\x18\x02 \x03(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\"S\n\x13RouteDeleteResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"B\n\x1aIpRouteSubscriptionRequest\x12$\n\x03key\x18\x01 \x01(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\"\x89\x01\n\x13IpRouteNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12$\n\x03key\x18\x02 \x01(\x0b\x32\x17.srlinux.sdk.RouteKeyPb\x12\"\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x14.srlinux.sdk.RoutePb2\xc1\x02\n\x12SdkMgrRouteService\x12Q\n\x10RouteAddOrUpdate\x12\x1c.srlinux.sdk.RouteAddRequest\x1a\x1d.srlinux.sdk.RouteAddResponse\"\x00\x12R\n\x0bRouteDelete\x12\x1f.srlinux.sdk.RouteDeleteRequest\x1a .srlinux.sdk.RouteDeleteResponse\"\x00\x12\x42\n\tSyncStart\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x12@\n\x07SyncEnd\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17ndk/route_service.proto\x12\x0bsrlinux.sdk\x1a\x1fndk/nexthop_group_service.proto\x1a\x14ndk/sdk_common.proto\"Z\n\x08RouteKey\x12\x1d\n\x15network_instance_name\x18\x01 \x01(\t\x12/\n\tip_prefix\x18\x02 \x01(\x0b\x32\x1c.srlinux.sdk.IpAddrPrefLenPb\"\x9b\x01\n\x05Route\x12\x1a\n\x12nexthop_group_name\x18\x01 \x01(\t\x12\x12\n\npreference\x18\x02 \x01(\r\x12\x0e\n\x06metric\x18\x03 \x01(\r\x12&\n\x08nexthops\x18\x04 \x03(\x0b\x32\x14.srlinux.sdk.NextHop\x12\x10\n\x08owner_id\x18\x05 \x01(\r\x12\x18\n\x10nexthop_group_id\x18\x06 \x01(\x04\"Q\n\tRouteInfo\x12\"\n\x03key\x18\x01 \x01(\x0b\x32\x15.srlinux.sdk.RouteKey\x12 \n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x12.srlinux.sdk.Route\"9\n\x0fRouteAddRequest\x12&\n\x06routes\x18\x02 \x03(\x0b\x32\x16.srlinux.sdk.RouteInfo\"P\n\x10RouteAddResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\";\n\x12RouteDeleteRequest\x12%\n\x06routes\x18\x02 \x03(\x0b\x32\x15.srlinux.sdk.RouteKey\"S\n\x13RouteDeleteResponse\x12)\n\x06status\x18\x01 \x01(\x0e\x32\x19.srlinux.sdk.SdkMgrStatus\x12\x11\n\terror_str\x18\x02 \x01(\t\"@\n\x1aIpRouteSubscriptionRequest\x12\"\n\x03key\x18\x01 \x01(\x0b\x32\x15.srlinux.sdk.RouteKey\"\x85\x01\n\x13IpRouteNotification\x12(\n\x02op\x18\x01 \x01(\x0e\x32\x1c.srlinux.sdk.SdkMgrOperation\x12\"\n\x03key\x18\x02 \x01(\x0b\x32\x15.srlinux.sdk.RouteKey\x12 \n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x12.srlinux.sdk.Route2\xc1\x02\n\x12SdkMgrRouteService\x12Q\n\x10RouteAddOrUpdate\x12\x1c.srlinux.sdk.RouteAddRequest\x1a\x1d.srlinux.sdk.RouteAddResponse\"\x00\x12R\n\x0bRouteDelete\x12\x1f.srlinux.sdk.RouteDeleteRequest\x1a .srlinux.sdk.RouteDeleteResponse\"\x00\x12\x42\n\tSyncStart\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x12@\n\x07SyncEnd\x12\x18.srlinux.sdk.SyncRequest\x1a\x19.srlinux.sdk.SyncResponse\"\x00\x42%Z#github.com/nokia/srlinux-ndk-go/ndkb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -23,24 +23,24 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ndk.route_service_pb2', _gl
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z#github.com/nokia/srlinux-ndk-go/ndk'
-  _globals['_ROUTEKEYPB']._serialized_start=95
-  _globals['_ROUTEKEYPB']._serialized_end=179
-  _globals['_ROUTEPB']._serialized_start=182
-  _globals['_ROUTEPB']._serialized_end=328
-  _globals['_ROUTEINFO']._serialized_start=330
-  _globals['_ROUTEINFO']._serialized_end=415
-  _globals['_ROUTEADDREQUEST']._serialized_start=417
-  _globals['_ROUTEADDREQUEST']._serialized_end=474
-  _globals['_ROUTEADDRESPONSE']._serialized_start=476
-  _globals['_ROUTEADDRESPONSE']._serialized_end=556
-  _globals['_ROUTEDELETEREQUEST']._serialized_start=558
-  _globals['_ROUTEDELETEREQUEST']._serialized_end=619
-  _globals['_ROUTEDELETERESPONSE']._serialized_start=621
-  _globals['_ROUTEDELETERESPONSE']._serialized_end=704
-  _globals['_IPROUTESUBSCRIPTIONREQUEST']._serialized_start=706
-  _globals['_IPROUTESUBSCRIPTIONREQUEST']._serialized_end=772
-  _globals['_IPROUTENOTIFICATION']._serialized_start=775
-  _globals['_IPROUTENOTIFICATION']._serialized_end=912
-  _globals['_SDKMGRROUTESERVICE']._serialized_start=915
-  _globals['_SDKMGRROUTESERVICE']._serialized_end=1236
+  _globals['_ROUTEKEY']._serialized_start=95
+  _globals['_ROUTEKEY']._serialized_end=185
+  _globals['_ROUTE']._serialized_start=188
+  _globals['_ROUTE']._serialized_end=343
+  _globals['_ROUTEINFO']._serialized_start=345
+  _globals['_ROUTEINFO']._serialized_end=426
+  _globals['_ROUTEADDREQUEST']._serialized_start=428
+  _globals['_ROUTEADDREQUEST']._serialized_end=485
+  _globals['_ROUTEADDRESPONSE']._serialized_start=487
+  _globals['_ROUTEADDRESPONSE']._serialized_end=567
+  _globals['_ROUTEDELETEREQUEST']._serialized_start=569
+  _globals['_ROUTEDELETEREQUEST']._serialized_end=628
+  _globals['_ROUTEDELETERESPONSE']._serialized_start=630
+  _globals['_ROUTEDELETERESPONSE']._serialized_end=713
+  _globals['_IPROUTESUBSCRIPTIONREQUEST']._serialized_start=715
+  _globals['_IPROUTESUBSCRIPTIONREQUEST']._serialized_end=779
+  _globals['_IPROUTENOTIFICATION']._serialized_start=782
+  _globals['_IPROUTENOTIFICATION']._serialized_end=915
+  _globals['_SDKMGRROUTESERVICE']._serialized_start=918
+  _globals['_SDKMGRROUTESERVICE']._serialized_end=1239
 # @@protoc_insertion_point(module_scope)

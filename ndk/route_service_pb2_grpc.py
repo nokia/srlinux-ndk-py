@@ -45,28 +45,28 @@ class SdkMgrRouteServiceServicer(object):
     """
 
     def RouteAddOrUpdate(self, request, context):
-        """/ Add or update IP routes.
+        """Add or update IP routes.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def RouteDelete(self, request, context):
-        """/ Delete IP routes.
+        """Delete IP routes.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def SyncStart(self, request, context):
-        """/ Synchronization start for IP routes
+        """Synchronization start for IP routes
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def SyncEnd(self, request, context):
-        """/ Synchronization end for IP routes
+        """Synchronization end for IP routes
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

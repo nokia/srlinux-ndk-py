@@ -45,28 +45,28 @@ class SdkMgrNextHopGroupServiceServicer(object):
     """
 
     def NextHopGroupAddOrUpdate(self, request, context):
-        """/ Add or update one or more next-hop groups.
+        """Add or update one or more next-hop groups.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def NextHopGroupDelete(self, request, context):
-        """/ Delete next-hop group.
+        """Delete next-hop group.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def SyncStart(self, request, context):
-        """/ Synchronization start to open synchronization operation.
+        """Synchronization start to open synchronization operation.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def SyncEnd(self, request, context):
-        """/ Synchronization end to close synchronization operation.
+        """Synchronization end to close synchronization operation.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
